@@ -77,6 +77,9 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -92,44 +95,18 @@
     <option name="width" value="714" />
     <option name="height" value="1017" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="会聪网信息采集" type="b2602c69:ProjectViewProjectNode" />
-              <item name="会聪网信息采集" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="会聪网信息采集" type="b2602c69:ProjectViewProjectNode" />
-              <item name="会聪网信息采集" type="462c0819:PsiDirectoryNode" />
-              <item name="hui_cong_wang" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="会聪网信息采集" type="b2602c69:ProjectViewProjectNode" />
-              <item name="会聪网信息采集" type="462c0819:PsiDirectoryNode" />
-              <item name="hui_cong_wang" type="462c0819:PsiDirectoryNode" />
-              <item name="hui_cong_wang" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="会聪网信息采集" type="b2602c69:ProjectViewProjectNode" />
-              <item name="会聪网信息采集" type="462c0819:PsiDirectoryNode" />
-              <item name="hui_cong_wang" type="462c0819:PsiDirectoryNode" />
-              <item name="hui_cong_wang" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="C:/搜好货电商数据采集" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -160,24 +137,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560755222617</updated>
-      <workItem from="1560755223967" duration="20498000" />
+      <workItem from="1560755223967" duration="21705000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20498000" />
+    <option name="totallyTimeSpent" value="21705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1416" height="1026" extended-state="7" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.022123894" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21460177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3068309" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.44618833" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
