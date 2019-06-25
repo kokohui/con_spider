@@ -23,16 +23,8 @@ class SuppySpider(scrapy.Spider):
 
     def start_requests(self):
         """初始url"""
-        sql_id = "SELECT url,id FROM bus_spider_data WHERE TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
-        cur.execute(sql_id)
-        res_all_list = cur.fetchall()
-        url = res_all_list[0][0]
-        for num in res_all_list:
-            start_url = url.format(str(num))
-
-        # start_url = 'https://s.hc360.com/seller/search.html?kwd=%E6%9C%8D%E8%A3%85&c=&F=&G=&nselect=1&pnum={}&ee=2'
-
-            yield Request(url=start_url, callback=self.parse)
+        start_url = 'https://s.hc360.com/seller/search.html?kwd=%E6%9C%8D%E8%A3%85&c=&F=&G=&nselect=1&pnum=1&ee=2'
+        yield Request(url=start_url, callback=self.parse)
 
     def parse(self, response):
         """

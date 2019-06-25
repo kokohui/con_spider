@@ -11,7 +11,7 @@ import re
 from bs4 import BeautifulSoup
 from lxml import etree
 
-conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888', db='ktcx_buschance', port=3306,
+conn = pymysql.connect(host='localhost', user='root', passwd='zhangxing888', db='ktcx_buschance', port=3306,
                        charset='utf8')
 
 cur = conn.cursor()  # 获取一个游标
