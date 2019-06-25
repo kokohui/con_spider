@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="335eaea0-68da-4175-9fa4-2a469c8af269" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../乐宇/.idea/乐宇.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/征信供应商.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../搜好货电商数据采集/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sou_hao_huo_pag_1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/pymysqls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sou_hao_huo_pag_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../搜好货电商数据采集/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/sou_hao_huo/sou_hao_huo/spiders/dian_shang.py" beforeDir="false" afterPath="$PROJECT_DIR$/../搜好货电商数据采集/sou_hao_huo/sou_hao_huo/spiders/dian_shang.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sou_zheng_xin/sou_zheng_xin/spiders/zheng_xin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="63" column="8" lean-forward="true" selection-start-line="63" selection-start-column="8" selection-end-line="66" selection-end-column="86" />
+              <folding>
+                <element signature="e#24#37#0" expanded="true" />
+                <element signature="e#479#919#0" />
+                <element signature="e#1102#1437#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sou_zheng_xin/sou_zheng_xin/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="607">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sou_zheng_xin/sou_zheng_xin/items.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/sou_zheng_xin/sou_zheng_xin/settings.py" />
+        <option value="$PROJECT_DIR$/sou_zheng_xin/sou_zheng_xin/items.py" />
+        <option value="$PROJECT_DIR$/sou_zheng_xin/sou_zheng_xin/spiders/zheng_xin.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/征信供应商.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="611" />
+    <option name="y" value="102" />
+    <option name="width" value="1066" />
+    <option name="height" value="978" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="征信供应商" type="b2602c69:ProjectViewProjectNode" />
+              <item name="征信供应商" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="征信供应商" type="b2602c69:ProjectViewProjectNode" />
+              <item name="征信供应商" type="462c0819:PsiDirectoryNode" />
+              <item name="sou_zheng_xin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="征信供应商" type="b2602c69:ProjectViewProjectNode" />
+              <item name="征信供应商" type="462c0819:PsiDirectoryNode" />
+              <item name="sou_zheng_xin" type="462c0819:PsiDirectoryNode" />
+              <item name="sou_zheng_xin" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="335eaea0-68da-4175-9fa4-2a469c8af269" name="Default Changelist" comment="" />
+      <created>1561187644999</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561187644999</updated>
+      <workItem from="1561187646191" duration="1221000" />
+      <workItem from="1561337949260" duration="7673000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="8894000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1416" height="1026" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07743363" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32399103" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://C:/Python36/Lib/site-packages/scrapy/crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sou_zheng_xin/sou_zheng_xin/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sou_zheng_xin/sou_zheng_xin/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sou_zheng_xin/sou_zheng_xin/spiders/zheng_xin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="63" column="8" lean-forward="true" selection-start-line="63" selection-start-column="8" selection-end-line="66" selection-end-column="86" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+            <element signature="e#479#919#0" />
+            <element signature="e#1102#1437#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
