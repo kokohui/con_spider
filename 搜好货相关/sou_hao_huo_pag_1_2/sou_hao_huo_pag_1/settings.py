@@ -52,9 +52,10 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'sou_hao_huo_pag_1.middlewares.SouHaoHuoPag1DownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   # 'sou_hao_huo_pag_1.middlewares.SouHaoHuoPag1DownloaderMiddleware': 543,
+   # 'sou_hao_huo_pag_1.middlewares.Proxy': 543,
+}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html

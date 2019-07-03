@@ -9,6 +9,7 @@ import time
 from bs4 import BeautifulSoup
 from ..items import LeYuItem
 import pymysql
+import datetime
 
 conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888', db='ktcx_buschance', port=3306,
                        charset='utf8')
@@ -18,8 +19,6 @@ cur = conn.cursor()  # 获取一个游标
 
 class SitongSpider(scrapy.Spider):
     name = 'sitong'
-    # allowed_domains = ['http://www.sitongzixun.com/channel_Buy/i14717.html.html']
-    # start_urls = ['http://http://www.sitongzixun.com/channel_Buy/i14717.html.html/']
 
     def start_requests(self):
 
@@ -27,10 +26,8 @@ class SitongSpider(scrapy.Spider):
         cur.execute(sql_id)
         res_all_list = cur.fetchall()
         url_pag = res_all_list[0][0]
-        # url_pag = 'http://www.sitongzixun.com/channel_Buy/i14717.html.html?page={}&rows=16780'
-
-
-
+        # url_pag = 'http://www.sitongzixun.com/channel_buy/w101035.html?page={}&rows=424639'
+        # url_pag = 'http://www.sitongzixun.com/channel_buy/w6191535.html?page={}'
         for num in range(1, 3):
             url = url_pag.format(num)
             yield Request(url=url, callback=self.parse)
@@ -40,7 +37,7 @@ class SitongSpider(scrapy.Spider):
         for res_li in res_li_list:
             res_url = 'http:' + res_li.xpath('./span/a/@href')[0].extract()
             # print(res_url)
-            yield Request(url=res_url,callback=self.parse_2)
+            yield Request(url=res_url, callback=self.parse_2)
 
     def parse_2(self, response):
 
@@ -113,7 +110,7 @@ class SitongSpider(scrapy.Spider):
             item['com_name'] = str(com_name)
 
             # `create_date`
-            create_date = time.strftime('%Y.%m.%d %H:%M:%S ', time.localtime(time.time()))
+            create_date = time.strftime('%Y-%m-%d %H:%M:%S ', time.localtime(time.time()))
             item['create_date'] = create_date
 
 
@@ -195,4 +192,15 @@ class SitongSpider(scrapy.Spider):
             item['imgs'] = ''
 
             print('数据完成..')
-            # return item
+
+            # 随机时间
+            days = random.randint(120, 360)
+
+            now = datetime.datetime.now()
+            delta = datetime.timedelta(days=days)
+            n_days = now + delta
+            item['end_time'] = n_days.strftime('%Y-%m-%d %H:%M:%S')
+            print(item['end_time'])
+
+            return item
+

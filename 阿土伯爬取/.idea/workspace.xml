@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9eafdd0a-d390-48fd-92f2-a749f2a242ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../1688爬取/.idea/1688爬取.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../搜好货相关/.idea/搜好货相关.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../首商网爬取/.idea/首商网爬取.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../乐宇/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../乐宇/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../乐宇/le_yu/le_yu/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../乐宇/le_yu/le_yu/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../乐宇/le_yu/le_yu/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../乐宇/le_yu/le_yu/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../乐宇/le_yu/le_yu/spiders/sitong.py" beforeDir="false" afterPath="$PROJECT_DIR$/../乐宇/le_yu/le_yu/spiders/sitong.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/会聪网信息采集/hui_cong_wang/hui_cong_wang/spiders/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/会聪网信息采集/hui_cong_wang/hui_cong_wang/spiders/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../搜好货相关/sou_hao_huo_pag_1_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../搜好货相关/sou_hao_huo_pag_1_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../搜好货相关/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/../搜好货相关/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../搜好货相关/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../搜好货相关/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../搜好货相关/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py" beforeDir="false" afterPath="$PROJECT_DIR$/../搜好货相关/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../搜好货相关/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py" beforeDir="false" afterPath="$PROJECT_DIR$/../搜好货相关/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aTuBo_chan_pin/aTuBo/spiders/purchase.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+              <folding>
+                <element signature="e#632#2099#0" />
+                <element signature="e#2142#2870#0" />
+                <element signature="e#2913#3424#0" />
+                <element signature="e#3430#3457#0" />
+                <element signature="e#3603#12364#0" />
+                <element signature="e#3776#4238#0" />
+                <element signature="e#4460#5627#0" />
+                <element signature="e#6858#7147#0" />
+                <element signature="e#7346#7464#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/aTuBo/aTuBo/items.py" />
+        <option value="$PROJECT_DIR$/aTuBo/aTuBo/pipelines.py" />
+        <option value="$PROJECT_DIR$/aTuBo/aTuBo/middlewares.py" />
+        <option value="$PROJECT_DIR$/aTuBo/aTuBo/settings.py" />
+        <option value="$PROJECT_DIR$/aTuBo/aTuBo/spiders/purchase.py" />
+        <option value="$PROJECT_DIR$/aTuBo_chan_pin/aTuBo/spiders/purchase.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/阿土伯爬取.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-7" />
+    <option name="width" value="714" />
+    <option name="height" value="1017" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="阿土伯爬取" type="b2602c69:ProjectViewProjectNode" />
+              <item name="阿土伯爬取" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\公司爬虫\阿土伯爬取" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9eafdd0a-d390-48fd-92f2-a749f2a242ef" name="Default Changelist" comment="" />
+      <created>1561943057042</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561943057042</updated>
+      <workItem from="1561943058583" duration="20453000" />
+      <workItem from="1562028603582" duration="15109000" />
+      <workItem from="1562115721844" duration="709000" />
+      <workItem from="1562122075253" duration="5262000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="41533000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1416" height="1026" extended-state="7" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23672566" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007375" side_tool="true" weight="0.6513453" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49926254" visible="true" weight="0.10986547" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://C:/Python36/Lib/site-packages/scrapy/spiders/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
+          <folding>
+            <element signature="e#2285#2912#0" />
+            <element signature="e#3086#3179#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aTuBo/aTuBo/602438/480079.jpg" />
+    <entry file="file://$PROJECT_DIR$/aTuBo/aTuBo/602438/811628.jpg" />
+    <entry file="file://$PROJECT_DIR$/aTuBo/aTuBo/602438/212437.jpg" />
+    <entry file="file://$PROJECT_DIR$/aTuBo/aTuBo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aTuBo/aTuBo/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aTuBo/aTuBo/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
+          <folding>
+            <element signature="e#480#5901#0" />
+            <element signature="e#884#1081#0" />
+            <element signature="e#1191#3333#0" />
+            <element signature="e#3427#3991#0" />
+            <element signature="e#3927#5756#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aTuBo/aTuBo/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="e#169#195#0" expanded="true" />
+            <element signature="e#604#751#0" />
+            <element signature="e#656#751#0" />
+            <element signature="e#890#2552#0" />
+            <element signature="e#2600#4243#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aTuBo_chan_pin/aTuBo/spiders/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aTuBo_chan_pin/aTuBo/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="19" column="70" lean-forward="true" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+          <folding>
+            <element signature="e#794#2456#0" />
+            <element signature="e#2504#4147#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aTuBo/aTuBo/spiders/purchase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="210" selection-start-line="210" selection-end-line="211" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+            <element signature="e#628#2103#0" />
+            <element signature="e#2146#2766#0" />
+            <element signature="e#2809#3476#0" />
+            <element signature="e#3482#3509#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aTuBo_chan_pin/aTuBo/spiders/purchase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+          <folding>
+            <element signature="e#632#2099#0" />
+            <element signature="e#2142#2870#0" />
+            <element signature="e#2913#3424#0" />
+            <element signature="e#3430#3457#0" />
+            <element signature="e#3603#12364#0" />
+            <element signature="e#3776#4238#0" />
+            <element signature="e#4460#5627#0" />
+            <element signature="e#6858#7147#0" />
+            <element signature="e#7346#7464#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

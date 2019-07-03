@@ -1,5 +1,6 @@
 import pymysql
 
+
 class HuiCongGongPipeline(object):
     cursor = None  # mysql游标对象声明
     cur = None  # 获取一个游标
@@ -47,9 +48,9 @@ class HuiCongGongPipeline(object):
                     0, 0, 0, '0', item['com_name'], item["linkman"], item['mobile'], '', '', item['create_date'],
                     item['create_date'], '', '0', '5fc530f6b8574e03b6f13794ec64c1f8', item['create_date'], '', '', '',
                     '', '',
-                    '', item['address'], '', item['summary'], '', item['scopes'], '', '', '', '',
+                    '', item['address'], item['summary'], item['summary'], item['summary'], item['scopes'], '', '', '', '',
                     '', '', 123456, item['mobile'], '', 0, 0, 0, 0, 0,
-                    0, '', '75cebe2e19434dcd9c4586f4621e6f9c', '', '', '', '', '1', 1))
+                    0, '', '75cebe2e19434dcd9c4586f4621e6f9c', '', '', '', '', item['com_keyword'], 1))
 
                 print('.......................................')
                 print('data', data)
@@ -68,7 +69,6 @@ class HuiCongGongPipeline(object):
             except Exception as e:
                 raise e
 
-            # 产品信息存储
             # 产品信息存储
             try:
                 sql_in = "INSERT INTO `bus_product` (`create_by`, `create_date`, `is_del`, `list_img`, `price`, `title`,`way`,`one_level_id`, `two_level_id`, `three_level_id`, `custom_id`, `keywords`,`models`,`standards`, `imgs`, `sort`, `update_time`, `state`, `is_verify`, `verify_remark`,`verify_time`, `verify_by`, `detail`, `types`, `start_time`, `end_time`, `num`, `units`,`money_units`, `province_id`, `province_name`, `city_id`, `city_name`, `view_count`,`inquiry_count`,`provider_id`, `provider_name`, `is_import`, `com_name`, `linkman`,`mobile`, `add_by`) VALUE(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
@@ -92,13 +92,12 @@ class HuiCongGongPipeline(object):
             return item
 
     def close_spider(self, spider):
-        sql_id = "SELECT id FROM bus_spider_data WHERE TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
+        sql_id = "SELECT id FROM bus_spider_data WHERE  source='慧聪网'AND TYPE = 'huicong_gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
         self.cur.execute(sql_id)
         res_all_list = self.cur.fetchall()
         id = res_all_list[0][0]
         sql_insert = "UPDATE ktcx_buschance.bus_spider_data SET isuse='1' WHERE id={}".format(id)
         print(sql_insert)
-
         self.cur.execute(sql_insert)
         self.conn.commit()
 

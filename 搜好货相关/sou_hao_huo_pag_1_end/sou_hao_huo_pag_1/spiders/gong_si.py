@@ -11,7 +11,7 @@ import re
 from bs4 import BeautifulSoup
 from lxml import etree
 
-conn = pymysql.connect(host='localhost', user='root', passwd='zhangxing888', db='ktcx_buschance', port=3306,
+conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888', db='ktcx_buschance', port=3306,
                        charset='utf8')
 
 cur = conn.cursor()  # 获取一个游标
@@ -26,13 +26,14 @@ class GongSiSpider(scrapy.Spider):
         处理初始url
         :return:
         """
-        sql_id = "SELECT url FROM bus_spider_data WHERE TYPE = 'chengxin' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
-        cur.execute(sql_id)
-        res_all_list = cur.fetchall()
-        url = res_all_list[0][0]
-        for num in range(1, 2):
-            url_2 = url.format(num)
-            yield Request(url=url_2, callback=self.parse_2)
+        # sql_id = "SELECT url FROM bus_spider_data WHERE TYPE = 'chengxin' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
+        # cur.execute(sql_id)
+        # res_all_list = cur.fetchall()
+        # url = res_all_list[0][0]
+        # for num in range(1, 2):
+        #     url_2 = url.format(num)
+        url_2 = 'http://s.912688.com/prod/dy/search?kw=%E5%AE%A0%E7%89%A9%E8%8D%AF%E5%93%81&pageSize=20&page=1'
+        yield Request(url=url_2, callback=self.parse_2)
 
     def parse_2(self, response):
         """

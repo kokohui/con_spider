@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27894e26-0343-4e69-9ec3-cd57829cf864" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/items.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/middlewares.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../慧聪网抓取/慧聪网诚信/hui_cong_gong/scrapy.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../慧聪网抓取/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../慧聪网抓取/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sou_hao_huo_pag_1_end/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +96,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="158" />
     <option name="y" value="92" />
     <option name="width" value="1066" />
@@ -264,12 +250,12 @@
       <workItem from="1561169654898" duration="19957000" />
       <workItem from="1561337473344" duration="7082000" />
       <workItem from="1561358190768" duration="13874000" />
-      <workItem from="1561423919608" duration="11686000" />
+      <workItem from="1561423919608" duration="12218000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140775000" />
+    <option name="totallyTimeSpent" value="141307000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -281,7 +267,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1416" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1416" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.022123894" />

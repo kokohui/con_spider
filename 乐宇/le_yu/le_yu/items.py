@@ -29,3 +29,4 @@ class LeYuItem(scrapy.Item):
     summary = scrapy.Field()
     scopes = scrapy.Field()
     num = scrapy.Field()
+    end_time = scrapy.Field()

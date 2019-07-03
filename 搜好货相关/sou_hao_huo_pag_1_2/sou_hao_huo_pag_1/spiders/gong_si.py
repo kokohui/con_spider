@@ -78,7 +78,7 @@ class GongSiSpider(scrapy.Spider):
 
                     print('恭喜您,爬取{}成功,真是太厉害了!!!!!!'.format(self.num_2))
                     self.num_2 += 1
-                    yield item
+                    # yield item
 
             except:
                 print('沒有这条数据')

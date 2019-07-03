@@ -2,76 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e85063fa-95ea-4537-bd4c-3d1731d7c5e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/乐宇.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1/.idea/sou_hao_huo_pag_1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1/scrapy.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1/sou_hao_huo_pag_1/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1/sou_hao_huo_pag_1/items.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1/sou_hao_huo_pag_1/middlewares.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1/sou_hao_huo_pag_1/pipelines.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1/sou_hao_huo_pag_1/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1/sou_hao_huo_pag_1/spiders/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1/sou_hao_huo_pag_1/spiders/gong_si.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/.idea/sou_hao_huo_pag_1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/pymysqls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/scrapy.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/items.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/middlewares.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/pipelines.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_2/.idea/sou_hao_huo_pag_1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_2/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_2/scrapy.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_2/sou_hao_huo_pag_1/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_2/sou_hao_huo_pag_1/items.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_2/sou_hao_huo_pag_1/middlewares.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_2/sou_hao_huo_pag_1/pipelines.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_2/sou_hao_huo_pag_1/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_2/sou_hao_huo_pag_1/spiders/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sou_hao_huo_pag_2/sou_hao_huo_pag_1/spiders/gong_si.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../会聪网信息采集/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../会聪网信息采集/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../会聪网信息采集/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../会聪网信息采集/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../会聪网信息采集/.idea/会聪网信息采集.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../会聪网信息采集/hui_cong_wang/hui_cong_wang/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../会聪网信息采集/hui_cong_wang/hui_cong_wang/items.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../会聪网信息采集/hui_cong_wang/hui_cong_wang/middlewares.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../会聪网信息采集/hui_cong_wang/hui_cong_wang/pipelines.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../会聪网信息采集/hui_cong_wang/hui_cong_wang/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../会聪网信息采集/hui_cong_wang/hui_cong_wang/spiders/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../会聪网信息采集/hui_cong_wang/hui_cong_wang/spiders/data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../会聪网信息采集/hui_cong_wang/scrapy.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/.idea/搜好货电商数据采集.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/ceshi222.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/duplicate_removal.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/qqqqqqqqqqqqqq.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/qqqqqqqqqqqqqqqq.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/sou_hao_huo/scrapy.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/sou_hao_huo/sou_hao_huo/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/sou_hao_huo/sou_hao_huo/items.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/sou_hao_huo/sou_hao_huo/middlewares.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/sou_hao_huo/sou_hao_huo/pipelines.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/sou_hao_huo/sou_hao_huo/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/sou_hao_huo/sou_hao_huo/spiders/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../搜好货电商数据采集/sou_hao_huo/sou_hao_huo/spiders/dian_shang.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1688爬取/.idea/1688爬取.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../搜好货相关/.idea/搜好货相关.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../首商网爬取/.idea/首商网爬取.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/le_yu/le_yu/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/le_yu/le_yu/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/le_yu/le_yu/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/le_yu/le_yu/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/le_yu/le_yu/spiders/sitong.py" beforeDir="false" afterPath="$PROJECT_DIR$/le_yu/le_yu/spiders/sitong.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/会聪网信息采集/hui_cong_wang/hui_cong_wang/spiders/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/会聪网信息采集/hui_cong_wang/hui_cong_wang/spiders/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../搜好货相关/sou_hao_huo_pag_1_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../搜好货相关/sou_hao_huo_pag_1_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../搜好货相关/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py" beforeDir="false" afterPath="$PROJECT_DIR$/../搜好货相关/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,28 +25,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/le_yu/le_yu/spiders/sitong.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="-176">
+              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
-                <element signature="e#653#1112#0" />
-                <element signature="e#1153#1445#0" />
-                <element signature="e#1489#7123#0" />
+                <element signature="e#1075#1368#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/le_yu/le_yu/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1881">
-              <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+            <state relative-caret-position="380">
+              <caret line="29" column="29" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="29" selection-end-column="29" />
               <folding>
-                <element signature="e#5560#6149#0" />
+                <element signature="e#339#618#0" />
+                <element signature="e#1133#3100#0" />
+                <element signature="e#3178#3734#0" />
+                <element signature="e#5564#6153#0" />
               </folding>
             </state>
           </provider>
@@ -111,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/le_yu/le_yu/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="7" />
+            <state relative-caret-position="361">
+              <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="31" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -120,13 +65,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/le_yu/le_yu/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2178">
-              <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="68" selection-end-column="1" />
+            <state relative-caret-position="1056">
+              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -140,27 +92,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/le_yu/le_yu/settings.py" />
-        <option value="$PROJECT_DIR$/le_yu/le_yu/spiders/sitong.py" />
         <option value="$PROJECT_DIR$/le_yu/le_yu/items.py" />
+        <option value="$PROJECT_DIR$/time.py" />
+        <option value="$PROJECT_DIR$/le_yu/le_yu/spiders/sitong.py" />
         <option value="$PROJECT_DIR$/le_yu/le_yu/pipelines.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/乐宇.iml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="291" />
-    <option name="y" value="250" />
-    <option name="width" value="1066" />
-    <option name="height" value="1045" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="229" />
+    <option name="y" value="72" />
+    <option name="width" value="939" />
+    <option name="height" value="1017" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -168,11 +111,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../慧聪网抓取" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -194,6 +138,35 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="time" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="乐宇" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/time.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.time" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -207,21 +180,24 @@
       <workItem from="1561188887164" duration="10284000" />
       <workItem from="1561337474418" duration="4276000" />
       <workItem from="1561355646033" duration="33000" />
+      <workItem from="1561511492280" duration="5745000" />
+      <workItem from="1561597444268" duration="4269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14593000" />
+    <option name="totallyTimeSpent" value="24607000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1416" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1416" height="1026" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15707965" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6092504" visible="true" weight="0.03982301" />
+      <window_info id="Structure" order="1" sideWeight="0.3907496" side_tool="true" weight="0.25737464" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.57286996" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -230,7 +206,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.22421524" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.09529148" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -242,6 +218,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/$time.coverage" NAME="time Coverage Results" MODIFIED="1561513624177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://C:/Python36/Lib/site-packages/scrapy/item.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -250,40 +229,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/time.py" />
+    <entry file="file://$PROJECT_DIR$/le_yu/le_yu/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/le_yu/le_yu/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="31" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/le_yu/le_yu/spiders/sitong.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="-176">
+          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
-            <element signature="e#653#1112#0" />
-            <element signature="e#1153#1445#0" />
-            <element signature="e#1489#7123#0" />
+            <element signature="e#1075#1368#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/le_yu/le_yu/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1881">
-          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+        <state relative-caret-position="380">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="29" selection-end-column="29" />
           <folding>
-            <element signature="e#5560#6149#0" />
+            <element signature="e#339#618#0" />
+            <element signature="e#1133#3100#0" />
+            <element signature="e#3178#3734#0" />
+            <element signature="e#5564#6153#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/le_yu/le_yu/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/le_yu/le_yu/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2178">
-          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="68" selection-end-column="1" />
         </state>
       </provider>
     </entry>

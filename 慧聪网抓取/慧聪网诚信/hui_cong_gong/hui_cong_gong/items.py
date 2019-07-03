@@ -28,3 +28,4 @@ class HuiCongGongItem(scrapy.Item):
 
     summary = scrapy.Field()
     scopes = scrapy.Field()
+    com_keyword = scrapy.Field()

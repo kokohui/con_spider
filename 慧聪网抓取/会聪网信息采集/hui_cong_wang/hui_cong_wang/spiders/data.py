@@ -83,7 +83,7 @@ class DataSpider(scrapy.Spider):
                     print('爬++++++++++++++++++++++++++++++++++++++')
                     print('恭喜您,爬取{}成功,真是太厉害了!!!!!!'.format(self.num_2))
                     self.num_2 += 1
-                    return item
+                    # return item
                 else:
                     print('没有电话不爬取')
 

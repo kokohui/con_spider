@@ -7,11 +7,24 @@
 
 from scrapy import signals
 
+ip = '221.0.25.172: 80'
+
+class Proxy(object):
+    def process_request(self, request, spider):
+        # 对拦截到请求的url进行判断（协议头到底是http还是https）
+        # request.url返回值：http://www.xxx.com
+        h = request.url.split(':')[0]  # 请求的协议头
+        print('ip是{}'.format(ip))
+        if h == 'https':
+            request.meta['proxy'] = 'https://' + ip
+        else:
+            request.meta['proxy'] = 'http://' + ip
 
 class SouHaoHuoPag1SpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
     # passed objects.
+
 
     @classmethod
     def from_crawler(cls, crawler):
