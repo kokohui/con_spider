@@ -25,7 +25,7 @@ class SuppySpider(scrapy.Spider):
     def start_requests(self):
         """初始url"""
 
-        sql_id = "SELECT url,id FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'huicong_gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 2 "
+        sql_id = "SELECT url,id FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'chengxin' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 2 "
         cur.execute(sql_id)
         res_all_list = cur.fetchall()
         for res_one_list in res_all_list:
@@ -99,13 +99,13 @@ class SuppySpider(scrapy.Spider):
                 #     将图片链接保存到硬盘
                 res_img = respone.xpath('//*[@id="thumblist"]/li/div/a/img/@src')
                 for img_url in res_img:
-                    img_url = img_url.extract()
+                    img_url = img_url.extract().replace('..100x100.jpg', '')
                     img_url = 'https:' + img_url.strip()
                     code_img = requests.get(url=img_url).content
                     img_name = str(random.randint(1, 999999))
                     with open('/home/imgServer/spiders/{}/{}.jpg'.format(str_ran, img_name), 'wb') as f:
                         f.write(code_img)
-                    os_img_2 = 'http://img.ktcx.cn/spiders/' + '{}/{}.jpg'.format(str_ran, img_name)
+                    os_img_2 = 'http://img.youkeduo.com.cn/spiders/' + '{}/{}.jpg'.format(str_ran, img_name)
                     os_img_2_list.append(os_img_2)
                 os_img_2_str_1 = os_img_2_list[0]
                 os_img_2_str = ','.join(os_img_2_list)
@@ -151,7 +151,7 @@ class SuppySpider(scrapy.Spider):
                 way = '1'
             item['way'] = way
 
-            sql_id = "SELECT one_level,two_level,three_level,keyword,com_keyword  FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'huicong_chengxin' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
+            sql_id = "SELECT one_level,two_level,three_level,keyword,com_keyword  FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'chengxin' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
             cur.execute(sql_id)
             print('sql_id?????????????', sql_id)
             res_all_list = cur.fetchall()
@@ -184,7 +184,7 @@ class SuppySpider(scrapy.Spider):
                 strinfo = re.compile('<img.*?>')
                 html_2 = strinfo.sub('', html)
 
-                strinfo = re.compile('<br>')
+                strinfo = re.compile('<br.*?>')
                 html_3 = strinfo.sub('', html_2)
 
                 strinfo = re.compile('慧聪网')

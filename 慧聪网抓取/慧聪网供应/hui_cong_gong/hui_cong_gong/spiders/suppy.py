@@ -25,7 +25,7 @@ class SuppySpider(scrapy.Spider):
     def start_requests(self):
         """初始url"""
 
-        sql_id = "SELECT url,id FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'huicong_gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 2 "
+        sql_id = "SELECT url,id FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
         cur.execute(sql_id)
         res_all_list = cur.fetchall()
         for res_one_list in res_all_list:
@@ -56,7 +56,6 @@ class SuppySpider(scrapy.Spider):
         item = HuiCongGongItem()
 
         mobile = ''
-        result_count = 0
         try:
             mobile = respone.xpath('//*[@id="dialogCorMessage"]/div[@class="p tel2"]/em/text()').extract()[0]
             mobile = mobile[1:]
@@ -65,7 +64,6 @@ class SuppySpider(scrapy.Spider):
 
         if mobile != '':
             print('................................................')
-
 
             # 保存商品图片
             os_img_2_list = []
@@ -76,12 +74,12 @@ class SuppySpider(scrapy.Spider):
                 res_img = respone.xpath('//*[@id="thumblist"]/li/div/a/img/@src')
                 for img_url in res_img:
                     img_url = img_url.extract()
-                    img_url = 'https:' + img_url.strip()
+                    img_url = 'https:' + img_url.strip().replace('..100x100.jpg', '')
                     code_img = requests.get(url=img_url).content
                     img_name = str(random.randint(1, 999999))
                     with open('/home/imgServer/hc/{}/{}.jpg'.format(str_ran, img_name), 'wb') as f:
                         f.write(code_img)
-                    os_img_2 = 'http://img.ktcx.cn/hc/' + '{}/{}.jpg'.format(str_ran, img_name)
+                    os_img_2 = 'http://img.youkeduo.com.cn/hc/' + '{}/{}.jpg'.format(str_ran, img_name)
                     os_img_2_list.append(os_img_2)
                 os_img_2_str_1 = os_img_2_list[0]
                 os_img_2_str = ','.join(os_img_2_list)
@@ -103,7 +101,7 @@ class SuppySpider(scrapy.Spider):
                 if price.startswith('¥'):
                     price = price[1:]
                 if not price:
-                    price = ''
+                    price = '面议'
                 print('price', price)
             except:
                 print('price', price)
@@ -126,7 +124,7 @@ class SuppySpider(scrapy.Spider):
                 way = '1'
             item['way'] = way
 
-            sql_id = "SELECT one_level,two_level,three_level,keyword,com_keyword  FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'huicong_gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
+            sql_id = "SELECT one_level,two_level,three_level,keyword,com_keyword  FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
             cur.execute(sql_id)
             print('sql_id?????????????', sql_id)
             res_all_list = cur.fetchall()
@@ -159,7 +157,7 @@ class SuppySpider(scrapy.Spider):
                 strinfo = re.compile('<img.*?>')
                 html_2 = strinfo.sub('', html)
 
-                strinfo = re.compile('<br>')
+                strinfo = re.compile('<br.*?>')
                 html_3 = strinfo.sub('', html_2)
 
                 strinfo = re.compile('慧聪网')
@@ -171,13 +169,13 @@ class SuppySpider(scrapy.Spider):
                 for os_img_2_url in os_img_2_list:
                     os_img_2_url = '<img alt="{}" src="{}">'.format(title, os_img_2_url)
                     div_list.insert(1, os_img_2_url)
-                div_str = '<br>\n'.join(div_list)
+                div_str = '\n'.join(div_list)
 
                 html_all = html_4 + '\n' + div_str
                 # print(html_all)
             except Exception as e:
                 raise e
-            item['detail'] = str(html_4)
+            item['detail'] = str(html_all)
 
             # units
             units = ''
@@ -235,7 +233,7 @@ class SuppySpider(scrapy.Spider):
             # 公司url
             com_url = respone.xpath('/html/body/div[7]/div/table/tbody/tr/td[5]/a/@href')[0].extract()
             print('com_url.........', com_url)
-            item = self.parse_con(com_url, respone, item)
+            self.parse_con(com_url, respone, item)
             yield item
 
     @staticmethod
@@ -272,7 +270,7 @@ class SuppySpider(scrapy.Spider):
             print('scopes', scopes)
         item['scopes'] = scopes
 
-        return time
+        # return time
 
 
 

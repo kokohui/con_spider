@@ -2,8 +2,8 @@ import pymysql
 
 
 class HuiCongGongPipeline(object):
-    cursor = None  # mysql游标对象声明
-    cur = None  # 获取一个游标
+    cursor = None
+    cur = None
 
     def open_spider(self, spdier):
         print('爬虫开始》》》》')
@@ -49,7 +49,7 @@ class HuiCongGongPipeline(object):
                     '', '',
                     '', item['address'], item['summary'], item['summary'], item['summary'], item['scopes'], '', '', '', '',
                     '', '', 123456, item['mobile'], '', 0, 0, 0, 0, 0,
-                    0, '', '75cebe2e19434dcd9c4586f4621e6f9c', '', '', '', '', item['com_keyword'], 1))
+                    0, '', '75cebe2e19434dcd9c4586f4621e6f9c', '', '', '', '', item['com_keyword'], 0))
 
                 print('.......................................')
                 print('data', data)
@@ -91,7 +91,7 @@ class HuiCongGongPipeline(object):
         return item
 
     def close_spider(self, spider):
-        sql_id = "SELECT id FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'huicong_chengxin' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
+        sql_id = "SELECT id FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'chengxin' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
         self.cur.execute(sql_id)
         res_all_list = self.cur.fetchall()
         id = res_all_list[0][0]

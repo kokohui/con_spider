@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9eafdd0a-d390-48fd-92f2-a749f2a242ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../慧聪网抓取/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/ceeshi2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/ceshi.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/hh.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,10 +60,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="822" />
-    <option name="y" value="49" />
+    <option name="x" value="399" />
+    <option name="y" value="146" />
     <option name="width" value="714" />
-    <option name="height" value="1017" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -139,6 +136,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1416" height="1026" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.107669614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
