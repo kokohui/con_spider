@@ -20,17 +20,19 @@ cur = conn.cursor()  # 获取一个游标
 
 class SuppySpider(scrapy.Spider):
     name = 'suppy'
+    # start_url = 'https://s.hc360.com/seller/search.html?kwd=%E8%A1%A3%E6%9C%8D&pnum=2&ee=2'
 
     def start_requests(self):
         """初始url"""
-        sql_id = "SELECT url,id FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'huicong_gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
+
+        sql_id = "SELECT url,id FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'huicong_gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 2 "
         cur.execute(sql_id)
         res_all_list = cur.fetchall()
-        url = res_all_list[0][0]
-        for num in range(1, 2):
-            start_url = url.format(str(num))
-            # start_url = 'https://s.hc360.com/seller/search.html?kwd=%E8%A1%A3%E6%9C%8D&pnum=2&ee=2'
-            yield Request(url=start_url, callback=self.parse)
+        for res_one_list in res_all_list:
+            url = res_one_list[0]
+            for num in range(1, 2):
+                start_url = url.format(str(num))
+                yield Request(url=start_url, callback=self.parse)
 
     def parse(self, response):
         """
@@ -38,6 +40,7 @@ class SuppySpider(scrapy.Spider):
         :param response:
         :return:
         """
+        print('>>>>>>>>>>>>>>>', response)
         res_li_list = response.xpath('//div[@class="wrap-grid"]//li[@class="grid-list"]')
 
         for res_li in res_li_list:
@@ -55,7 +58,6 @@ class SuppySpider(scrapy.Spider):
         mobile = ''
         result_count = 0
         try:
-            # mobile = re.findall('<li class="header-info-mobile">手机：<strong>(.*?)</strong></li>', response.text, re.S)[0]
             mobile = respone.xpath('//*[@id="dialogCorMessage"]/div[@class="p tel2"]/em/text()').extract()[0]
             mobile = mobile[1:]
         except:
@@ -72,7 +74,6 @@ class SuppySpider(scrapy.Spider):
                 os.makedirs('/home/imgServer/hc/{}'.format(str_ran))
                 #     将图片链接保存到硬盘
                 res_img = respone.xpath('//*[@id="thumblist"]/li/div/a/img/@src')
-                # os_img_2_list = []
                 for img_url in res_img:
                     img_url = img_url.extract()
                     img_url = 'https:' + img_url.strip()
@@ -234,8 +235,8 @@ class SuppySpider(scrapy.Spider):
             # 公司url
             com_url = respone.xpath('/html/body/div[7]/div/table/tbody/tr/td[5]/a/@href')[0].extract()
             print('com_url.........', com_url)
-            self.parse_con(com_url, respone, item)
-            return item
+            item = self.parse_con(com_url, respone, item)
+            yield item
 
     @staticmethod
     def parse_con(com_url, response, item):
@@ -246,7 +247,6 @@ class SuppySpider(scrapy.Spider):
         """
         headers = {
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
-
         }
         response_text = requests.get(url=com_url, headers=headers).text
         tree = etree.HTML(response_text)
@@ -272,4 +272,8 @@ class SuppySpider(scrapy.Spider):
             print('scopes', scopes)
         item['scopes'] = scopes
 
-        # return time
+        return time
+
+
+
+

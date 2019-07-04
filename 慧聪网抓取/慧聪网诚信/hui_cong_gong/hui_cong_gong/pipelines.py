@@ -31,7 +31,6 @@ class HuiCongGongPipeline(object):
         result = self.cur.fetchall()
         result_count = int(result[0][0])
         if result_count == 0:
-
             # 企业信息数据库储存
             try:
                 sql = 'insert into `bus_user`(' \
