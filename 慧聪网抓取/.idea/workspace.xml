@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83005c95-0468-4852-bbe2-1c7597233f83" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1688爬取/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../1688爬取/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1688爬取/one688/one688/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/../1688爬取/one688/one688/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1688爬取/one688/one688/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../1688爬取/one688/one688/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1688爬取/one688/one688/spiders/spider_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/../1688爬取/one688/one688/spiders/spider_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../阿土伯爬取/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../阿土伯爬取/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,43 +16,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-                <element signature="e#562#1024#0" />
-                <element signature="e#1065#1415#0" />
-                <element signature="e#1458#1857#0" />
-                <element signature="e#1900#2301#0" />
-                <element signature="e#2345#9447#0" />
-                <element signature="e#4763#4904#0" />
-                <element signature="e#5540#6174#0" />
-                <element signature="e#6275#7154#0" />
-                <element signature="e#7351#7556#0" />
-                <element signature="e#9519#10538#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="88" column="30" lean-forward="true" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
-              <folding>
-                <element signature="e#129#720#0" />
-                <element signature="e#5774#6304#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
@@ -59,10 +25,6 @@
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
                 <element signature="e#1129#1556#0" />
-                <element signature="e#3458#3717#0" />
-                <element signature="e#3884#4025#0" />
-                <element signature="e#4653#5287#0" />
-                <element signature="e#8581#9628#0" />
               </folding>
             </state>
           </provider>
@@ -113,10 +75,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="399" />
-    <option name="y" value="146" />
+    <option name="x" value="693" />
     <option name="width" value="714" />
-    <option name="height" value="1040" />
+    <option name="height" value="1017" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -124,7 +85,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,43 +92,18 @@
               <item name="慧聪网抓取" type="b2602c69:ProjectViewProjectNode" />
               <item name="慧聪网抓取" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="慧聪网抓取" type="b2602c69:ProjectViewProjectNode" />
-              <item name="慧聪网抓取" type="462c0819:PsiDirectoryNode" />
-              <item name="慧聪网诚信" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="慧聪网抓取" type="b2602c69:ProjectViewProjectNode" />
-              <item name="慧聪网抓取" type="462c0819:PsiDirectoryNode" />
-              <item name="慧聪网诚信" type="462c0819:PsiDirectoryNode" />
-              <item name="hui_cong_gong" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="慧聪网抓取" type="b2602c69:ProjectViewProjectNode" />
-              <item name="慧聪网抓取" type="462c0819:PsiDirectoryNode" />
-              <item name="慧聪网诚信" type="462c0819:PsiDirectoryNode" />
-              <item name="hui_cong_gong" type="462c0819:PsiDirectoryNode" />
-              <item name="hui_cong_gong" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="慧聪网抓取" type="b2602c69:ProjectViewProjectNode" />
-              <item name="慧聪网抓取" type="462c0819:PsiDirectoryNode" />
-              <item name="慧聪网诚信" type="462c0819:PsiDirectoryNode" />
-              <item name="hui_cong_gong" type="462c0819:PsiDirectoryNode" />
-              <item name="hui_cong_gong" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../阿土伯爬取" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../1688爬取" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -240,18 +175,18 @@
       <workItem from="1561974484552" duration="2047000" />
       <workItem from="1562028606273" duration="3756000" />
       <workItem from="1562115710228" duration="20606000" />
-      <workItem from="1562201645986" duration="12158000" />
+      <workItem from="1562201645986" duration="12356000" />
+      <workItem from="1562288759821" duration="3697000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105365000" />
+    <option name="totallyTimeSpent" value="109260000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1416" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.022123894" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.06784661" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -265,7 +200,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.26569507" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37668163" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.37556055" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -379,131 +314,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ceeshi2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="211" column="30" lean-forward="true" selection-start-line="211" selection-start-column="30" selection-end-line="211" selection-end-column="30" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#1;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#table#1;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#3;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#strong#0;n#span#0;n#p#3;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#strong#0;n#span#0;n#p#3;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#strong#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#strong#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#strong#1;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#strong#1;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#s#0;n#span#0;n#span#0;n#strong#1;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#span#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#strong#0;n#span#0;n#span#0;n#span#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#strong#0;n#span#0;n#span#0;n#span#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#font#0;n#span#0;n#span#0;n#strong#0;n#span#0;n#span#0;n#span#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#font#0;n#span#0;n#span#0;n#strong#0;n#span#0;n#span#0;n#span#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#1;n#span#0;n#strong#0;n#span#0;n#span#0;n#span#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#strong#0;n#span#0;n#span#0;n#span#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#1;n#strong#0;n#span#0;n#span#0;n#span#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#span#1;n#strong#0;n#span#0;n#span#0;n#span#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#span#0;n#span#1;n#strong#0;n#span#0;n#span#0;n#span#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#span#0;n#span#1;n#strong#0;n#span#0;n#span#0;n#span#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#1;n#span#0;n#span#1;n#strong#0;n#span#0;n#span#0;n#span#0;n#s#0;n#spa#0;n#h3#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#spa#0;n#p#0;n#div#9;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#1;n#div#9;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#2;n#div#9;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#strong#0;n#li#0;n#ul#0;n#div#12;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#div#12;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#li#2;n#ul#0;n#div#12;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ceshi.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="206" column="7" lean-forward="true" selection-start-line="206" selection-start-column="7" selection-end-line="206" selection-end-column="7" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#span#0;n#p#1;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#1;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#1;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#2;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#3;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#3;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#4;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#5;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#5;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#6;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#7;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#7;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#8;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#9;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#9;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#10;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#11;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#11;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#12;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#13;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#13;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#14;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#15;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#15;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#16;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#17;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#17;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#18;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#19;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#19;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#20;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#21;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#21;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#22;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#23;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#23;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#strong#0;n#p#23;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#p#23;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#1;n#p#23;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#24;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#25;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#25;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#26;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#27;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#27;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#28;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#29;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#29;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#30;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#31;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#31;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#32;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#33;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#33;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#34;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#35;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#35;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#36;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#37;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#37;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#38;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#39;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#p#39;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#40;n#span#0;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ceeshi2.html" />
+    <entry file="file://$PROJECT_DIR$/ceshi.html" />
     <entry file="file://$PROJECT_DIR$/慧聪网供应/hui_cong_gong/hui_cong_gong/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
@@ -564,6 +376,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+            <element signature="e#562#1024#0" />
+            <element signature="e#1065#1415#0" />
+            <element signature="e#1458#1857#0" />
+            <element signature="e#1900#2301#0" />
+            <element signature="e#2345#9447#0" />
+            <element signature="e#4763#4904#0" />
+            <element signature="e#5540#6174#0" />
+            <element signature="e#6275#7154#0" />
+            <element signature="e#7351#7556#0" />
+            <element signature="e#9519#10538#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -582,30 +414,6 @@
           <folding>
             <element signature="e#24#37#0" expanded="true" />
             <element signature="e#1129#1556#0" />
-            <element signature="e#3458#3717#0" />
-            <element signature="e#3884#4025#0" />
-            <element signature="e#4653#5287#0" />
-            <element signature="e#8581#9628#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-            <element signature="e#562#1024#0" />
-            <element signature="e#1065#1415#0" />
-            <element signature="e#1458#1857#0" />
-            <element signature="e#1900#2301#0" />
-            <element signature="e#2345#9447#0" />
-            <element signature="e#4763#4904#0" />
-            <element signature="e#5540#6174#0" />
-            <element signature="e#6275#7154#0" />
-            <element signature="e#7351#7556#0" />
-            <element signature="e#9519#10538#0" />
           </folding>
         </state>
       </provider>

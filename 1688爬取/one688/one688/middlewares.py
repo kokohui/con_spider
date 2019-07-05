@@ -7,6 +7,7 @@
 
 from scrapy import signals
 from time import sleep
+from scrapy.http import HtmlResponse
 
 
 class One688DownloaderMiddleware(object):
@@ -25,6 +26,29 @@ class One688DownloaderMiddleware(object):
 
     def process_response(self, request, response, spider):
         model_urls = spider.model_urls
+        bro = spider.bro
+        if request.url in model_urls:
+
+            bro.get(url=request.url)
+            sleep(3)
+
+            iframe = bro.find_element_by_xpath('//iframe')  # 找到“嵌套”的iframe
+            bro.switch_to.frame(iframe)  # 切换到iframe
+            sleep(2)
+
+            bro.find_element_by_id('J_Quick2Static').click()
+            sleep(2)
+
+            bro.find_element_by_id('TPL_username_1').send_keys('辉哥又来啦')
+            sleep(2)
+            bro.find_element_by_id('TPL_password_1').send_keys('kong267871')
+            sleep(2)
+            bro.find_element_by_id('J_SubmitStatic').click()
+            sleep(2)
+
+            page_text = bro.page_source
+
+            return HtmlResponse(url=bro.current_url, body=page_text, encoding='utf-8', request=request)
 
         return response
 

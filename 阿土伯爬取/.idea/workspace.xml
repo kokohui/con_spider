@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9eafdd0a-d390-48fd-92f2-a749f2a242ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../慧聪网抓取/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +55,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="399" />
     <option name="y" value="146" />
     <option name="width" value="714" />
@@ -127,16 +123,15 @@
       <workItem from="1562028603582" duration="15109000" />
       <workItem from="1562115721844" duration="709000" />
       <workItem from="1562122075253" duration="5267000" />
-      <workItem from="1562207842619" duration="1807000" />
+      <workItem from="1562207842619" duration="1810000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43345000" />
+    <option name="totallyTimeSpent" value="43348000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1416" height="1026" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1416" height="1026" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.107669614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
