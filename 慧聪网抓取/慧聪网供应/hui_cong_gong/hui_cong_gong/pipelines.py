@@ -20,6 +20,7 @@ class HuiCongGongPipeline(object):
         self.cur.execute(sql_count)
         result = self.cur.fetchall()
         result_count = int(result[0][0])
+        print('result_count........................', result_count)
         if result_count == 0:
 
             # 数据库最大id查询
@@ -71,7 +72,9 @@ class HuiCongGongPipeline(object):
 
             # 产品信息存储
             try:
-                sql_in = "INSERT INTO `bus_product` (`create_by`, `create_date`, `is_del`, `list_img`, `price`, `title`,`way`,`one_level_id`, `two_level_id`, `three_level_id`, `custom_id`, `keywords`,`models`,`standards`, `imgs`, `sort`, `update_time`, `state`, `is_verify`, `verify_remark`,`verify_time`, `verify_by`, `detail`, `types`, `start_time`, `end_time`, `num`, `units`,`money_units`, `province_id`, `province_name`, `city_id`, `city_name`, `view_count`,`inquiry_count`,`provider_id`, `provider_name`, `is_import`, `com_name`, `linkman`,`mobile`, `add_by`) VALUE(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+                sql_in = "INSERT INTO `bus_product` (`create_by`, `create_date`, `is_del`, `list_img`, `price`, `title`,`way`,`one_level_id`, `two_level_id`, `three_level_id`, `custom_id`, `keywords`,`models`,`standards`, `imgs`, `sort`, `update_time`, `state`, `is_verify`, `verify_remark`,`verify_time`, `verify_by`, `detail`, `types`, `start_time`, `end_time`, `num`, `units`,`money_units`, `province_id`, `province_name`, `city_id`, `city_name`, `view_count`,`inquiry_count`,`provider_id`, `provider_name`, `is_import`, `com_name`, `linkman`,`mobile`, `add_by`,`one_class_name`, `one_class_id`, `two_class_name`, `two_class_id`, `tree_class_name`, `tree_class_id`)" \
+                         "VALUE " \
+                         "(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,    %s, %s, %s, %s, %s, %s)"
                 # print('sql', sql)
                 data = self.cur.execute(sql_in, (
                     res_num, item['create_date'], '0', item['list_img'], item['price'], item['title'], item['way'],
@@ -81,7 +84,9 @@ class HuiCongGongPipeline(object):
                     item['units'],
                     '元', '', '', '', '', '0', '0',
                     '1ec40ecd3cf64908941b5f7679f19d2b', '', '0', item['com_name'], item['linkman'], item['mobile'],
-                    '43e9737882af413095f612ef34412a8f'))  # 单条插入
+                    '43e9737882af413095f612ef34412a8f', item['one_class_name'], '',
+                    item['two_class_name'], '', item['tree_class_name'],
+                    item['tree_class_id']))  # 单条插入
                 print('.......................................')
                 print('data', data)
 
@@ -92,14 +97,14 @@ class HuiCongGongPipeline(object):
             return item
 
     def close_spider(self, spider):
-        sql_id = "SELECT id FROM bus_spider_data WHERE  source='慧聪网'AND TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
-        self.cur.execute(sql_id)
-        res_all_list = self.cur.fetchall()
-        id = res_all_list[0][0]
-        sql_insert = "UPDATE ktcx_buschance.bus_spider_data SET isuse='1' WHERE id={}".format(id)
-        print(sql_insert)
-        self.cur.execute(sql_insert)
-        self.conn.commit()
+        # sql_id = "SELECT id FROM bus_spider_data WHERE  source='慧聪网'AND TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
+        # self.cur.execute(sql_id)
+        # res_all_list = self.cur.fetchall()
+        # id = res_all_list[0][0]
+        # sql_insert = "UPDATE ktcx_buschance.bus_spider_data SET isuse='1' WHERE id={}".format(id)
+        # print(sql_insert)
+        # self.cur.execute(sql_insert)
+        # self.conn.commit()
 
         print('爬虫结束>>>>>>>>')
         self.cur.close()

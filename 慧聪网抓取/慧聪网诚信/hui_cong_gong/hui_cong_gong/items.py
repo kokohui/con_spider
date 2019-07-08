@@ -25,7 +25,13 @@ class HuiCongGongItem(scrapy.Item):
     linkman = scrapy.Field()
     mobile = scrapy.Field()
     address = scrapy.Field()
-
     summary = scrapy.Field()
     scopes = scrapy.Field()
     com_keyword = scrapy.Field()
+
+    one_class_name = scrapy.Field()
+    one_class_id = scrapy.Field()
+    two_class_name = scrapy.Field()
+    two_class_id = scrapy.Field()
+    tree_class_name = scrapy.Field()
+    tree_class_id = scrapy.Field()

@@ -20,32 +20,52 @@ cur = conn.cursor()  # 获取一个游标
 
 class SuppySpider(scrapy.Spider):
     name = 'suppy'
-    # start_url = 'https://s.hc360.com/seller/search.html?kwd=%E8%A1%A3%E6%9C%8D&pnum=2&ee=2'
-
-    def start_requests(self):
-        """初始url"""
-
-        sql_id = "SELECT url,id FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
-        cur.execute(sql_id)
-        res_all_list = cur.fetchall()
-        for res_one_list in res_all_list:
-            url = res_one_list[0]
-            for num in range(1, 2):
-                start_url = url.format(str(num))
-                yield Request(url=start_url, callback=self.parse)
+    start_urls = ['https://www.hc360.com/']
 
     def parse(self, response):
+        """获取123目录名字, url"""
+
+        item = HuiCongGongItem()
+        div_list = response.xpath('//*[@id="category"]/div')
+        for div in div_list:
+            one_class_name = div.xpath('./@data-name')[0].extract()
+            item['one_class_name'] = one_class_name
+
+            li_list = div.xpath('./div[@class="sideBarLeft"]//li')
+            for li in li_list:
+                two_class_name = li.xpath('./span/text()')[0].extract()
+                item['two_class_name'] = two_class_name
+
+                a_list = li.xpath('./div[@class="sideBarLinkBox"]/a')
+                for a in a_list:
+                    tree_class_name = a.xpath('./text()')[0].extract()
+                    item['tree_class_name'] = tree_class_name
+
+                    tree_class_url = a.xpath('./@href')[0].extract()
+                    tree_class_id = tree_class_url.split('/')[-1].replace('.html', '')
+                    print('tree_class_id', tree_class_id)
+                    item['tree_class_id'] = tree_class_id
+
+                    for num in range(1, 2):
+
+                        url = 'https://s.hc360.com/seller/search.html?kwd={}&pnum={}&ee=2'.format(tree_class_name, num)
+                        print(url)
+                        yield Request(url=url, meta={'item': item}, callback=self.parse_1)
+
+    def parse_1(self, response):
         """
         获取商品详情页url
         :param response:
         :return:
         """
         print('>>>>>>>>>>>>>>>', response)
+        item = response.meta['item']
         res_li_list = response.xpath('//div[@class="wrap-grid"]//li[@class="grid-list"]')
 
         for res_li in res_li_list:
             res_url = 'https:' + res_li.xpath('./div[@class="NewItem"]/div[@class="picmid pRel"]/a/@href')[0].extract()
-            yield Request(url=res_url, callback=self.parse_2)
+            # print(res_url)
+            yield Request(url=res_url, callback=self.parse_2, meta={'item': item})
 
     def parse_2(self, respone):
         """
@@ -53,7 +73,7 @@ class SuppySpider(scrapy.Spider):
         :param respone:
         :return:
         """
-        item = HuiCongGongItem()
+        item = respone.meta['item']
 
         mobile = ''
         try:
@@ -202,7 +222,7 @@ class SuppySpider(scrapy.Spider):
             linkman = ''
             try:
                 linkman = respone.xpath('//*[@id="dialogCorMessage"]/div[@class="p name"]/em/text()').extract()[0]
-                linkman = linkman[1:]
+                linkman = str(linkman[1:]).replace(u'\xa0', u' ')
                 print('linkman', linkman)
             except:
                 print('linkman', linkman)
@@ -261,7 +281,6 @@ class SuppySpider(scrapy.Spider):
         try:
 
             scopes = tree.xpath('//div[@class="profileTab"]/table//tr[1]/td[1]/a/text()')
-            print('scopes', scopes)
             scopes = str(scopes).strip('[').strip(']').replace("'", "")
             if not scopes:
                 scopes = '-'

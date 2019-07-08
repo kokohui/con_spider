@@ -22,29 +22,58 @@ cur = conn.cursor()  # 获取一个游标
 class SuppySpider(scrapy.Spider):
     name = 'suppy'
 
-    def start_requests(self):
-        """初始url"""
+    # def start_requests(self):
+    #     """初始url"""
+    #
+    #     sql_id = "SELECT url,id FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'chengxin' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 2 "
+    #     cur.execute(sql_id)
+    #     res_all_list = cur.fetchall()
+    #     for res_one_list in res_all_list:
+    #         url = res_one_list[0]
+    #         for num in range(1, 2):
+    #             start_url = url.format(str(num))
+    #             yield Request(url=start_url, callback=self.parse)\
 
-        sql_id = "SELECT url,id FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'chengxin' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 2 "
-        cur.execute(sql_id)
-        res_all_list = cur.fetchall()
-        for res_one_list in res_all_list:
-            url = res_one_list[0]
-            for num in range(1, 2):
-                start_url = url.format(str(num))
-                yield Request(url=start_url, callback=self.parse)
+    start_urls = ['https://www.hc360.com/']
 
     def parse(self, response):
+        """获取123目录名字, url"""
+
+        item = HuiCongGongItem()
+        div_list = response.xpath('//*[@id="category"]/div')
+        for div in div_list:
+            one_class_name = div.xpath('./@data-name')[0].extract()
+            item['one_class_name'] = one_class_name
+
+            li_list = div.xpath('./div[@class="sideBarLeft"]//li')
+            for li in li_list:
+                two_class_name = li.xpath('./span/text()')[0].extract()
+                item['two_class_name'] = two_class_name
+
+                a_list = li.xpath('./div[@class="sideBarLinkBox"]/a')
+                for a in a_list:
+                    tree_class_name = a.xpath('./text()')[0].extract()
+                    item['tree_class_name'] = tree_class_name
+
+                    tree_class_url = a.xpath('./@href')[0].extract()
+                    tree_class_id = tree_class_url.split('/')[-1].replace('.html', '')
+                    print('tree_class_id', tree_class_id)
+                    item['tree_class_id'] = tree_class_id
+
+                    for num in range(1, 2):
+                        url = 'https://s.hc360.com/seller/search.html?kwd={}&pnum={}&ee=2'.format(tree_class_name, num)
+                        yield Request(url=url, meta={'item': item}, callback=self.parse_1)
+
+    def parse_1(self, response):
         """
         获取商品详情页url
         :param response:
         :return:
         """
-
+        item = response.meta['item']
         print('parse>>>>>>>>>>>>>>>>>>>>')
         res_url = 'https:' + response.xpath('//div[@class="wrap-grid"]//li[1]/div[@class="NewItem"]/div[@class="picmid pRel"]/a/@href')[0].extract()
-        print(res_url)
-        yield Request(url=res_url, callback=self.parse_2)
+        yield Request(url=res_url, callback=self.parse_2, meta={'item': item})
 
     def parse_2(self, response):
         """
@@ -53,9 +82,9 @@ class SuppySpider(scrapy.Spider):
         :return:
         """
         print('parse_2>>>>>>>>>>>>>>>>>>')
-        item = HuiCongGongItem()
+        # item = HuiCongGongItem()
+        item = response.meta['item']
         res_pro_url = response.xpath('/html/body/div[7]/div/table/tbody/tr/td[7]/a/@href')[0].extract()
-        print('///////////////////////////', res_pro_url)
         yield Request(url=res_pro_url, callback=self.parse_3, meta={'item': item})
 
     def parse_3(self, response):
@@ -77,7 +106,7 @@ class SuppySpider(scrapy.Spider):
         :param respone:
         :return:
         """
-        item = HuiCongGongItem()
+        item = respone.meta['item']
 
         mobile = ''
         try:
@@ -260,7 +289,7 @@ class SuppySpider(scrapy.Spider):
             # 公司url
             com_url = respone.xpath('/html/body/div[7]/div/table/tbody/tr/td[5]/a/@href')[0].extract()
             print('com_url.........', com_url)
-            item = self.parse_con(com_url, respone, item)
+            self.parse_con(com_url, respone, item)
             yield item
 
     @staticmethod
@@ -295,7 +324,7 @@ class SuppySpider(scrapy.Spider):
             print('scopes', scopes)
         item['scopes'] = scopes
 
-        return time
+        # return time
 
 
 
