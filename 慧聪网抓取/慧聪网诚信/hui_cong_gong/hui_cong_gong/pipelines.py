@@ -43,11 +43,13 @@ class HuiCongGongPipeline(object):
                       'VALUE' \
                       '(%s,%s,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'
                 data = self.cur.execute(sql, (
-                    self.res_num, item['com_name'], item['list_img'], item['mobile'], '123456', 'pc', 'supply', '1', 0, 0,
+                    self.res_num, item['com_name'], item['list_img'], item['mobile'], '123456', 'pc', 'supply', '1', 0,
+                    0,
                     0, 0, 0, '0', item['com_name'], item["linkman"], item['mobile'], '', '', item['create_date'],
                     item['create_date'], '', '0', '5fc530f6b8574e03b6f13794ec64c1f8', item['create_date'], '', '', '',
                     '', '',
-                    '', item['address'], item['summary'], item['summary'], item['summary'], item['scopes'], '', '', '', '',
+                    '', item['address'], item['summary'], item['summary'], item['summary'], item['scopes'], '', '', '',
+                    '',
                     '', '', 123456, item['mobile'], '', 0, 0, 0, 0, 0,
                     0, '', '75cebe2e19434dcd9c4586f4621e6f9c', '', '', '', '', item['com_keyword'], 0))
 
@@ -60,9 +62,8 @@ class HuiCongGongPipeline(object):
 
             try:
                 sql_in_2 = "insert into `bus_user_industry` (`create_by`, `one_level_id`, `two_level_id`, `three_level_id`, `sort`, `is_del`) values(%s,%s,%s,%s,%s,%s)"
-                # sql_in_2 = "insert into `bus_user_industry` (`create_by`, `one_level_id`, `two_level_id`, `three_level_id`, `sort`, `is_del`) values('1', '2', '3','4','1','0')"
                 self.cur.execute(sql_in_2, (
-                self.res_num, item['one_level_id'], item['two_level_id'], item['three_level_id'], '1', '0'))
+                    self.res_num, item['one_level_id'], item['two_level_id'], item['three_level_id'], '1', '0'))
                 self.conn.commit()  # 提交
                 print('sql_in_2 添加成功')
             except Exception as e:
@@ -73,7 +74,6 @@ class HuiCongGongPipeline(object):
             sql_in = "INSERT INTO `bus_product` (`create_by`, `create_date`, `is_del`, `list_img`, `price`, `title`,`way`,`one_level_id`, `two_level_id`, `three_level_id`, `custom_id`, `keywords`,`models`,`standards`, `imgs`, `sort`, `update_time`, `state`, `is_verify`, `verify_remark`,`verify_time`, `verify_by`, `detail`, `types`, `start_time`, `end_time`, `num`, `units`,`money_units`, `province_id`, `province_name`, `city_id`, `city_name`, `view_count`,`inquiry_count`,`provider_id`, `provider_name`, `is_import`, `com_name`, `linkman`,`mobile`, `add_by`,`one_class_name`, `one_class_id`, `two_class_name`, `two_class_id`, `tree_class_name`, `tree_class_id`)" \
                      "VALUE " \
                      "(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,    %s, %s, %s, %s, %s, %s)"
-            # print('sql', sql)
             data = self.cur.execute(sql_in, (
                 self.res_num, item['create_date'], '0', item['list_img'], item['price'], item['title'], item['way'],
                 item['one_level_id'], item['two_level_id'], item['three_level_id'], 0, item['keywords'], '',

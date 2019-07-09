@@ -41,8 +41,12 @@ class GongSiSpider(scrapy.Spider):
         :param response:
         :return:
         """
+        print('parse_2>>>>>>>>>>>>')
         # li_list_2 = response.xpath('//*[@id="compList"]/li/div[@class="company-product"]/div[@class="through-box"]//li[1]/a/@href')[1:]
-        li_list_2 = response.xpath('//h1[@class="clearfix"]/a/@href')[1:]
+        # li_list_2 = response.xpath('//h1[@class="clearfix"]/a/@href')[1:]
+        li_list_2 = response.xpath('//div[@class="product-left-new clearfix"]//li/a/@href')[1:]
+
+        print(li_list_2)
         for li_2 in li_list_2:
             li_2 = li_2.extract()
             yield Request(url=li_2, callback=self.parse_3)

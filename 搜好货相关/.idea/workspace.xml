@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61eaa30e-a7ef-4df9-b08e-ebe4c465dec4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../1688爬取/.idea/1688爬取.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/搜好货相关.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../首商网爬取/.idea/首商网爬取.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../乐宇/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../乐宇/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../乐宇/le_yu/le_yu/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../乐宇/le_yu/le_yu/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../乐宇/le_yu/le_yu/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../乐宇/le_yu/le_yu/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../乐宇/le_yu/le_yu/spiders/sitong.py" beforeDir="false" afterPath="$PROJECT_DIR$/../乐宇/le_yu/le_yu/spiders/sitong.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../慧聪网抓取/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/会聪网信息采集/hui_cong_wang/hui_cong_wang/spiders/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/会聪网信息采集/hui_cong_wang/hui_cong_wang/spiders/data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sou_hao_huo_pag_1_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sou_hao_huo_pag_1_2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py" beforeDir="false" afterPath="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py" beforeDir="false" afterPath="$PROJECT_DIR$/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py" afterDir="false" />
     </list>
@@ -31,19 +16,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-114">
-              <caret line="194" column="37" lean-forward="true" selection-start-line="194" selection-start-column="37" selection-end-line="194" selection-end-column="37" />
+            <state relative-caret-position="322">
+              <caret line="46" column="89" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="89" />
               <folding>
-                <element signature="e#895#978#0" />
-                <element signature="e#1021#1431#0" />
                 <element signature="e#1474#2925#0" />
                 <element signature="e#1678#2056#0" />
+                <element signature="e#2985#9470#0" />
                 <element signature="e#3019#4171#0" />
                 <element signature="e#4569#5067#0" />
                 <element signature="e#5344#5732#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="116" column="28" lean-forward="true" selection-start-line="116" selection-start-column="28" selection-end-line="116" selection-end-column="28" />
+              <folding>
+                <element signature="e#528#1061#0" />
+                <element signature="e#1104#1416#0" />
+                <element signature="e#1459#1758#0" />
+                <element signature="e#1801#3887#0" />
+                <element signature="e#2270#3843#0" />
+                <element signature="e#3932#4356#0" />
+                <element signature="e#4401#4631#0" />
+                <element signature="e#4692#10269#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/pipelines.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="91" column="23" lean-forward="true" selection-start-line="91" selection-start-column="23" selection-end-line="99" selection-end-column="28" />
+              <folding>
+                <element signature="e#435#5721#0" />
               </folding>
             </state>
           </provider>
@@ -64,7 +79,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/middlewares.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="169">
               <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#247#602#0" />
@@ -78,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
+            <state relative-caret-position="-109">
               <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
             </state>
           </provider>
@@ -97,11 +112,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py" />
         <option value="D:/公司爬虫2/chuan_zhong2222/chuan_zhong/middlewares.py" />
-        <option value="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py" />
         <option value="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/middlewares.py" />
         <option value="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/settings.py" />
+        <option value="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/pipelines.py" />
+        <option value="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py" />
+        <option value="$PROJECT_DIR$/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py" />
       </list>
     </option>
   </component>
@@ -115,10 +131,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="268" />
-    <option name="y" value="150" />
-    <option name="width" value="939" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="693" />
+    <option name="width" value="714" />
     <option name="height" value="1017" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -137,18 +152,18 @@
             <path>
               <item name="搜好货相关" type="b2602c69:ProjectViewProjectNode" />
               <item name="搜好货相关" type="462c0819:PsiDirectoryNode" />
-              <item name="sou_hao_huo_pag_1_2" type="462c0819:PsiDirectoryNode" />
+              <item name="sou_hao_huo_pag_1_end" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="搜好货相关" type="b2602c69:ProjectViewProjectNode" />
               <item name="搜好货相关" type="462c0819:PsiDirectoryNode" />
-              <item name="sou_hao_huo_pag_1_2" type="462c0819:PsiDirectoryNode" />
+              <item name="sou_hao_huo_pag_1_end" type="462c0819:PsiDirectoryNode" />
               <item name="sou_hao_huo_pag_1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="搜好货相关" type="b2602c69:ProjectViewProjectNode" />
               <item name="搜好货相关" type="462c0819:PsiDirectoryNode" />
-              <item name="sou_hao_huo_pag_1_2" type="462c0819:PsiDirectoryNode" />
+              <item name="sou_hao_huo_pag_1_end" type="462c0819:PsiDirectoryNode" />
               <item name="sou_hao_huo_pag_1" type="462c0819:PsiDirectoryNode" />
               <item name="spiders" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -160,8 +175,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../阿土伯爬取" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -195,16 +211,18 @@
       <workItem from="1561941846594" duration="3456000" />
       <workItem from="1562028605997" duration="596000" />
       <workItem from="1562115631823" duration="1895000" />
+      <workItem from="1562635409664" duration="1447000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17519000" />
+    <option name="totallyTimeSpent" value="18966000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1416" height="1026" extended-state="7" />
+    <frame x="-8" y="-8" width="1416" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.031710915" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12020649" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -218,7 +236,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.20179372" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.50784755" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -235,13 +253,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -269,17 +280,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/90998/142887.jpg" />
     <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/203018/264806.jpg" />
-    <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" selection-start-line="2" selection-end-line="4" />
-          <folding>
-            <element signature="e#435#5721#0" />
-            <element signature="e#5767#6275#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/公司爬虫2/chuan_zhong2222/chuan_zhong/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -304,14 +304,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
+        <state relative-caret-position="-109">
           <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="169">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#247#602#0" />
@@ -331,18 +331,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="91" column="23" lean-forward="true" selection-start-line="91" selection-start-column="23" selection-end-line="99" selection-end-column="28" />
+          <folding>
+            <element signature="e#435#5721#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="194" column="37" lean-forward="true" selection-start-line="194" selection-start-column="37" selection-end-line="194" selection-end-column="37" />
+        <state relative-caret-position="322">
+          <caret line="46" column="89" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="89" />
           <folding>
-            <element signature="e#895#978#0" />
-            <element signature="e#1021#1431#0" />
             <element signature="e#1474#2925#0" />
             <element signature="e#1678#2056#0" />
+            <element signature="e#2985#9470#0" />
             <element signature="e#3019#4171#0" />
             <element signature="e#4569#5067#0" />
             <element signature="e#5344#5732#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="116" column="28" lean-forward="true" selection-start-line="116" selection-start-column="28" selection-end-line="116" selection-end-column="28" />
+          <folding>
+            <element signature="e#528#1061#0" />
+            <element signature="e#1104#1416#0" />
+            <element signature="e#1459#1758#0" />
+            <element signature="e#1801#3887#0" />
+            <element signature="e#2270#3843#0" />
+            <element signature="e#3932#4356#0" />
+            <element signature="e#4401#4631#0" />
+            <element signature="e#4692#10269#0" />
           </folding>
         </state>
       </provider>

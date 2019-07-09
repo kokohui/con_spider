@@ -41,8 +41,7 @@ class GongSiSpider(scrapy.Spider):
         :param response:
         :return:
         """
-
-        li_list_one = response.xpath('//div[@class="product-left-new clearfix"]/ul/li/div[@class="clearfix"]/div[@class="sm-list-parameter-new"]/h1/a/@href')[0].extract()
+        li_list_one = response.xpath('//div[@class="product-left-new clearfix"]//li/a/@href')[0].extract()
         yield Request(url=li_list_one, callback=self.parse_3)
 
     def parse_3(self, response):
@@ -304,7 +303,7 @@ class GongSiSpider(scrapy.Spider):
         item['mobile'] = str(mobile)
         print('数据完成..')
 
-        return item
+        # return item
 # cur.close()
 # conn.close()
 

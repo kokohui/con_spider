@@ -47,7 +47,6 @@ class SuppySpider(scrapy.Spider):
                     item['tree_class_id'] = tree_class_id
 
                     for num in range(1, 2):
-
                         url = 'https://s.hc360.com/seller/search.html?kwd={}&pnum={}&ee=2'.format(tree_class_name, num)
                         print(url)
                         yield Request(url=url, meta={'item': item}, callback=self.parse_1)
@@ -200,7 +199,8 @@ class SuppySpider(scrapy.Spider):
             # units
             units = ''
             try:
-                units = re.findall('<em class="number"> | 共<i id="totalNumber">.*?</i>(.*?)</em>', respone.text, re.S)[-1]
+                units = re.findall('<em class="number"> | 共<i id="totalNumber">.*?</i>(.*?)</em>', respone.text, re.S)[
+                    -1]
                 if not units:
                     units = ''
                 print('units', units)
@@ -290,7 +290,3 @@ class SuppySpider(scrapy.Spider):
         item['scopes'] = scopes
 
         # return time
-
-
-
-
