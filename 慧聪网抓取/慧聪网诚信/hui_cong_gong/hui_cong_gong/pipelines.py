@@ -13,7 +13,7 @@ class HuiCongGongPipeline(object):
         self.cur = self.conn.cursor()  # 获取一个游标
 
         # 数据库最大id查询~
-        self.res_num = ''
+        self.res_num = 0
         try:
             sql_1 = 'select max(id) from bus_user'
             self.cur.execute(sql_1)
@@ -74,7 +74,6 @@ class HuiCongGongPipeline(object):
             sql_in = "INSERT INTO `bus_product` (`create_by`, `create_date`, `is_del`, `list_img`, `price`, `title`,`way`,`one_level_id`, `two_level_id`, `three_level_id`, `custom_id`, `keywords`,`models`,`standards`, `imgs`, `sort`, `update_time`, `state`, `is_verify`, `verify_remark`,`verify_time`, `verify_by`, `detail`, `types`, `start_time`, `end_time`, `num`, `units`,`money_units`, `province_id`, `province_name`, `city_id`, `city_name`, `view_count`,`inquiry_count`,`provider_id`, `provider_name`, `is_import`, `com_name`, `linkman`,`mobile`, `add_by`,`one_class_name`, `one_class_id`, `two_class_name`, `two_class_id`, `tree_class_name`, `tree_class_id`)" \
                      "VALUE " \
                      "(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,    %s, %s, %s, %s, %s, %s)"
-            # print('sql', sql)
             data = self.cur.execute(sql_in, (
                 self.res_num, item['create_date'], '0', item['list_img'], item['price'], item['title'], item['way'],
                 item['one_level_id'], item['two_level_id'], item['three_level_id'], 0, item['keywords'], '',

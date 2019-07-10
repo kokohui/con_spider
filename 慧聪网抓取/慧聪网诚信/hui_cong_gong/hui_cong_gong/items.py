@@ -29,9 +29,12 @@ class HuiCongGongItem(scrapy.Item):
     scopes = scrapy.Field()
     com_keyword = scrapy.Field()
 
+    res_pro_url = scrapy.Field()
+
     one_class_name = scrapy.Field()
     one_class_id = scrapy.Field()
     two_class_name = scrapy.Field()
     two_class_id = scrapy.Field()
     tree_class_name = scrapy.Field()
     tree_class_id = scrapy.Field()
+    res_num = scrapy.Field()

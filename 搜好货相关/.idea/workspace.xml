@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61eaa30e-a7ef-4df9-b08e-ebe4c465dec4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../1688自定义/pynysql_db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应抓取/hui_cong_gong/hui_cong_gong/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应抓取/hui_cong_gong/hui_cong_gong/items.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应抓取/hui_cong_gong/hui_cong_gong/middlewares.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应抓取/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应抓取/hui_cong_gong/hui_cong_gong/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应抓取/hui_cong_gong/hui_cong_gong/spiders/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应抓取/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应抓取/hui_cong_gong/scrapy.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1688自定义/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../1688自定义/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1688自定义/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/../1688自定义/1688_spider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../慧聪网抓取/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../慧聪网抓取/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py" beforeDir="false" afterPath="$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py" beforeDir="false" afterPath="$PROJECT_DIR$/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,17 +30,17 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py">
+        <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="46" column="89" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="89" />
+            <state relative-caret-position="231">
+              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
               <folding>
-                <element signature="e#1474#2925#0" />
-                <element signature="e#1678#2056#0" />
-                <element signature="e#2985#9470#0" />
-                <element signature="e#3019#4171#0" />
-                <element signature="e#4569#5067#0" />
-                <element signature="e#5344#5732#0" />
+                <element signature="e#455#650#0" />
+                <element signature="e#1079#3739#0" />
+                <element signature="e#1124#3219#0" />
+                <element signature="e#3313#3680#0" />
+                <element signature="e#3785#5401#0" />
+                <element signature="e#5519#6052#0" />
               </folding>
             </state>
           </provider>
@@ -36,65 +49,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="116" column="28" lean-forward="true" selection-start-line="116" selection-start-column="28" selection-end-line="116" selection-end-column="28" />
+            <state relative-caret-position="169">
+              <caret line="305" column="21" lean-forward="true" selection-start-line="305" selection-start-column="21" selection-end-line="305" selection-end-column="21" />
               <folding>
                 <element signature="e#528#1061#0" />
-                <element signature="e#1104#1416#0" />
-                <element signature="e#1459#1758#0" />
-                <element signature="e#1801#3887#0" />
-                <element signature="e#2270#3843#0" />
-                <element signature="e#3932#4356#0" />
-                <element signature="e#4401#4631#0" />
-                <element signature="e#4692#10269#0" />
+                <element signature="e#1394#1693#0" />
+                <element signature="e#1736#3822#0" />
+                <element signature="e#2205#3778#0" />
+                <element signature="e#3867#4291#0" />
+                <element signature="e#4336#4566#0" />
+                <element signature="e#4627#10206#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/pipelines.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="91" column="23" lean-forward="true" selection-start-line="91" selection-start-column="23" selection-end-line="99" selection-end-column="28" />
-              <folding>
-                <element signature="e#435#5721#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/items.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-              <folding>
-                <element signature="e#211#795#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/middlewares.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#247#602#0" />
-                <element signature="e#653#2316#0" />
-                <element signature="e#2372#4015#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-109">
-              <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -121,18 +86,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/../阿土伯爬取/.idea/阿土伯爬取.iml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="693" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="354" />
+    <option name="y" value="43" />
     <option name="width" value="714" />
     <option name="height" value="1017" />
   </component>
@@ -212,17 +168,19 @@
       <workItem from="1562028605997" duration="596000" />
       <workItem from="1562115631823" duration="1895000" />
       <workItem from="1562635409664" duration="1447000" />
+      <workItem from="1562666622780" duration="1070000" />
+      <workItem from="1562725237457" duration="8521000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18966000" />
+    <option name="totallyTimeSpent" value="28557000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1416" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1416" height="1026" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12020649" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1379056" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -236,7 +194,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.50784755" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.41143498" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -253,16 +211,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="9" column="55" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="55" />
-          <folding>
-            <element signature="e#1124#3219#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -302,10 +250,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/settings.py">
+    <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-109">
-          <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
+        <state relative-caret-position="322">
+          <caret line="46" column="89" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <element signature="e#211#795#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -321,54 +279,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/items.py">
+    <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="e#211#795#0" />
-          </folding>
+        <state relative-caret-position="33">
+          <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="91" column="23" lean-forward="true" selection-start-line="91" selection-start-column="23" selection-end-line="99" selection-end-column="28" />
+        <state relative-caret-position="476">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding>
-            <element signature="e#435#5721#0" />
+            <element signature="e#839#1036#0" />
+            <element signature="e#1146#3221#0" />
+            <element signature="e#3315#3856#0" />
+            <element signature="e#3971#5638#0" />
+            <element signature="e#5767#6300#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/spiders/gong_si.py">
+    <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="46" column="89" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="89" />
+        <state relative-caret-position="231">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
           <folding>
-            <element signature="e#1474#2925#0" />
-            <element signature="e#1678#2056#0" />
-            <element signature="e#2985#9470#0" />
-            <element signature="e#3019#4171#0" />
-            <element signature="e#4569#5067#0" />
-            <element signature="e#5344#5732#0" />
+            <element signature="e#455#650#0" />
+            <element signature="e#1079#3739#0" />
+            <element signature="e#1124#3219#0" />
+            <element signature="e#3313#3680#0" />
+            <element signature="e#3785#5401#0" />
+            <element signature="e#5519#6052#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sou_hao_huo_pag_1_end/sou_hao_huo_pag_1/spiders/gong_si.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="116" column="28" lean-forward="true" selection-start-line="116" selection-start-column="28" selection-end-line="116" selection-end-column="28" />
+        <state relative-caret-position="169">
+          <caret line="305" column="21" lean-forward="true" selection-start-line="305" selection-start-column="21" selection-end-line="305" selection-end-column="21" />
           <folding>
             <element signature="e#528#1061#0" />
-            <element signature="e#1104#1416#0" />
-            <element signature="e#1459#1758#0" />
-            <element signature="e#1801#3887#0" />
-            <element signature="e#2270#3843#0" />
-            <element signature="e#3932#4356#0" />
-            <element signature="e#4401#4631#0" />
-            <element signature="e#4692#10269#0" />
+            <element signature="e#1394#1693#0" />
+            <element signature="e#1736#3822#0" />
+            <element signature="e#2205#3778#0" />
+            <element signature="e#3867#4291#0" />
+            <element signature="e#4336#4566#0" />
+            <element signature="e#4627#10206#0" />
           </folding>
         </state>
       </provider>

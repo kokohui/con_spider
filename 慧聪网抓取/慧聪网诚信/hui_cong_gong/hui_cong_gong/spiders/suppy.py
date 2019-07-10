@@ -25,30 +25,30 @@ class SuppySpider(scrapy.Spider):
     def parse(self, response):
         """获取123目录名字, url"""
 
-        item = HuiCongGongItem()
-        div_list = response.xpath('//*[@id="category"]/div')
-        for div in div_list:
-            one_class_name = div.xpath('./@data-name')[0].extract()
-            item['one_class_name'] = one_class_name
+        div = response.xpath('//*[@id="category"]/div')[0]
+        # for div in div_list:
+        one_class_name = div.xpath('./@data-name')[0].extract()
 
-            li_list = div.xpath('./div[@class="sideBarLeft"]//li')
-            for li in li_list:
-                two_class_name = li.xpath('./span/text()')[0].extract()
+        li_list = div.xpath('./div[@class="sideBarLeft"]//li')
+        for li in li_list:
+            two_class_name = li.xpath('./span/text()')[0].extract()
+            a_list = li.xpath('./div[@class="sideBarLinkBox"]/a')
+            for a in a_list:
+                tree_class_name = a.xpath('./text()')[0].extract()
+                tree_class_url = a.xpath('./@href')[0].extract()
+                print(tree_class_url)
+                tree_class_id = tree_class_url.split('/')[-1].replace('.html', '')
+
+                item = HuiCongGongItem()
+                item['one_class_name'] = one_class_name
                 item['two_class_name'] = two_class_name
+                item['tree_class_name'] = tree_class_name
+                item['tree_class_id'] = tree_class_id
 
-                a_list = li.xpath('./div[@class="sideBarLinkBox"]/a')
-                for a in a_list:
-                    tree_class_name = a.xpath('./text()')[0].extract()
-                    item['tree_class_name'] = tree_class_name
-
-                    tree_class_url = a.xpath('./@href')[0].extract()
-                    tree_class_id = tree_class_url.split('/')[-1].replace('.html', '')
-                    print('tree_class_id', tree_class_id)
-                    item['tree_class_id'] = tree_class_id
-
-                    for num in range(1, 2):
-                        url = 'https://s.hc360.com/seller/search.html?kwd={}&pnum={}&ee=2'.format(tree_class_name, num)
-                        yield Request(url=url, meta={'item': item}, callback=self.parse_1)
+                for num in range(1, 2):
+                    url = 'https://s.hc360.com/seller/search.html?kwd={}&pnum={}&ee=2'.format(tree_class_name, num)
+                    print(one_class_name, two_class_name, tree_class_name, tree_class_id)
+                    yield Request(url=url, meta={'item': item}, callback=self.parse_1)
 
     def parse_1(self, response):
         """
@@ -67,8 +67,57 @@ class SuppySpider(scrapy.Spider):
         解析公司信息获取产品信息
         """
         item = response.meta['item']
+
+        # # 数据库最大id查询~
+        # res_num = 0
+        # try:
+        #     sql_1 = 'select max(id) from bus_user'
+        #     cur.execute(sql_1)
+        #     res_num = int(cur.fetchone()[0]) + 1
+        #     print('res.......................', res_num)
+        # except:
+        #     print('查询错误.')
+        # item['res_num'] = res_num
+
+        # 商品列表url
         res_pro_url = response.xpath('/html/body/div[7]/div/table/tbody/tr/td[7]/a/@href')[0].extract()
-        yield Request(url=res_pro_url, callback=self.parse_3, meta={'item': item})
+        item['res_pro_url'] = res_pro_url
+
+        # 公司url
+        com_url = response.xpath('//html/body/div[7]/div/table/tbody/tr/td[5]/a/@href')[0].extract()
+        # item = self.parse_con(com_url, item)
+        yield Request(url=com_url, callback=self.parse_con, meta={'item': item})
+
+    def parse_con(self, response):
+        """
+        获取部分企业信息
+        """
+        # headers = {
+        #     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+        # }
+        # response_text = requests.get(url=com_url, headers=headers).text
+        # tree = etree.HTML(response_text)
+        item = response.meta['item']
+        summary = ''
+        try:
+            summary = response.xpath('/html/body/div[4]/div/div[2]/div/div[3]/div[2]/p/text()')[0].extract()
+            print('summary', summary)
+        except:
+            print('summary', summary)
+        item['summary'] = summary
+
+        scopes = '-'
+        try:
+            scopes = response.xpath('//div[@class="profileTab"]/table//tr[1]/td[1]/a/text()')[0].extract()
+            scopes = str(scopes).strip('[').strip(']').replace("'", "")
+            if not scopes:
+                scopes = '-'
+            print('scopes', scopes)
+        except:
+            print('scopes', scopes)
+        item['scopes'] = scopes
+
+        yield Request(url=item['res_pro_url'], callback=self.parse_3, meta={'item': item})
 
     def parse_3(self, response):
         """
@@ -85,14 +134,34 @@ class SuppySpider(scrapy.Spider):
         获取商品详情页信息
         """
         item = respone.meta['item']
+
+        res_num = ''
+        try:
+            sql_1 = 'select max(id) from bus_user'
+            cur.execute(sql_1)
+            res_num = int(cur.fetchone()[0]) + 1
+            print('res.......................', res_num)
+        except:
+            print('查询错误.')
+        item['res_num'] = res_num
+
+
         mobile = ''
+        result_count = ''
         try:
             mobile = respone.xpath('//*[@id="dialogCorMessage"]/div[@class="p tel2"]/em/text()').extract()[0]
             mobile = mobile[1:]
+            com_name = str(respone.xpath('//*[@id="dialogCorMessage"]/div[@class="p sate"]/em/text()').extract()[0])
+
+            # 查询公司存储个数, 如果没有则存储~
+            sql_count = "select count(0) from bus_user where company_name='{}'".format(com_name)
+            cur.execute(sql_count)
+            result = cur.fetchall()
+            result_count = int(result[0][0])
         except:
             print('没有手机号或公司重复')
 
-        if mobile != '':
+        if mobile != '' and result_count <= 1:
             print('................................................')
 
             # 保存商品图片
@@ -257,40 +326,9 @@ class SuppySpider(scrapy.Spider):
                 print('address', address)
             item['address'] = address
 
-            # 公司url
-            com_url = respone.xpath('/html/body/div[7]/div/table/tbody/tr/td[5]/a/@href')[0].extract()
-            print('com_url.........', com_url)
-            self.parse_con(com_url, item)
+            # # 公司url
+            # com_url = respone.xpath('/html/body/div[7]/div/table/tbody/tr/td[5]/a/@href')[0].extract()
+            # print('com_url.........', com_url)
+            # self.parse_con(com_url, item)
             yield item
-
-    @staticmethod
-    def parse_con(com_url, item):
-        """
-        获取部分企业信息
-        """
-        headers = {
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
-        }
-        response_text = requests.get(url=com_url, headers=headers).text
-        tree = etree.HTML(response_text)
-
-        summary = ''
-        try:
-            summary = tree.xpath('/html/body/div[4]/div/div[2]/div/div[3]/div[2]/p/text()')[0]
-            print('summary', summary)
-        except:
-            print('summary', summary)
-        item['summary'] = summary
-
-        scopes = '-'
-        try:
-            scopes = tree.xpath('//div[@class="profileTab"]/table//tr[1]/td[1]/a/text()')
-            scopes = str(scopes).strip('[').strip(']').replace("'", "")
-            if not scopes:
-                scopes = '-'
-            print('scopes', scopes)
-        except:
-            print('scopes', scopes)
-        item['scopes'] = scopes
-
-        # return time
+            # print(item)

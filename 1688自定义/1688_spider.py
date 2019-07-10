@@ -13,6 +13,7 @@ s = requests.session()
 
 
 class login():
+    """爬虫类"""
 
     def __init__(self):
 
@@ -29,7 +30,7 @@ class login():
         self.page_text = ''
         self.list_url_dedail = []
         self.cookies_dict = dict()
-        # self.con_url = ''
+        self.dict_data = {}  # 返回数据
 
     def sinin(self):
         """登录"""
@@ -96,6 +97,8 @@ class login():
     def parse_detail(self):
         """解析商品详情页内容"""
 
+        dict_data = self.dict_data
+
         cookies_dict = self.cookies_dict
         for res_url in self.list_url_dedail:
             response = s.get(url=res_url, headers=self.headers, cookies=cookies_dict)
@@ -127,6 +130,8 @@ class login():
                         os_img_2_list.append(os_img_2)
                 os_img_2_str_1 = os_img_2_list[0]
                 os_img_2_str = ','.join(os_img_2_list)
+                dict_data['list_img'] = os_img_2_str_1
+                dict_data['imgs'] = os_img_2_str
 
                 print('图片ok', os_img_2_list)
             except:
@@ -139,9 +144,11 @@ class login():
                 print('res_title', res_title)
             except:
                 print('res_title', res_title)
+            dict_data['title'] = res_title
 
             # detail详情
             res_detail_html = response
+            html_all = ''
             try:
                 soup = BeautifulSoup(res_detail_html, 'lxml')
                 html = str(soup.find('div', class_="detail-inside area-detail-feature"))
@@ -162,6 +169,7 @@ class login():
                 html_all = html_3 + '\n' + div_str
             except Exception as e:
                 raise e
+            dict_data['detail'] = html_all
 
 
             # 价格
@@ -176,6 +184,7 @@ class login():
                 print('res_price>>>>', res_price)
             except:
                 print('res_price', res_price)
+            dict_data['price'] = res_price
 
             # 单位
             unit = ''
@@ -184,6 +193,7 @@ class login():
                 print('unit', unit)
             except:
                 print('unit', unit)
+            dict_data['units'] = unit
 
             # 公司名
             con_name = ''
@@ -192,6 +202,7 @@ class login():
                 print('con_name', con_name)
             except:
                 print('con_name', con_name)
+            dict_data['con_name'] = con_name
 
             # 联系地址
             con_adress = ''
@@ -200,6 +211,7 @@ class login():
                 print('con_adress', con_adress)
             except:
                 print('con_adress', con_adress)
+            dict_data['address'] = con_adress
 
             # 公司详情url, 和联系方式详情url
             con_url = ''
@@ -212,12 +224,14 @@ class login():
                 print('con_url', con_url)
 
             sleep(3)
-            self.parse_con(self, con_url)
+            self.parse_con(self, con_url, dict_data)
             sleep(3)
-            self.parse_link(self, link_url)
+            self.parse_link(self, link_url, dict_data)
+
+            print(dict_data)
 
     @staticmethod
-    def parse_link(self, link_url):
+    def parse_link(self, link_url, dict_data):
         """解析部分联系方式"""
         print('parse_link>>>>>>>')
         res_con = s.get(url=link_url, headers=self.headers, cookies=self.cookies_dict).text
@@ -227,23 +241,23 @@ class login():
         con_man = ''
         try:
             con_man = tree.xpath('//a[@class="membername"]/text()')[0].strip()
-            # con_man_2 = tree.xpath('//a[@class="name"]/text()')[0].strip()
             print('con_man', con_man)
-            # print('con_man_2', con_man_2)
         except:
             print('con_man', con_man)
+        dict_data['linkman'] = con_man
 
         # 联系电话
         con_tel = ''
         try:
-            # con_tel = tree.xpath('//dd[@class="mobile-number"]/text()')[0].strip()
             con_tel = tree.xpath('//dl[@class="m-mobilephone"]/dd/text()')[0].strip()
             print('con_tel', con_tel)
         except:
             print('con_tel', con_tel)
 
+        dict_data['mobile'] = con_tel
+
     @staticmethod
-    def parse_con(self, con_url):
+    def parse_con(self, con_url, dict_data):
         """解析公司部分内容"""
         print('parse_con>>>>>>>>>')
         res_con = s.get(url=con_url, headers=self.headers, cookies=self.cookies_dict).text
@@ -256,6 +270,7 @@ class login():
             print('summary', summary)
         except:
             print('summary', summary)
+        dict_data['summary'] = summary
 
         # 公司主营产品
         scopes = ''
@@ -264,6 +279,7 @@ class login():
             print('scopes', scopes)
         except:
             print('scopes', scopes)
+        dict_data['scopes'] = scopes
         sleep(3)
         
 

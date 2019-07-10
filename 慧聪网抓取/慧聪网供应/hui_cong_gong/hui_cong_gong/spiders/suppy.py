@@ -25,31 +25,41 @@ class SuppySpider(scrapy.Spider):
     def parse(self, response):
         """获取123目录名字, url"""
 
-        item = HuiCongGongItem()
-        div_list = response.xpath('//*[@id="category"]/div')
-        for div in div_list:
-            one_class_name = div.xpath('./@data-name')[0].extract()
-            item['one_class_name'] = one_class_name
 
-            li_list = div.xpath('./div[@class="sideBarLeft"]//li')
-            for li in li_list:
-                two_class_name = li.xpath('./span/text()')[0].extract()
+        div = response.xpath('//*[@id="category"]/div')[17]
+        # for div in div_list:
+        one_class_name = div.xpath('./@data-name')[0].extract()
+
+        # print('one_class_name', item['one_class_name'])
+
+        li_list = div.xpath('./div[@class="sideBarLeft"]//li')
+        for li in li_list:
+            two_class_name = li.xpath('./span/text()')[0].extract()
+
+            # print('two_class_name', item['two_class_name'])
+
+            a_list = li.xpath('./div[@class="sideBarLinkBox"]/a')
+            for a in a_list:
+                tree_class_name = a.xpath('./text()')[0].extract()
+
+                # print('tree_class_name',item['tree_class_name'])
+
+                tree_class_url = a.xpath('./@href')[0].extract()
+                print(tree_class_url)
+                tree_class_id = tree_class_url.split('/')[-1].replace('.html', '')
+
+                item = HuiCongGongItem()
+                item['one_class_name'] = one_class_name
                 item['two_class_name'] = two_class_name
+                item['tree_class_name'] = tree_class_name
+                item['tree_class_id'] = tree_class_id
 
-                a_list = li.xpath('./div[@class="sideBarLinkBox"]/a')
-                for a in a_list:
-                    tree_class_name = a.xpath('./text()')[0].extract()
-                    item['tree_class_name'] = tree_class_name
+                for num in range(1, 2):
 
-                    tree_class_url = a.xpath('./@href')[0].extract()
-                    tree_class_id = tree_class_url.split('/')[-1].replace('.html', '')
-                    print('tree_class_id', tree_class_id)
-                    item['tree_class_id'] = tree_class_id
+                    url = 'https://s.hc360.com/seller/search.html?kwd={}&pnum={}&ee=2'.format(tree_class_name, num)
 
-                    for num in range(1, 2):
-                        url = 'https://s.hc360.com/seller/search.html?kwd={}&pnum={}&ee=2'.format(tree_class_name, num)
-                        print(url)
-                        yield Request(url=url, meta={'item': item}, callback=self.parse_1)
+                    print(one_class_name, two_class_name, tree_class_name, tree_class_id)
+                    yield Request(url=url, meta={'item': item}, callback=self.parse_1)
 
     def parse_1(self, response):
         """
@@ -59,12 +69,14 @@ class SuppySpider(scrapy.Spider):
         """
         print('>>>>>>>>>>>>>>>', response)
         item = response.meta['item']
-        res_li_list = response.xpath('//div[@class="wrap-grid"]//li[@class="grid-list"]')
+        try:
+            res_li_list = response.xpath('//div[@class="wrap-grid"]//li[@class="grid-list"]')
 
-        for res_li in res_li_list:
-            res_url = 'https:' + res_li.xpath('./div[@class="NewItem"]/div[@class="picmid pRel"]/a/@href')[0].extract()
-            # print(res_url)
-            yield Request(url=res_url, callback=self.parse_2, meta={'item': item})
+            for res_li in res_li_list:
+                res_url = 'https:' + res_li.xpath('./div[@class="NewItem"]/div[@class="picmid pRel"]/a/@href')[0].extract()
+                yield Request(url=res_url, callback=self.parse_2, meta={'item': item})
+        except:
+            print('此res_li_list没有解析到~~')
 
     def parse_2(self, respone):
         """
@@ -142,29 +154,6 @@ class SuppySpider(scrapy.Spider):
             else:
                 way = '1'
             item['way'] = way
-
-            sql_id = "SELECT one_level,two_level,three_level,keyword,com_keyword  FROM bus_spider_data WHERE source='慧聪网'AND TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
-            cur.execute(sql_id)
-            print('sql_id?????????????', sql_id)
-            res_all_list = cur.fetchall()
-            for res_all in res_all_list:
-                one_level = res_all[0]
-                item['one_level_id'] = str(one_level)
-                print('id.........', item['one_level_id'])
-
-                two_level = res_all[1]
-                item['two_level_id'] = str(two_level)
-                print('id.........', item['two_level_id'])
-
-                three_level = res_all[2]
-                item['three_level_id'] = str(three_level)
-                print('id.........', item['three_level_id'])
-
-                keywords = res_all[3]
-                item['keywords'] = str(keywords)
-
-                com_keyword = res_all[4]
-                item['com_keyword'] = str(com_keyword)
 
             # detail详情
             res_detail_html = respone.text
