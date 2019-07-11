@@ -1,17 +1,15 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from scrapy import Request
-from bs4 import BeautifulSoup
 import re
 from ..items import HuiCongGongItem
 import os
 import random
 import requests
-from time import sleep
 import pymysql
 import time
 from lxml import etree
-
+from bs4 import BeautifulSoup
 conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888', db='ktcx_buschance', port=3306,
                        charset='utf8')
 
@@ -20,25 +18,26 @@ cur = conn.cursor()  # 获取一个游标
 
 class SuppySpider(scrapy.Spider):
     name = 'suppy'
+
     start_urls = ['https://www.hc360.com/']
 
     def parse(self, response):
         """获取123目录名字, url"""
-        div = response.xpath('//*[@id="category"]/div')[17]
+
+        div = response.xpath('//*[@id="category"]/div')[0]
+
         li_list = div.xpath('./div[@class="sideBarLeft"]//li')
         for li in li_list:
             a_list = li.xpath('./div[@class="sideBarLinkBox"]/a')
             for a in a_list:
                 tree_class_name = a.xpath('./text()')[0].extract()
                 tree_class_url = a.xpath('./@href')[0].extract()
-                if tree_class_url.endswith('.html'):
-                    tree_class_id = tree_class_url.split('/')[-1].replace('.html', '')
+                tree_class_id = tree_class_url.split('/')[-1].replace('.html', '')
 
-                    item = HuiCongGongItem()
-                    item['tree_class_id'] = tree_class_id
-                    for num in range(1, 2):
-                        url = 'https://s.hc360.com/seller/search.html?kwd={}&pnum={}&ee=2'.format(tree_class_name, num)
-                        yield Request(url=url, meta={'item': item}, callback=self.parse_1)
+                item = HuiCongGongItem()
+                item['tree_class_id'] = tree_class_id
+                url = 'https://s.hc360.com/seller/search.html?kwd={}&pnum={}&ee=2'.format(tree_class_name, '1')
+                yield Request(url=url, meta={'item': item}, callback=self.parse_1)
 
     def parse_1(self, response):
         """
@@ -46,55 +45,84 @@ class SuppySpider(scrapy.Spider):
         """
         item = response.meta['item']
         try:
-            res_li_list = response.xpath('//div[@class="wrap-grid"]//li[@class="grid-list"]')
-
-            for res_li in res_li_list:
-                res_url = 'https:' + res_li.xpath('./div[@class="NewItem"]/div[@class="picmid pRel"]/a/@href')[0].extract()
-                yield Request(url=res_url, callback=self.parse_2, meta={'item': item})
+            res_url = 'https:' + response.xpath(
+                '//div[@class="wrap-grid"]//li[1]/div[@class="NewItem"]/div[@class="picmid pRel"]/a/@href')[0].extract()
+            yield Request(url=res_url, callback=self.parse_2, meta={'item': item})
         except:
-            print('此res_li_list没有解析到~~')
+            print('res_url错误')
 
-    def parse_2(self, respone):
+    def parse_2(self, response):
+        """
+        解析公司信息获取产品信息
+        """
+        item = response.meta['item']
+        res_pro_url = response.xpath('/html/body/div[7]/div/table/tbody/tr/td[7]/a/@href')[0].extract()
+        yield Request(url=res_pro_url, callback=self.parse_3, meta={'item': item})
+
+    def parse_3(self, response):
+        """
+        获取商品详情url
+        """
+        item = response.meta['item']
+        res_pro_list = response.xpath('//div[@class="dProList"]/ul/li//a/@href')
+        for res_pro_url in res_pro_list:
+            res_pro_url = res_pro_url.extract()
+            yield Request(url=res_pro_url, callback=self.parse_2_2, meta={'item': item})
+
+    def parse_2_2(self, respone):
         """
         获取商品详情页信息
-        :param respone:
-        :return:
         """
         item = respone.meta['item']
-
         mobile = ''
-        result_count = 0
+        com_name = ''
         try:
             mobile = respone.xpath('//*[@id="dialogCorMessage"]/div[@class="p tel2"]/em/text()').extract()[0]
             mobile = mobile[1:]
 
             com_name = str(respone.xpath('//*[@id="dialogCorMessage"]/div[@class="p sate"]/em/text()').extract()[0])
             com_name = com_name[1:]
-            sql_count = "select count(0) from bus_user where company_name='{}'".format(com_name)
-            cur.execute(sql_count)
-            result = cur.fetchall()
-            result_count = int(result[0][0])
         except:
             print('没有手机号或公司重复')
 
-        if mobile != '' and result_count == 0:
+        result_list = []
+        try:
+            sql_count = "select is_cx from bus_user where  company_name='{}'".format(com_name)
+            cur.execute(sql_count)
+            result = cur.fetchall()
+            print(result)
+            result_list = result[0]
+        except:
+            print('数据库没有此公司')
+
+        print(result_list)
+        if 1 in result_list:
+            print('这个公司已经爬过了')
+            pass
+        elif 0 in result_list and 0 not in result_list:
+            sql_del = "delete from bus_user where company_name='{}'".format(com_name)
+            cur.execute(sql_del)
+        elif mobile != '' and ((0 in result_list and 0 not in result_list) or result_list == []):
+
             print('................................................')
 
             # 保存商品图片
             os_img_2_list = []
             try:
+                os_img_1 = []
                 str_ran = str(random.randint(0, 999999))
-                os.makedirs('/home/imgServer/hc/{}'.format(str_ran))
+                os_img_1.append(str_ran)
+                os.makedirs('/home/imgServer/spiders/{}'.format(str_ran))
                 #     将图片链接保存到硬盘
                 res_img = respone.xpath('//*[@id="thumblist"]/li/div/a/img/@src')
                 for img_url in res_img:
-                    img_url = img_url.extract()
-                    img_url = 'https:' + img_url.strip().replace('..100x100.jpg', '')
+                    img_url = img_url.extract().replace('..100x100.jpg', '')
+                    img_url = 'https:' + img_url.strip()
                     code_img = requests.get(url=img_url).content
                     img_name = str(random.randint(1, 999999))
-                    with open('/home/imgServer/hc/{}/{}.jpg'.format(str_ran, img_name), 'wb') as f:
+                    with open('/home/imgServer/spiders/{}/{}.jpg'.format(str_ran, img_name), 'wb') as f:
                         f.write(code_img)
-                    os_img_2 = 'http://img.youkeduo.com.cn/hc/' + '{}/{}.jpg'.format(str_ran, img_name)
+                    os_img_2 = 'http://img.youkeduo.com.cn/spiders/' + '{}/{}.jpg'.format(str_ran, img_name)
                     os_img_2_list.append(os_img_2)
                 os_img_2_str_1 = os_img_2_list[0]
                 os_img_2_str = ','.join(os_img_2_list)
@@ -144,7 +172,6 @@ class SuppySpider(scrapy.Spider):
             try:
                 soup = BeautifulSoup(res_detail_html, 'lxml')
                 html = str(soup.find('div', id="pdetail"))
-                # print(html)
 
                 strinfo = re.compile('<img.*?>')
                 html_2 = strinfo.sub('', html)
@@ -154,12 +181,14 @@ class SuppySpider(scrapy.Spider):
 
                 strinfo = re.compile('慧聪网')
                 html_4 = strinfo.sub('优客多', html_3)
+
                 # 把下载图片添加到html
                 div_list = ['<div id="img_detail">', '</div>']
                 for os_img_2_url in os_img_2_list:
                     os_img_2_url = '<img alt="{}" src="{}">'.format(title, os_img_2_url)
                     div_list.insert(1, os_img_2_url)
-                div_str = '\n'.join(div_list)
+                div_str = '<br>\n'.join(div_list)
+
                 html_all = html_4 + '\n' + div_str
             except Exception as e:
                 raise e
@@ -191,7 +220,7 @@ class SuppySpider(scrapy.Spider):
             linkman = ''
             try:
                 linkman = respone.xpath('//*[@id="dialogCorMessage"]/div[@class="p name"]/em/text()').extract()[0]
-                linkman = str(linkman[1:]).replace(u'\xa0', u' ')
+                linkman = linkman[1:]
                 print('linkman', linkman)
             except:
                 print('linkman', linkman)
@@ -202,8 +231,6 @@ class SuppySpider(scrapy.Spider):
             try:
                 mobile = respone.xpath('//*[@id="dialogCorMessage"]/div[@class="p tel2"]/em/text()').extract()[0]
                 mobile = mobile[1:]
-                # if not mobile:
-                #     mobile = '_'
                 print('mobile', mobile)
             except:
                 print('mobile', mobile)
@@ -222,11 +249,11 @@ class SuppySpider(scrapy.Spider):
             # 公司url
             com_url = respone.xpath('/html/body/div[7]/div/table/tbody/tr/td[5]/a/@href')[0].extract()
             print('com_url.........', com_url)
-            self.parse_con(com_url, respone, item)
+            self.parse_con(com_url, item)
             yield item
 
     @staticmethod
-    def parse_con(com_url, response, item):
+    def parse_con(com_url, item):
         """
         获取部分企业信息
         """
@@ -246,7 +273,6 @@ class SuppySpider(scrapy.Spider):
 
         scopes = '-'
         try:
-
             scopes = tree.xpath('//div[@class="profileTab"]/table//tr[1]/td[1]/a/text()')
             scopes = str(scopes).strip('[').strip(']').replace("'", "")
             if not scopes:
@@ -255,3 +281,5 @@ class SuppySpider(scrapy.Spider):
         except:
             print('scopes', scopes)
         item['scopes'] = scopes
+
+        # return time

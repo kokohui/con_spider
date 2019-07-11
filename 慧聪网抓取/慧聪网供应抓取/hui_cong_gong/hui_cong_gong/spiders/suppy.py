@@ -25,24 +25,17 @@ class SuppySpider(scrapy.Spider):
     def parse(self, response):
         """获取123目录名字, url"""
 
-
         div_list = response.xpath('//*[@id="category"]/div')
         for div in div_list:
             one_class_name = div.xpath('./@data-name')[0].extract()
-
-            # print('one_class_name', item['one_class_name'])
 
             li_list = div.xpath('./div[@class="sideBarLeft"]//li')
             for li in li_list:
                 two_class_name = li.xpath('./span/text()')[0].extract()
 
-                # print('two_class_name', item['two_class_name'])
-
                 a_list = li.xpath('./div[@class="sideBarLinkBox"]/a')
                 for a in a_list:
                     tree_class_name = a.xpath('./text()')[0].extract()
-
-                    # print('tree_class_name',item['tree_class_name'])
 
                     tree_class_url = a.xpath('./@href')[0].extract()
                     print(tree_class_url)

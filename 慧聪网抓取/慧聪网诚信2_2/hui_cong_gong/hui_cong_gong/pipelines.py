@@ -15,6 +15,17 @@ class HuiCongGongPipeline(object):
     def process_item(self, item, spider):
 
         print('process_item>>>>>>>>>>>>>>>>>>>>>>>')
+
+        # 数据库最大id查询
+        res_num = 0
+        try:
+            sql_1 = 'select max(id) from bus_user'
+            self.cur.execute(sql_1)
+            res_num = int(self.cur.fetchone()[0])
+            print('res.......................', res_num)
+        except:
+            print('查询错误.')
+
         # 查询公司存储个数, 如果没有则存储~
         sql_count = "select count(0) from bus_user where company_name='{}'".format(item['com_name'])
         self.cur.execute(sql_count)
@@ -22,16 +33,8 @@ class HuiCongGongPipeline(object):
         result_count = int(result[0][0])
         print('result_count........................', result_count)
         if result_count == 0:
-
             # 数据库最大id查询
-            res_num = 0
-            try:
-                sql_1 = 'select max(id) from bus_user'
-                self.cur.execute(sql_1)
-                res_num = int(self.cur.fetchone()[0]) + 1
-                print('res.......................', res_num)
-            except:
-                print('查询错误.')
+            res_num = res_num + 1
 
             # 进行存储
             try:
@@ -53,22 +56,6 @@ class HuiCongGongPipeline(object):
                     '', item['address'], item['summary'], item['summary'], item['summary'], item['scopes'], '', '', '',
                     '', '', '', 123456, item['mobile'], '', 0, 0, 0, 0, 0,
                     0, '', '75cebe2e19434dcd9c4586f4621e6f9c', '', '', '', '', '', 1))
-
-
-                # 产品
-                sql_in = "INSERT INTO `bus_product` (`create_by`, `create_date`, `is_del`, `list_img`, `price`, `title`,`way`,`one_level_id`, `two_level_id`, `three_level_id`, `custom_id`, `keywords`,`models`,`standards`, `imgs`, `sort`, `update_time`, `state`, `is_verify`, `verify_remark`,`verify_time`, `verify_by`, `detail`, `types`, `start_time`, `end_time`, `num`, `units`,`money_units`, `province_id`, `province_name`, `city_id`, `city_name`, `view_count`,`inquiry_count`,`provider_id`, `provider_name`, `is_import`, `com_name`, `linkman`,`mobile`, `add_by`,`tree_class_id`)" \
-                         "VALUE " \
-                         "(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,    %s)"
-                self.cur.execute(sql_in, (
-                    res_num, item['create_date'], '0', item['list_img'], item['price'], item['title'], item['way'],
-                    0, 0, 0, 0, '', '',
-                    '', item['imgs'], '1', item['create_date'], '1', '0', 0,
-                    item['create_date'], '', item['detail'], '0', item['create_date'], item['create_date'], 1,
-                    item['units'],
-                    '元', '', '', '', '', '0', '0',
-                    '1ec40ecd3cf64908941b5f7679f19d2b', '', '0', item['com_name'], item['linkman'], item['mobile'],
-                    '43e9737882af413095f612ef34412a8f',
-                    item['tree_class_id']))  # 单条插入
             except Exception as e:
                 self.conn.rollback()  # 事务回滚
                 print('事务处理失败')
@@ -76,7 +63,30 @@ class HuiCongGongPipeline(object):
             else:
                 self.conn.commit()  # 事务提交
                 print('数据添加成功')
-            return item
+
+        # 产品信息存储
+        try:
+            sql_in = "INSERT INTO `bus_product` (`create_by`, `create_date`, `is_del`, `list_img`, `price`, `title`,`way`,`one_level_id`, `two_level_id`, `three_level_id`, `custom_id`, `keywords`,`models`,`standards`, `imgs`, `sort`, `update_time`, `state`, `is_verify`, `verify_remark`,`verify_time`, `verify_by`, `detail`, `types`, `start_time`, `end_time`, `num`, `units`,`money_units`, `province_id`, `province_name`, `city_id`, `city_name`, `view_count`,`inquiry_count`,`provider_id`, `provider_name`, `is_import`, `com_name`, `linkman`,`mobile`, `add_by`, `tree_class_id`)" \
+                     "VALUE " \
+                     "(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,    %s)"
+            data = self.cur.execute(sql_in, (
+                res_num, item['create_date'], '0', item['list_img'], item['price'], item['title'],
+                item['way'],
+                0, 0, 0, 0, '', '',
+                '', item['imgs'], '1', item['create_date'], '1', '0', 0,
+                item['create_date'], '', item['detail'], '0', item['create_date'], item['create_date'], 1,
+                item['units'],
+                '元', '', '', '', '', '0', '0',
+                '1ec40ecd3cf64908941b5f7679f19d2b', '', '0', item['com_name'], item['linkman'], item['mobile'],
+                '43e9737882af413095f612ef34412a8f',
+                item['tree_class_id']))  # 单条插入
+            print('data', data)
+
+            self.conn.commit()  # 提交
+            print('添加成功')
+        except Exception as e:
+            raise e
+        return item
 
     def close_spider(self, spider):
 
