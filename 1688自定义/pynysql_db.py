@@ -1,74 +1,118 @@
 import pymysql
-import logging
-import sys
-
-# 加入日志
-# 获取logger实例
-logger = logging.getLogger("baseSpider")
-# 指定输出格式
-formatter = logging.Formatter('%(asctime)s\
-              %(levelname)-8s:%(message)s')
-# 文件日志
-file_handler = logging.FileHandler("baseSpider.log")
-file_handler.setFormatter(formatter)
-# 控制台日志
-console_handler = logging.StreamHandler(sys.stdout)
-console_handler.setFormatter(formatter)
-
-# 为logge添加具体的日志处理器
-logger.addHandler(file_handler)
-logger.addHandler(console_handler)
-
-logger.setLevel(logging.INFO)
 
 
-class DBHelper:
-    # 构造函数
-    def __init__(self, host='127.0.0.1', user='root',
-                 pwd='123456', db='testdb'):
+class DataBaseHandle(object):
+
+    def __init__(self, host, username, password, database, port):
+
+        """初始化数据库信息并创建数据库连接"""
+
+        # 下面的赋值其实可以省略，connect 时 直接使用形参即可
         self.host = host
-        self.user = user
-        self.pwd = pwd
-        self.db = db
-        self.conn = None
-        self.cur = None
+        self.username = username
+        self.password = password
+        self.database = database
+        self.port = port
+        self.db = pymysql.connect(self.host, self.username, self.password, self.database, self.port, charset='utf8')
+        self.cursor = ''
 
-    # 连接数据库
-    def connectDatabase(self):
+
+    #  这里 注释连接的方法，是为了 实例化对象时，就创建连接。不许要单独处理连接了。
+    #
+    # def connDataBase(self):
+    #     ''' 数据库连接 '''
+    #
+    #     self.db = pymysql.connect(self.host,self.username,self.password,self.port,self.database)
+    #
+    #     # self.cursor = self.db.cursor()
+    #
+    #     return self.db
+
+    def insertDB(self, sql):
+        """插入数据库操作"""
+
+        self.cursor = self.db.cursor()
+
         try:
-            self.conn = pymysql.connect(self.host, self.user,
-                                        self.pwd, self.db, charset='utf8')
+            # 执行sql
+            self.cursor.execute(sql)
+            # tt = self.cursor.execute(sql)  # 返回 插入数据 条数 可以根据 返回值 判定处理结果
+            # print(tt)
+            self.db.commit()
         except:
-            logger.error("connectDatabase failed")
-            return False
-        self.cur = self.conn.cursor()
-        return True
+            # 发生错误时回滚
+            self.db.rollback()
+        finally:
+            self.cursor.close()
 
-    # 关闭数据库
-    def close(self):
-        # 如果数据打开，则关闭；否则没有操作
-        if self.conn and self.cur:
-            self.cur.close()
-            self.conn.close()
-        return True
+    def deleteDB(self, sql):
+        """操作数据库数据删除 """
+        self.cursor = self.db.cursor()
 
-    # 执行数据库的sq语句,主要用来做插入操作
-    def execute(self, sql, params=None):
-        # 连接数据库
-        self.connectDatabase()
         try:
-            if self.conn and self.cur:
-                # 正常逻辑，执行sql，提交操作
-                self.cur.execute(sql, params)
-                self.conn.commit()
+            # 执行sql
+            self.cursor.execute(sql)
+            # tt = self.cursor.execute(sql) # 返回 删除数据 条数 可以根据 返回值 判定处理结果
+            # print(tt)
+            self.db.commit()
         except:
-            logger.error("execute failed: " + sql)
-            logger.error("params: " + params)
-            self.close()
-            return False
-        return True
+            # 发生错误时回滚
+            self.db.rollback()
+        finally:
+            self.cursor.close()
 
-    # 用来查询表数据
-    def fetchall(self, sql, params=None):
-        self.execute(sql, params)
-        return self.cur.fetchall()
+    def updateDb(self, sql):
+        """更新数据库操作"""
+
+        self.cursor = self.db.cursor()
+
+        try:
+            # 执行sql
+            self.cursor.execute(sql)
+            # tt = self.cursor.execute(sql) # 返回 更新数据 条数 可以根据 返回值 判定处理结果
+            # print(tt)
+            self.db.commit()
+        except:
+            # 发生错误时回滚
+            self.db.rollback()
+        finally:
+            self.cursor.close()
+
+    def selectDb(self, sql):
+        """数据库查询"""
+        self.cursor = self.db.cursor()
+        try:
+            self.cursor.execute(sql)  # 返回 查询数据 条数 可以根据 返回值 判定处理结果
+
+            data = self.cursor.fetchall()  # 返回所有记录列表
+
+            print(data)
+
+            # 结果遍历
+            for row in data:
+                sid = row[0]
+                name = row[1]
+                # 遍历打印结果
+                print('sid = %s,  name = %s' % (sid, name))
+        except:
+            print('Error: unable to fecth data')
+        finally:
+            self.cursor.close()
+
+    def closeDb(self):
+        """数据库连接关闭"""
+        self.db.close()
+
+if __name__ == '__main__':
+
+    DbHandle = DataBaseHandle('127.0.0.1','adil','helloyyj','AdilTest',3306)
+
+    DbHandle.insertDB('insert into test(name) values ("%s")'%('FuHongXue'))
+    DbHandle.insertDB('insert into test(name) values ("%s")'%('FuHongXue'))
+    DbHandle.selectDb('select * from test')
+    DbHandle.updateDb('update test set name = "%s" where sid = "%d"' %('YeKai',22))
+    DbHandle.selectDb('select * from test')
+    DbHandle.insertDB('insert into test(name) values ("%s")'%('LiXunHuan'))
+    DbHandle.deleteDB('delete from test where sid > "%d"' %(25))
+    DbHandle.selectDb('select * from test')
+    DbHandle.closeDb()

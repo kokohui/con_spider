@@ -8,6 +8,8 @@ from bs4 import BeautifulSoup
 import re
 import random
 import os
+import pymysql
+from .pynysql_db import DataBaseHandle
 
 s = requests.session()
 
@@ -281,14 +283,19 @@ class login():
             print('scopes', scopes)
         dict_data['scopes'] = scopes
         sleep(3)
-        
 
-if __name__ == '__main__':
-    login = login()
+
+def start_spider(login):
+    login = login
     login.sinin()
     login.parse_url()
     login.parse_detail()
     login.kill()
+        
+
+if __name__ == '__main__':
+    start_spider(login())
+
 
 
 
