@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for shou_shang_wang project
+# Scrapy settings for wangShangHui project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,17 +9,17 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'shou_shang_wang'
+BOT_NAME = 'wangShangHui'
 
-SPIDER_MODULES = ['shou_shang_wang.spiders']
-NEWSPIDER_MODULE = 'shou_shang_wang.spiders'
+SPIDER_MODULES = ['wangShangHui.spiders']
+NEWSPIDER_MODULE = 'wangShangHui.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+#USER_AGENT = 'wangShangHui (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = False
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'shou_shang_wang.middlewares.ShouShangWangSpiderMiddleware': 543,
+#    'wangShangHui.middlewares.WangshanghuiSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'shou_shang_wang.middlewares.ShouShangWangDownloaderMiddleware': 543,
+#    'wangShangHui.middlewares.WangshanghuiDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -64,9 +64,9 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'shou_shang_wang.pipelines.ShouShangWangPipeline': 300,
-}
+#ITEM_PIPELINES = {
+#    'wangShangHui.pipelines.WangshanghuiPipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

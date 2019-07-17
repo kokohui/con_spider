@@ -20,7 +20,6 @@ cur = conn.cursor()  # 获取一个游标
 
 class PurchaseSpider(scrapy.Spider):
     name = 'purchase'
-    # allowed_domains = ['http://www.atobo.com/Buys']
     start_urls = ['http://www.atobo.com/Buys']
 
     def parse(self, response):
