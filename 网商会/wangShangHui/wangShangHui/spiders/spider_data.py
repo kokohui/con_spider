@@ -8,6 +8,7 @@ import random
 import re
 from bs4 import BeautifulSoup
 import pymysql
+
 conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888', db='ktcx_buschance', port=3306,
                        charset='utf8')
 
@@ -16,6 +17,7 @@ cur = conn.cursor()  # 获取一个游标
 
 class SpiderDataSpider(scrapy.Spider):
     name = 'spider_data'
+
     # start_urls = ['http://so.7wsh.com/?page=1&kw=%E6%89%8B%E6%9C%BA&type=buy']
 
     def start_requests(self):
@@ -67,7 +69,6 @@ class SpiderDataSpider(scrapy.Spider):
                 keywords = res_all[-1]
                 item['keywords'] = str(keywords)
 
-
             # # # 经营范围
             scopes = ''
             try:
@@ -80,7 +81,9 @@ class SpiderDataSpider(scrapy.Spider):
             # # # 地址
             address = ''
             try:
-                address = re.findall('<dd><span class="in_gray">联系地址</span><span id="spanadress">(.*?)</span>', response.text, re.S)[0]
+                address = \
+                re.findall('<dd><span class="in_gray">联系地址</span><span id="spanadress">(.*?)</span>', response.text,
+                           re.S)[0]
                 print('address', address)
             except:
                 print('address', address)
@@ -207,9 +210,3 @@ class SpiderDataSpider(scrapy.Spider):
         item['summary'] = str(summary)
 
         yield item
-
-
-
-
-
-
