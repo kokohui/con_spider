@@ -1,9 +1,15 @@
 import pymysql
+import json
+
+item_pro_list = []
+item_con_dict = {}
+item_url_dict = {}
 
 
 class HuiCongGongPipeline(object):
     cursor = None
     cur = None
+    conn = None
 
     def open_spider(self, spdier):
         print('爬虫开始》》》》')
@@ -15,81 +21,50 @@ class HuiCongGongPipeline(object):
     def process_item(self, item, spider):
 
         print('process_item>>>>>>>>>>>>>>>>>>>>>>>')
+        item_dict = dict(item)
+        item_dict.pop('com_name')
+        item_dict.pop('address')
+        item_dict.pop('summary')
+        item_dict.pop('scopes')
+        item_dict.pop('linkman')
+        item_dict.pop('mobile')
+        item_dict.pop('start_url')
+        item_dict.pop('lun_imgs')
 
-        # 数据库最大id查询
-        res_num = 0
-        try:
-            sql_1 = 'select max(id) from bus_user'
-            self.cur.execute(sql_1)
-            res_num = int(self.cur.fetchone()[0])
-            print('res.......................', res_num)
-        except:
-            print('查询错误.')
+        item_pro_list.append(item_dict)
+        item_con_dict['com_name'] = item['com_name']
+        item_con_dict['address'] = item['address']
+        item_con_dict['summary'] = item['summary']
+        item_con_dict['scopes'] = item['scopes']
+        item_con_dict['linkman'] = item['linkman']
+        item_con_dict['mobile'] = item['mobile']
+        item_con_dict['lun_imgs'] = item['lun_imgs']
+        item_con_dict['logo'] = item['list_img']
 
-        # 查询公司存储个数, 如果没有则存储~
-        sql_count = "select count(0) from bus_user where company_name='{}'".format(item['com_name'])
-        self.cur.execute(sql_count)
-        result = self.cur.fetchall()
-        result_count = int(result[0][0])
-        print('result_count........................', result_count)
-        if result_count == 0:
-            # 数据库最大id查询
-            res_num = res_num + 1
-
-            # 进行存储
-            try:
-                # 公司
-                sql = 'insert into `bus_user`(' \
-                      '`id`,`name`, `logo`, `phone`, `password`, `source`, `type`, `state`, `plate_visit_num`, `plate_visit_pnum`,' \
-                      ' `product_visit_num`, `balance`, `growth`, `status`, `company_name`, `linkman`, `mobile`, `number`, `url`, `submit_date`,' \
-                      ' `by_date`, `domain_name`, `is_del`, `create_by`, `create_date`, `province_id`, `province_name`, `city_id`, `city_name`, `county_id`,' \
-                      ' `county_name`, `address`, `sub_summary`, `summary`, `sub_scopes`, `scopes`, `minglu_img`, `company_img`, `mapx`, `mapy`,' \
-                      ' `zip_code`, `email`, `qq`, `tel`, `website`, `total_fee`, `send_num`, `refresh_num`, `supply_inquiry_num`, `purchase_inquiry_num`,' \
-                      ' `ad_price`, `openid`, `provider_id`, `provider_name`, `channel_duty_id`, `channel_open_id`, `service_id`, `keywords`, `is_cx`) ' \
-                      'VALUE' \
-                      '(%s,%s,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'
-                self.cur.execute(sql, (
-                    res_num, item['com_name'], item['list_img'], item['mobile'], '123456', 'pc', 'supply', '2', 0, 0,
-                    0, 0, 0, '0', item['com_name'], item["linkman"], item['mobile'], '', '', item['create_date'],
-                    item['create_date'], '', '0', '5fc530f6b8574e03b6f13794ec64c1f8', item['create_date'], '', '', '',
-                    '', '',
-                    '', item['address'], item['summary'], item['summary'], item['summary'], item['scopes'], '', '', '',
-                    '', '', '', 123456, item['mobile'], '', 0, 0, 0, 0, 0,
-                    0, '', '75cebe2e19434dcd9c4586f4621e6f9c', '', '', '', '', '', 1))
-            except Exception as e:
-                self.conn.rollback()  # 事务回滚
-                print('事务处理失败')
-                raise e
-            else:
-                self.conn.commit()  # 事务提交
-                print('数据添加成功')
-
-        # 产品信息存储
-        try:
-            sql_in = "INSERT INTO `bus_product` (`create_by`, `create_date`, `is_del`, `list_img`, `price`, `title`,`way`,`one_level_id`, `two_level_id`, `three_level_id`, `custom_id`, `keywords`,`models`,`standards`, `imgs`, `sort`, `update_time`, `state`, `is_verify`, `verify_remark`,`verify_time`, `verify_by`, `detail`, `types`, `start_time`, `end_time`, `num`, `units`,`money_units`, `province_id`, `province_name`, `city_id`, `city_name`, `view_count`,`inquiry_count`,`provider_id`, `provider_name`, `is_import`, `com_name`, `linkman`,`mobile`, `add_by`, `tree_class_id`)" \
-                     "VALUE " \
-                     "(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,    %s)"
-            data = self.cur.execute(sql_in, (
-                res_num, item['create_date'], '0', item['list_img'], item['price'], item['title'],
-                item['way'],
-                0, 0, 0, 0, '', '',
-                '', item['imgs'], '1', item['create_date'], '1', '0', 0,
-                item['create_date'], '', item['detail'], '0', item['create_date'], item['create_date'], 1,
-                item['units'],
-                '元', '', '', '', '', '0', '0',
-                '1ec40ecd3cf64908941b5f7679f19d2b', '', '0', item['com_name'], item['linkman'], item['mobile'],
-                '43e9737882af413095f612ef34412a8f',
-                item['tree_class_id']))  # 单条插入
-            print('data', data)
-
-            self.conn.commit()  # 提交
-            print('添加成功')
-        except Exception as e:
-            raise e
-        return item
+        item_url_dict['start_url'] = item['start_url']
+        item_url_dict['create_date'] = item['create_date']
 
     def close_spider(self, spider):
+        print('爬虫结束, 开始存储>>>>>>>>')
+        dict_data = {}
+        dict_data['item_con_dict'] = item_con_dict
+        dict_data['item_pro_list'] = item_pro_list
+        item_json = json.dumps(dict_data)
+        create_by = str(item_url_dict['start_url'])
+        create_date = item_url_dict['create_date']
 
-        print('爬虫结束>>>>>>>>')
+        # 进行存储
+        try:
+            sql_in_2 = "insert into `bus_spider_list` (`create_by`,`create_date`,`is_del`, `json_str`) values(%s, %s, %s, %s)"
+            self.cur.execute(sql_in_2, (create_by, create_date, '0', item_json))
+
+        except Exception as e:
+            self.conn.rollback()  # 事务回滚
+            print('事务处理失败')
+            raise e
+        else:
+            self.conn.commit()  # 事务提交
+            print('数据添加成功')
+
         self.cur.close()
         self.conn.close()

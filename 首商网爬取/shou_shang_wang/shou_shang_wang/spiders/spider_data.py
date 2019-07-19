@@ -183,15 +183,15 @@ class SpiderDataSpider(scrapy.Spider):
 
             # # 求购数量
             # # 41. `num`,
-            num = '0'
+            num = 0
             try:
                 num = re.findall('<li><b>产品数量：</b>(.*?)</li>', response.text, re.S)[0].strip()
                 if num  == '不限':
-                    num = '0'
+                    num = 0
                 print('num', num)
             except:
                 print('num', num)
-            item['num'] = str(num)
+            item['num'] = num
 
             item['list_img'] = ''
             item['imgs'] = ''

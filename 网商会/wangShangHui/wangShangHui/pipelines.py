@@ -85,7 +85,7 @@ class WangshanghuiPipeline(object):
                     res_num, item['create_date'], '0', item['list_img'], item['price'], item['title'], item['way'],
                     item['one_level_id'], item['two_level_id'], item['three_level_id'], 0, item['keywords'], '',
                     '', item['imgs'], '1', item['create_date'], '1', '1', 0,
-                    item['create_date'], '', item['detail'], '1', item['create_date'], item['end_time'], 1,
+                    item['create_date'], '', item['detail'], '1', item['create_date'], item['end_time'], 0,
                     item['units'],
                     '元', '', '', '', '', '0', '0',
                     '1ec40ecd3cf64908941b5f7679f19d2b', '', '0', item['com_name'], item['linkman'], item['mobile'],

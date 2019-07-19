@@ -21,14 +21,48 @@ class SuppySpider(scrapy.Spider):
 
     def __init__(self, category, *args, **keargs):
         super(SuppySpider, self).__init__(*args, **keargs)
-        print('shell脚本传来的url:', category)
-        self.start_urls = [category]
+        self.category = category
+        self.start_urls = [self.category]
 
     def parse(self, response):
+        """公司首页"""
+
+        item = HuiCongGongItem()
+
+        # 保存商品图片
+        lun_img_2_list = []
+        try:
+            lun_img_1 = []
+            str_ran = str(random.randint(0, 999999999))
+            lun_img_1.append(str_ran)
+            os.makedirs('/home/imgServer/spiders/{}'.format(str_ran))
+            res_img_list = response.xpath('//div[@class="bannerBoxCon"]/ul//li/@style')
+            for res_img in res_img_list:
+                res_img = res_img.extract()
+                res_img = 'https:' + res_img.split('(')[-1].split(')')[0]
+                code_img = requests.get(url=res_img).content
+                img_name = str(random.randint(1, 999999999))
+                with open('/home/imgServer/spiders/{}/{}.jpg'.format(str_ran, img_name), 'wb') as f:
+                    f.write(code_img)
+                lun_img_2 = 'http://img.youkeduo.com.cn/spiders/' + '{}/{}.jpg'.format(str_ran, img_name)
+                lun_img_2_list.append(lun_img_2)
+            lun_img_2_str = ','.join(lun_img_2_list)
+            item['lun_imgs'] = lun_img_2_str
+            print('图片ok')
+        except:
+            print('图片错误.')
+
+        # 供应产品url
+        gong_url = response.xpath('//div[@class="navBoxCon"]/table//tr/td[3]/a/@href')[0].extract()
+        gong_url = 'https:' + gong_url
+        yield Request(url=gong_url, callback=self.parse_2, meta={'item': item})
+
+    def parse_2(self, response):
         """
         获取商品详情url
         """
-        item = HuiCongGongItem()
+        print('parse')
+        item = response.meta['item']
         res_pro_list = response.xpath('//div[@class="dProList"]/ul/li//a/@href')
         for res_pro_url in res_pro_list:
             res_pro_url = res_pro_url.extract()
@@ -38,6 +72,7 @@ class SuppySpider(scrapy.Spider):
         """
         获取商品详情页信息
         """
+        print('parse_2_2')
         item = respone.meta['item']
         mobile = ''
         com_name = ''
@@ -66,23 +101,22 @@ class SuppySpider(scrapy.Spider):
             sql_del = "delete from bus_user where company_name='{}'".format(com_name)
             cur.execute(sql_del)
         elif mobile != '' and ((0 in result_list and 0 not in result_list) or result_list == []):
-
             print('................................................')
 
             # 保存商品图片
             os_img_2_list = []
             try:
                 os_img_1 = []
-                str_ran = str(random.randint(0, 999999))
+                str_ran = str(random.randint(0, 999999999))
                 os_img_1.append(str_ran)
                 os.makedirs('/home/imgServer/spiders/{}'.format(str_ran))
-                #     将图片链接保存到硬盘
+                #  将图片链接保存到硬盘
                 res_img = respone.xpath('//*[@id="thumblist"]/li/div/a/img/@src')
                 for img_url in res_img:
                     img_url = img_url.extract().replace('..100x100.jpg', '')
                     img_url = 'https:' + img_url.strip()
                     code_img = requests.get(url=img_url).content
-                    img_name = str(random.randint(1, 999999))
+                    img_name = str(random.randint(1, 999999999))
                     with open('/home/imgServer/spiders/{}/{}.jpg'.format(str_ran, img_name), 'wb') as f:
                         f.write(code_img)
                     os_img_2 = 'http://img.youkeduo.com.cn/spiders/' + '{}/{}.jpg'.format(str_ran, img_name)
@@ -91,8 +125,7 @@ class SuppySpider(scrapy.Spider):
                 os_img_2_str = ','.join(os_img_2_list)
                 item['list_img'] = os_img_2_str_1
                 item['imgs'] = os_img_2_str
-
-                print('图片ok', os_img_2_list)
+                print('图片ok')
             except:
                 print('图片错误.')
 
@@ -202,7 +235,7 @@ class SuppySpider(scrapy.Spider):
             # address
             address = ''
             try:
-                address = respone.xpath('//*[@id="dialogCorMessage"]/div[@class="p sate"]/em/text()').extract()[0]
+                address = respone.xpath('//*[@id="archivesListBox"]/ul/li[3]/div/p/text()').extract()[0]
                 address = address[1:]
                 print('address', address)
             except:
@@ -213,7 +246,9 @@ class SuppySpider(scrapy.Spider):
             com_url = respone.xpath('/html/body/div[7]/div/table/tbody/tr/td[5]/a/@href')[0].extract()
             print('com_url.........', com_url)
             self.parse_con(com_url, item)
-            # yield item
+
+            item['start_url'] = self.category
+            yield item
 
     @staticmethod
     def parse_con(com_url, item):
@@ -244,3 +279,5 @@ class SuppySpider(scrapy.Spider):
         except:
             print('scopes', scopes)
         item['scopes'] = scopes
+
+
