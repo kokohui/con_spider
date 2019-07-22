@@ -1,11 +1,52 @@
-# -*- coding: utf-8 -*-
-
-# Define here the models for your spider middleware
-#
-# See documentation in:
-# https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-
 from scrapy import signals
+import random
+import requests
+from lxml import etree
+
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36'
+}
+url = 'https://www.kuaidaili.com/free/inha/1/'
+
+
+def getIp():
+    res_text = requests.get(url=url, headers=headers).text
+    tree = etree.HTML(res_text)
+
+    ip_list = tree.xpath('//*[@id="list"]/table/tbody/tr/td[1]/text()')
+
+    port_lsit = tree.xpath('//*[@id="list"]/table/tbody/tr/td[2]/text()')
+
+    ip_port_list = []
+    for ip in ip_list:
+
+        for port in port_lsit:
+            ip_port_list.append("{}:{}".format(ip, port))
+    return ip_port_list
+
+PROXY_http = [
+      '1.198.73.168:9999',
+      '1.197.203.177:9999',
+      '1.198.72.209:53128',
+  ]
+PROXY_https = [
+    '1.198.73.168:9999',
+    '1.197.203.177:9999',
+    '1.198.72.209:53128',
+]
+
+
+class Proxy(object):
+    def process_request(self, request, spider):
+        # 对拦截到请求的url进行判断（协议头到底是http还是https）
+        # request.url返回值：http://www.xxx.com
+        h = request.url.split(':')[0]  # 请求的协议头
+        if h == 'https':
+            ip = random.choice(PROXY_https)
+            request.meta['proxy'] = 'https://' + ip
+        else:
+            ip = random.choice(PROXY_http)
+            request.meta['proxy'] = 'http://' + ip
 
 
 class HuiCongGongSpiderMiddleware(object):

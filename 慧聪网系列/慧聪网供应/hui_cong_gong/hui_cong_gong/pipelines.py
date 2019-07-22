@@ -92,15 +92,15 @@ class HuiCongGongPipeline(object):
             return item
 
     def close_spider(self, spider):
-        sql_id = "SELECT id FROM bus_spider_data WHERE source = '慧聪网' and  TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
-        self.cur.execute(sql_id)
-        res_all_list = self.cur.fetchall()
-        id = res_all_list[0][0]
-        sql_insert = "UPDATE ktcx_buschance.bus_spider_data SET isuse='1' WHERE id={}".format(id)
-        print(sql_insert)
+        # sql_id = "SELECT id FROM bus_spider_data WHERE source = '慧聪网' and  TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
+        # self.cur.execute(sql_id)
+        # res_all_list = self.cur.fetchall()
+        # id = res_all_list[0][0]
+        # sql_insert = "UPDATE ktcx_buschance.bus_spider_data SET isuse='1' WHERE id={}".format(id)
+        # print(sql_insert)
 
-        self.cur.execute(sql_insert)
-        self.conn.commit()
+        # self.cur.execute(sql_insert)
+        # self.conn.commit()
 
         print('爬虫结束>>>>>>>>')
         self.cur.close()

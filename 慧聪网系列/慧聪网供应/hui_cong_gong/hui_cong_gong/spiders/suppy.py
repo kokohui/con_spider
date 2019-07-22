@@ -7,10 +7,10 @@ from ..items import HuiCongGongItem
 import os
 import random
 import requests
-from time import sleep
 import pymysql
 import time
 from lxml import etree
+import re
 
 conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888', db='ktcx_buschance', port=3306,
                        charset='utf8')
@@ -55,10 +55,13 @@ class SuppySpider(scrapy.Spider):
         item = respone.meta['item']
 
         mobile = ''
+        com_url = ''
         result_count = 0
         try:
             mobile = respone.xpath('//*[@id="dialogCorMessage"]/div[@class="p tel2"]/em/text()').extract()[0]
             mobile = mobile[1:]
+
+            com_url = respone.xpath('/html/body/div[7]/div/table/tbody/tr/td[5]/a/@href')[0].extract()
 
             com_name = str(respone.xpath('//*[@id="dialogCorMessage"]/div[@class="p sate"]/em/text()').extract()[0])
             com_name = com_name[1:]
@@ -69,7 +72,7 @@ class SuppySpider(scrapy.Spider):
         except:
             print('没有手机号或公司重复')
 
-        if mobile != '' and result_count == 0:
+        if mobile != '' and com_url != '' and result_count == 0:
             print('................................................')
 
             # 数据库获取id
@@ -102,7 +105,12 @@ class SuppySpider(scrapy.Spider):
                 res_img = respone.xpath('//*[@id="thumblist"]/li/div/a/img/@src')
                 for img_url in res_img:
                     img_url = img_url.extract()
-                    img_url = 'https:' + img_url.strip().replace('..100x100.jpg', '')
+                    # img_url = 'https:' + img_url.strip().replace('..100x100.jpg', '')
+                    img_url = 'https:' + img_url.strip()
+                    img_url = re.sub('\.\.\d+x\d+.jpg', '', img_url)
+                    print('img_url>>>>>>>>>>>>><<<<<<<<<<<<<<<<<::::::', img_url)
+
+
                     code_img = requests.get(url=img_url).content
                     img_name = str(random.randint(1, 999999))
                     with open('/home/imgServer/hc/{}/{}.jpg'.format(str_ran, img_name), 'wb') as f:
@@ -139,7 +147,7 @@ class SuppySpider(scrapy.Spider):
             title = ''
             try:
                 title = str(respone.xpath('//*[@id="comTitle"]/text()').extract()[0])
-                title = title[1:]
+                # title = title[1:]
                 print('title', title)
             except:
                 print('title', title)
@@ -233,9 +241,14 @@ class SuppySpider(scrapy.Spider):
             item['address'] = address
 
             # 公司url
-            com_url = respone.xpath('/html/body/div[7]/div/table/tbody/tr/td[5]/a/@href')[0].extract()
-            print('com_url.........', com_url)
-            self.parse_con(com_url, respone, item)
+            try:
+                com_url = respone.xpath('/html/body/div[7]/div/table/tbody/tr/td[5]/a/@href')[0].extract()
+                print('com_url.........', com_url)
+                self.parse_con(com_url, respone, item)
+
+            except:
+                print('此公司url错误')
+
             yield item
 
     @staticmethod
