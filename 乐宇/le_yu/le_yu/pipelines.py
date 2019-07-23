@@ -6,6 +6,7 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import pymysql
 
+
 class LeYuPipeline(object):
     cursor = None  # mysql游标对象声明
     cur = None  # 获取一个游标

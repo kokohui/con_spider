@@ -11,6 +11,7 @@ import pymysql
 import time
 from lxml import etree
 import re
+from time import sleep
 
 conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888', db='ktcx_buschance', port=3306,
                        charset='utf8')
@@ -43,6 +44,7 @@ class SuppySpider(scrapy.Spider):
             for res_li in res_li_list:
                 res_url = 'https:' + res_li.xpath('./div[@class="NewItem"]/div[@class="picmid pRel"]/a/@href')[0].extract()
                 yield Request(url=res_url, callback=self.parse_2, meta={'item': item})
+                sleep(1)
         except:
             print('此res_li_list没有解析到~~')
 
