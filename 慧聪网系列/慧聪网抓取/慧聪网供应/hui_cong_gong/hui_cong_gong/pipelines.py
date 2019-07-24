@@ -50,7 +50,7 @@ class HuiCongGongPipeline(object):
                     0, 0, 0, '0', item['com_name'], item["linkman"], item['mobile'], '', '', item['create_date'],
                     item['create_date'], '', '0', '5fc530f6b8574e03b6f13794ec64c1f8', item['create_date'], '', '', '',
                     '', '',
-                    '', item['address'], item['summary'], item['summary'], item['summary'], item['scopes'], '', '', '',
+                    '', item['address'], item['summary'], item['summary'], item['summary'], item['scopes'], item['list_img'], item['list_img'], '',
                     '', '', '', 123456, item['mobile'], '', 0, 0, 0, 0, 0,
                     0, '', '75cebe2e19434dcd9c4586f4621e6f9c', '', '', '', '', '', 1))
 

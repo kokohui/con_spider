@@ -28,7 +28,7 @@ class SuppySpider(scrapy.Spider):
         cur.execute(sql_id)
         res_all_list = cur.fetchall()
         url = res_all_list[0][0]
-        for num in range(1, 2):
+        for num in range(1, 11):
             url_2 = url.format(num)
             print(url_2)
             yield Request(url=url_2, callback=self.parse_1)
@@ -43,8 +43,8 @@ class SuppySpider(scrapy.Spider):
 
             for res_li in res_li_list:
                 res_url = 'https:' + res_li.xpath('./div[@class="NewItem"]/div[@class="picmid pRel"]/a/@href')[0].extract()
+                print('res_url', res_url)
                 yield Request(url=res_url, callback=self.parse_2, meta={'item': item})
-                sleep(1)
         except:
             print('此res_li_list没有解析到~~')
 
@@ -274,7 +274,6 @@ class SuppySpider(scrapy.Spider):
 
         scopes = '-'
         try:
-
             scopes = tree.xpath('//div[@class="profileTab"]/table//tr[1]/td[1]/a/text()')
             scopes = str(scopes).strip('[').strip(']').replace("'", "")
             if not scopes:

@@ -89,7 +89,10 @@ class SuppySpider(scrapy.Spider):
                 res_img = respone.xpath('//*[@id="thumblist"]/li/div/a/img/@src')
                 for img_url in res_img:
                     img_url = img_url.extract()
-                    img_url = 'https:' + img_url.strip().replace('..100x100.jpg', '')
+                    # img_url = 'https:' + img_url.strip().replace('..100x100.jpg', '')
+                    img_url = 'https:' + img_url.strip()
+                    img_url = re.sub('\.\.\d+x\d+.jpg', '', img_url)
+
                     code_img = requests.get(url=img_url).content
                     img_name = str(random.randint(1, 999999))
                     with open('/home/imgServer/hc/{}/{}.jpg'.format(str_ran, img_name), 'wb') as f:
@@ -144,7 +147,6 @@ class SuppySpider(scrapy.Spider):
             try:
                 soup = BeautifulSoup(res_detail_html, 'lxml')
                 html = str(soup.find('div', id="pdetail"))
-                # print(html)
 
                 strinfo = re.compile('<img.*?>')
                 html_2 = strinfo.sub('', html)
