@@ -9,6 +9,7 @@ import requests
 import pymysql
 import time
 import re
+import jieba.analyse
 
 conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888', db='ktcx_buschance', port=3306,
                        charset='utf8')
@@ -129,6 +130,7 @@ class SpiderDataSpider(scrapy.Spider):
             except:
                 print('title', title)
             item['title'] = title
+
 
             # way
             if price != '':

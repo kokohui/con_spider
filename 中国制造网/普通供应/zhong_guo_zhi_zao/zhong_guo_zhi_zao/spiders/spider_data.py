@@ -4,12 +4,14 @@ from scrapy import Request
 from bs4 import BeautifulSoup
 import os
 import random
-import requests
 import pymysql
 import time
 import re
 import requests
+import jieba.analyse
 from lxml import html
+import json
+
 etree = html.etree
 conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888', db='ktcx_buschance', port=3306,
                        charset='utf8')
@@ -57,7 +59,6 @@ class SpiderDataSpider(scrapy.Spider):
             # 数据库获取id
             sql_id = "SELECT one_level,two_level,three_level,keyword  FROM bus_spider_data WHERE source = '中国制造网' and  TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
             cur.execute(sql_id)
-            print('sql_id?????????????', sql_id)
             res_all_list = cur.fetchall()
             for res_all in res_all_list:
                 one_level = res_all[0]
@@ -72,8 +73,10 @@ class SpiderDataSpider(scrapy.Spider):
                 item['three_level_id'] = str(three_level)
                 print('id.........', item['three_level_id'])
 
-                keywords = res_all[-1]
-                item['keywords'] = str(keywords)
+                # keywords = res_all[-1]
+                # item['keywords'] = str(keywords)
+
+
 
             # 保存商品图片
             os_img_2_list = []
@@ -81,24 +84,28 @@ class SpiderDataSpider(scrapy.Spider):
                 str_ran = str(random.randint(0, 999999))
                 os.makedirs('/home/imgServer/hc/{}'.format(str_ran))
                 #     将图片链接保存到硬盘
-                for img_num in range(0, 6):
-                    res_img = response.xpath('//*[@id="small_{}"]/img/@src'.format(img_num))
-                    for img_url in res_img:
-                        img_url = img_url.extract()
-                        img_url = img_url.strip()
-                        img_url = re.sub('_100x100', '_800x800', img_url)
-                        print('img_url>>>>>>>>>>>>><<<<<<<<<<<<<<<<<::::::', img_url)
 
-                        code_img = requests.get(url=img_url).content
-                        img_name = str(random.randint(1, 999999))
-                        with open('/home/imgServer/hc/{}/{}.jpg'.format(str_ran, img_name), 'wb') as f:
-                            f.write(code_img)
-                        os_img_2 = 'http://img.youkeduo.com.cn/hc/' + '{}/{}.jpg'.format(str_ran, img_name)
-                        os_img_2_list.append(os_img_2)
-                    os_img_2_str_1 = os_img_2_list[0]
-                    os_img_2_str = ','.join(os_img_2_list)
-                    item['list_img'] = os_img_2_str_1
-                    item['imgs'] = os_img_2_str
+                res_img_list_11 = response.xpath('//div[@class="big-pic"]/a//img/@src').extract()
+                if res_img_list_11 == []:
+                    for img_num in range(0, 6):
+                        res_img = response.xpath('//*[@id="small_{}"]/img/@src'.format(img_num))[0].extract()
+                        res_img_list_11.append(res_img)
+
+                for img_url in res_img_list_11:
+                    img_url = img_url.strip()
+                    img_url = re.sub('_100x100', '_800x800', img_url)
+                    print('img_url>>>>>>>>>>>>><<<<<<<<<<<<<<<<<::::::', img_url)
+
+                    code_img = requests.get(url=img_url).content
+                    img_name = str(random.randint(1, 999999))
+                    with open('/home/imgServer/hc/{}/{}.jpg'.format(str_ran, img_name), 'wb') as f:
+                        f.write(code_img)
+                    os_img_2 = 'http://img.youkeduo.com.cn/hc/' + '{}/{}.jpg'.format(str_ran, img_name)
+                    os_img_2_list.append(os_img_2)
+                os_img_2_str_1 = os_img_2_list[0]
+                os_img_2_str = ','.join(os_img_2_list)
+                item['list_img'] = os_img_2_str_1
+                item['imgs'] = os_img_2_str
                 print('图片ok', os_img_2_list)
             except:
                 print('图片错误.')
@@ -127,6 +134,22 @@ class SpiderDataSpider(scrapy.Spider):
             except:
                 print('title', title)
             item['title'] = title
+
+            # 关键字
+            keywords_all_data = '-'
+            try:
+                setence = title
+                keywords = jieba.analyse.extract_tags(setence, topK=30, withWeight=True, allowPOS=('n', 'nr', 'ns'))
+                keywords_1 = keywords[0][0]
+                keywords_2 = keywords[1][0]
+                keywords_all = keywords_1 + ',' + keywords_2
+                keywords_all_data = [{"id": 0, "keyword": "{}".format(keywords_all)}]
+                print('keywords', keywords_all)
+            except:
+                print('没有提取到关键字')
+            item['keywords'] = json.dumps(keywords_all_data)
+
+
 
             # way
             if price != '':
@@ -237,3 +260,4 @@ class SpiderDataSpider(scrapy.Spider):
         except:
             print('scopes', scopes)
         item['scopes'] = scopes
+
