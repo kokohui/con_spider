@@ -85,7 +85,7 @@ class ZhaoShangWangPipeline(object):
             return item
 
     def close_spider(self, spider):
-        sql_id = "SELECT id FROM bus_spider_data WHERE source = '慧聪网' and  TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
+        sql_id = "SELECT id FROM bus_spider_data WHERE source = '找商网' and  TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
         self.cur.execute(sql_id)
         res_all_list = self.cur.fetchall()
         id = res_all_list[0][0]
