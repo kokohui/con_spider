@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
-import scrapy
-from scrapy import Request
-import re
-from ..items import HuiCongGongItem
 import os
 import random
-import requests
-import pymysql
+import re
 import time
-from lxml import etree
+import pymysql
+import requests
+import scrapy
 from bs4 import BeautifulSoup
+from lxml import etree
+from scrapy import Request
+
+from ..items import HuiCongGongItem
 
 conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888', db='ktcx_buschance', port=3306,
                        charset='utf8')
@@ -35,16 +36,16 @@ class SuppySpider(scrapy.Spider):
             lun_img_1 = []
             str_ran = str(random.randint(0, 999999999))
             lun_img_1.append(str_ran)
-            os.makedirs('/home/imgServer/spiders/{}'.format(str_ran))
+            os.makedirs('/home/imgServer/img_hui/{}'.format(str_ran))
             res_img_list = response.xpath('//div[@class="bannerBoxCon"]/ul//li/@style')
             for res_img in res_img_list:
                 res_img = res_img.extract()
                 res_img = 'https:' + res_img.split('(')[-1].split(')')[0]
                 code_img = requests.get(url=res_img).content
                 img_name = str(random.randint(1, 999999999))
-                with open('/home/imgServer/spiders/{}/{}.jpg'.format(str_ran, img_name), 'wb') as f:
+                with open('/home/imgServer/img_hui/{}/{}.jpg'.format(str_ran, img_name), 'wb') as f:
                     f.write(code_img)
-                lun_img_2 = 'http://img.youkeduo.com.cn/spiders/' + '{}/{}.jpg'.format(str_ran, img_name)
+                lun_img_2 = 'http://img.youkeduo.com.cn/img_hui/' + '{}/{}.jpg'.format(str_ran, img_name)
                 lun_img_2_list.append(lun_img_2)
             lun_img_2_str = ','.join(lun_img_2_list)
             item['lun_imgs'] = lun_img_2_str
@@ -75,32 +76,14 @@ class SuppySpider(scrapy.Spider):
         print('parse_2_2')
         item = respone.meta['item']
         mobile = ''
-        com_name = ''
         try:
             mobile = respone.xpath('//*[@id="dialogCorMessage"]/div[@class="p tel2"]/em/text()').extract()[0]
             mobile = mobile[1:]
 
-            com_name = str(respone.xpath('//*[@id="dialogCorMessage"]/div[@class="p sate"]/em/text()').extract()[0])
-            com_name = com_name[1:]
         except:
             print('没有手机号或公司重复')
 
-        result_list = []
-        try:
-            sql_count = "select is_cx from bus_user where  company_name='{}'".format(com_name)
-            cur.execute(sql_count)
-            result = cur.fetchall()
-            result_list = result[0]
-        except:
-            print('数据库没有此公司')
-
-        if 1 in result_list:
-            print('这个公司已经爬过了')
-            pass
-        elif 0 in result_list and 0 not in result_list:
-            sql_del = "delete from bus_user where company_name='{}'".format(com_name)
-            cur.execute(sql_del)
-        elif mobile != '' and ((0 in result_list and 0 not in result_list) or result_list == []):
+        if mobile !='':
             print('................................................')
 
             # 保存商品图片
@@ -109,7 +92,7 @@ class SuppySpider(scrapy.Spider):
                 os_img_1 = []
                 str_ran = str(random.randint(0, 999999999))
                 os_img_1.append(str_ran)
-                os.makedirs('/home/imgServer/spiders/{}'.format(str_ran))
+                os.makedirs('/home/imgServer/img_hui/{}'.format(str_ran))
                 #  将图片链接保存到硬盘
                 res_img = respone.xpath('//*[@id="thumblist"]/li/div/a/img/@src')
                 for img_url in res_img:
@@ -117,9 +100,9 @@ class SuppySpider(scrapy.Spider):
                     img_url = 'https:' + img_url.strip()
                     code_img = requests.get(url=img_url).content
                     img_name = str(random.randint(1, 999999999))
-                    with open('/home/imgServer/spiders/{}/{}.jpg'.format(str_ran, img_name), 'wb') as f:
+                    with open('/home/imgServer/img_hui/{}/{}.jpg'.format(str_ran, img_name), 'wb') as f:
                         f.write(code_img)
-                    os_img_2 = 'http://img.youkeduo.com.cn/spiders/' + '{}/{}.jpg'.format(str_ran, img_name)
+                    os_img_2 = 'http://img.youkeduo.com.cn/img_hui/' + '{}/{}.jpg'.format(str_ran, img_name)
                     os_img_2_list.append(os_img_2)
                 os_img_2_str_1 = os_img_2_list[0]
                 os_img_2_str = ','.join(os_img_2_list)
@@ -243,7 +226,7 @@ class SuppySpider(scrapy.Spider):
             item['address'] = address
 
             # 公司url
-            com_url = respone.xpath('/html/body/div[7]/div/table/tbody/tr/td[5]/a/@href')[0].extract()
+            com_url = respone.xpath('//div[@class="mainnav"]/table/tbody/tr/td[5]/a/@href')[0].extract()
             print('com_url.........', com_url)
             self.parse_con(com_url, item)
 
@@ -279,5 +262,6 @@ class SuppySpider(scrapy.Spider):
         except:
             print('scopes', scopes)
         item['scopes'] = scopes
+
 
 

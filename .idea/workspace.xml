@@ -2,34 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b7fd72f-e1a9-47bf-8b69-20ce23bc59ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang/zhao_shang_wang/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang_changxin/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang_changxin/scrapy.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang_changxin/zhao_shang_wang/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang_changxin/zhao_shang_wang/items.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang_changxin/zhao_shang_wang/middlewares.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang_changxin/zhao_shang_wang/pipelines.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang_changxin/zhao_shang_wang/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang_changxin/zhao_shang_wang/spiders/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang_changxin/zhao_shang_wang/spiders/spider_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/网商会/wangShangHui_chengxin/scrapy.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/网商会/wangShangHui_chengxin/wangShangHui/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/网商会/wangShangHui_chengxin/wangShangHui/items.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/网商会/wangShangHui_chengxin/wangShangHui/middlewares.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/网商会/wangShangHui_chengxin/wangShangHui/pipelines.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/网商会/wangShangHui_chengxin/wangShangHui/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/网商会/wangShangHui_chengxin/wangShangHui/spiders/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/网商会/wangShangHui_chengxin/wangShangHui/spiders/spider_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhao_shang_wang/scrapy.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang/scrapy.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhao_shang_wang/zhao_shang_wang/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/分布式/master.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhao_shang_wang/zhao_shang_wang/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang/zhao_shang_wang/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhao_shang_wang/zhao_shang_wang/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang/zhao_shang_wang/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhao_shang_wang/zhao_shang_wang/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang/zhao_shang_wang/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhao_shang_wang/zhao_shang_wang/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang/zhao_shang_wang/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhao_shang_wang/zhao_shang_wang/spiders/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang/zhao_shang_wang/spiders/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhao_shang_wang/zhao_shang_wang/spiders/spider_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/找商网/zhao_shang_wang/zhao_shang_wang/spiders/spider_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/中国制造网/普通供应/zhong_guo_zhi_zao/zhong_guo_zhi_zao/spiders/spider_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/中国制造网/普通供应/zhong_guo_zhi_zao/zhong_guo_zhi_zao/spiders/spider_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/spiders/suppy.py" beforeDir="false" afterPath="$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/spiders/suppy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,23 +15,51 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/找商网/zhao_shang_wang_changxin/zhao_shang_wang/pipelines.py">
+        <entry file="file://$PROJECT_DIR$/天助网/普通供应/tian_zhu_wang/tian_zhu_wang/spiders/spider_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+            <state relative-caret-position="572">
+              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
               <folding>
-                <element signature="e#1379#3411#0" />
-                <element signature="e#3683#5471#0" />
+                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#588#1096#0" />
+                <element signature="e#443#619#0" />
+                <element signature="e#1244#7920#0" />
+                <element signature="e#953#1440#0" />
+                <element signature="e#2454#3112#0" />
+                <element signature="e#794#2258#0" />
+                <element signature="e#1102#1687#0" />
+                <element signature="e#905#1095#0" />
+                <element signature="e#1349#1438#0" />
+                <element signature="e#3852#4746#0" />
+                <element signature="e#2784#2986#0" />
+                <element signature="e#3094#3437#0" />
+                <element signature="e#3392#3525#0" />
+                <element signature="e#3778#3975#0" />
+                <element signature="e#4014#4166#0" />
+                <element signature="e#4293#4927#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/分布式/master.py">
+        <entry file="file://$PROJECT_DIR$/天助网/普通供应/tian_zhu_wang/tian_zhu_wang/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="367">
+              <caret line="81" column="68" selection-start-line="81" selection-start-column="68" selection-end-line="81" selection-end-column="68" />
+              <folding>
+                <element signature="e#996#5442#0" />
+                <element signature="e#1367#5189#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/天助网/普通供应/tian_zhu_wang/tian_zhu_wang/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
             </state>
           </provider>
         </entry>
@@ -80,6 +83,7 @@
       <find>end</find>
       <find>os_img_2_list</find>
       <find>os_img_2_str</find>
+      <find>keywords</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -88,10 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/1688自定义/pynysql_db.py" />
-        <option value="$PROJECT_DIR$/1688自定义/1688_spider.py" />
-        <option value="$PROJECT_DIR$/1688自定义/ceshi.py" />
-        <option value="$PROJECT_DIR$/搜好货相关/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/pipelines.py" />
         <option value="$PROJECT_DIR$/搜好货相关/sou_hao_huo_pag_1_2/sou_hao_huo_pag_1/items.py" />
         <option value="$PROJECT_DIR$/慧聪网供应/hui_cong_gong/hui_cong_gong/items.py" />
         <option value="$PROJECT_DIR$/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py" />
@@ -111,7 +111,6 @@
         <option value="$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/pipelines.py" />
         <option value="$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/settings.py" />
         <option value="$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/items.py" />
-        <option value="$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/spiders/suppy.py" />
         <option value="$PROJECT_DIR$/首商网爬取/shou_shang_wang/shou_shang_wang/spiders/spider_data.py" />
         <option value="$PROJECT_DIR$/网商会/wangShangHui/wangShangHui/pipelines.py" />
         <option value="$PROJECT_DIR$/网商会/wangShangHui/wangShangHui/items.py" />
@@ -133,17 +132,23 @@
         <option value="$PROJECT_DIR$/中国制造网/普通供应/zhong_guo_zhi_zao/zhong_guo_zhi_zao/pipelines.py" />
         <option value="$PROJECT_DIR$/jieba分词提取关键字.py" />
         <option value="$PROJECT_DIR$/zhao_shang_wang/zhao_shang_wang/spiders/spider_data.py" />
-        <option value="$PROJECT_DIR$/中国制造网/普通供应/zhong_guo_zhi_zao/zhong_guo_zhi_zao/spiders/spider_data.py" />
         <option value="$PROJECT_DIR$/网商会/wangShangHui_chengxin/wangShangHui/spiders/spider_data.py" />
         <option value="$PROJECT_DIR$/找商网/zhao_shang_wang/zhao_shang_wang/pipelines.py" />
         <option value="$PROJECT_DIR$/找商网/zhao_shang_wang_changxin/zhao_shang_wang/spiders/spider_data.py" />
         <option value="$PROJECT_DIR$/找商网/zhao_shang_wang_changxin/zhao_shang_wang/pipelines.py" />
         <option value="$PROJECT_DIR$/分布式/master.py" />
+        <option value="$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/spiders/suppy.py" />
+        <option value="$PROJECT_DIR$/中国制造网/普通供应/zhong_guo_zhi_zao/zhong_guo_zhi_zao/spiders/spider_data.py" />
+        <option value="$PROJECT_DIR$/天助网/普通供应/tian_zhu_wang/tian_zhu_wang/items.py" />
+        <option value="$PROJECT_DIR$/天助网/普通供应/tian_zhu_wang/tian_zhu_wang/spiders/spider_data.py" />
+        <option value="$PROJECT_DIR$/天助网/普通供应/tian_zhu_wang/tian_zhu_wang/settings.py" />
+        <option value="$PROJECT_DIR$/天助网/普通供应/tian_zhu_wang/tian_zhu_wang/pipelines.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="693" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="714" />
     <option name="height" value="1017" />
   </component>
@@ -162,12 +167,37 @@
             <path>
               <item name="公司爬虫" type="b2602c69:ProjectViewProjectNode" />
               <item name="公司爬虫" type="462c0819:PsiDirectoryNode" />
-              <item name="分布式" type="462c0819:PsiDirectoryNode" />
+              <item name="天助网" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="公司爬虫" type="b2602c69:ProjectViewProjectNode" />
               <item name="公司爬虫" type="462c0819:PsiDirectoryNode" />
-              <item name="找商网" type="462c0819:PsiDirectoryNode" />
+              <item name="天助网" type="462c0819:PsiDirectoryNode" />
+              <item name="普通供应" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="公司爬虫" type="b2602c69:ProjectViewProjectNode" />
+              <item name="公司爬虫" type="462c0819:PsiDirectoryNode" />
+              <item name="天助网" type="462c0819:PsiDirectoryNode" />
+              <item name="普通供应" type="462c0819:PsiDirectoryNode" />
+              <item name="tian_zhu_wang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="公司爬虫" type="b2602c69:ProjectViewProjectNode" />
+              <item name="公司爬虫" type="462c0819:PsiDirectoryNode" />
+              <item name="天助网" type="462c0819:PsiDirectoryNode" />
+              <item name="普通供应" type="462c0819:PsiDirectoryNode" />
+              <item name="tian_zhu_wang" type="462c0819:PsiDirectoryNode" />
+              <item name="tian_zhu_wang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="公司爬虫" type="b2602c69:ProjectViewProjectNode" />
+              <item name="公司爬虫" type="462c0819:PsiDirectoryNode" />
+              <item name="天助网" type="462c0819:PsiDirectoryNode" />
+              <item name="普通供应" type="462c0819:PsiDirectoryNode" />
+              <item name="tian_zhu_wang" type="462c0819:PsiDirectoryNode" />
+              <item name="tian_zhu_wang" type="462c0819:PsiDirectoryNode" />
+              <item name="spiders" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -366,16 +396,19 @@
       <workItem from="1564448473447" duration="611000" />
       <workItem from="1564534459875" duration="8131000" />
       <workItem from="1564620264319" duration="5237000" />
+      <workItem from="1564707591079" duration="3927000" />
+      <workItem from="1564799504606" duration="14911000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232384000" />
+    <option name="totallyTimeSpent" value="251222000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="693" y="0" width="714" height="1017" extended-state="0" />
+    <frame x="-8" y="-8" width="1416" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21100917" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.095870204" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -389,7 +422,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3295964" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.07420091" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.03587444" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -410,75 +443,6 @@
     <SUITE FILE_PATH="coverage/$master.coverage" NAME="master Coverage Results" MODIFIED="1564639316577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/分布式" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1184660488/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="5249" column="8" selection-start-line="5249" selection-start-column="8" selection-end-line="5249" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2900" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#209#1162#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="72" column="28" lean-forward="true" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/网商会/wangShangHui/wangShangHui/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/网商会/wangShangHui/wangShangHui/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/网商会/wangShangHui/wangShangHui/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/网商会/wangShangHui/wangShangHui/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/材料网/caiLiaoWang/caiLiaoWang/spiders/spider_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="72" column="48" lean-forward="true" selection-start-line="53" selection-start-column="11" selection-end-line="72" selection-end-column="48" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-            <element signature="e#1125#1374#0" />
-            <element signature="e#2393#2931#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/首商网爬取/shou_shang_wang/shou_shang_wang/spiders/spider_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -547,76 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-            <element signature="e#519#644#0" />
-            <element signature="e#685#2047#0" />
-            <element signature="e#2090#2442#0" />
-            <element signature="e#2486#9110#0" />
-            <element signature="e#9172#10119#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网供应抓取/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-269" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取22/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-979">
-          <folding>
-            <element signature="e#1238#3327#0" />
-            <element signature="e#3421#3806#0" />
-            <element signature="e#3921#5886#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网供应抓取/hui_cong_gong/hui_cong_gong/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="49" column="113" lean-forward="true" selection-start-line="49" selection-start-column="113" selection-end-line="49" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="259" selection-start-line="259" selection-end-line="259" />
-          <folding>
-            <element signature="e#577#1473#0" />
-            <element signature="e#1516#2002#0" />
-            <element signature="e#2226#2722#0" />
-            <element signature="e#2975#4171#0" />
-            <element signature="e#4454#4715#0" />
-            <element signature="e#4882#5023#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网供应/hui_cong_gong/hui_cong_gong/items.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -672,32 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取22/慧聪网采集/hui_cong_wang/hui_cong_wang/spiders/cai_ji.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-297" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-            <element signature="e#543#946#0" />
-            <element signature="e#989#1513#0" />
-            <element signature="e#1555#9222#0" />
-            <element signature="e#1758#2358#0" />
-            <element signature="e#2945#3483#0" />
-            <element signature="e#3570#4849#0" />
-            <element signature="e#5132#5393#0" />
-            <element signature="e#5560#5703#0" />
-            <element signature="e#9294#10241#0" />
-            <element signature="e#9660#9780#0" />
-            <element signature="e#9916#10157#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网采集/hui_cong_wang/hui_cong_wang/spiders/cai_ji.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -711,33 +579,6 @@
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/中国制造网/普通供应/zhong_guo_zhi_zao/zhong_guo_zhi_zao/spiders/spider_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="259" column="4" selection-start-line="259" selection-start-column="4" selection-end-line="259" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/中国制造网/普通供应/zhong_guo_zhi_zao/zhong_guo_zhi_zao/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="64" column="109" selection-start-line="64" selection-start-column="91" selection-end-line="64" selection-end-column="109" />
-          <folding>
-            <element signature="e#5338#5867#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/中国制造网/普通供应/zhong_guo_zhi_zao/zhong_guo_zhi_zao/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -836,9 +677,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网供应抓取/hui_cong_gong/hui_cong_gong/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网供应抓取/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#577#1639#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="689">
+          <caret line="259" selection-start-line="259" selection-end-line="259" />
+          <folding>
+            <element signature="e#577#1473#0" />
+            <element signature="e#1516#2002#0" />
+            <element signature="e#2044#8427#0" />
+            <element signature="e#2226#2722#0" />
+            <element signature="e#2975#4171#0" />
+            <element signature="e#4454#4715#0" />
+            <element signature="e#4882#5023#0" />
+            <element signature="e#8499#9447#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="49" column="113" lean-forward="true" selection-start-line="49" selection-start-column="113" selection-end-line="49" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#24#37#0" expanded="true" />
+            <element signature="e#543#946#0" />
+            <element signature="e#989#1513#0" />
+            <element signature="e#1555#9222#0" />
+            <element signature="e#1758#2358#0" />
+            <element signature="e#2945#3483#0" />
+            <element signature="e#3570#4849#0" />
+            <element signature="e#5132#5393#0" />
+            <element signature="e#5560#5703#0" />
+            <element signature="e#9294#10241#0" />
+            <element signature="e#9660#9780#0" />
+            <element signature="e#9916#10157#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/分布式/master.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/找商网/zhao_shang_wang_changxin/zhao_shang_wang/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
+        <state>
           <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
           <folding>
             <element signature="e#1379#3411#0" />
@@ -847,10 +763,172 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/分布式/master.py">
+    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取22/慧聪网诚信/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state>
+          <folding>
+            <element signature="e#555#2162#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取22/慧聪网采集/hui_cong_wang/hui_cong_wang/spiders/cai_ji.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取22/慧聪网供应/hui_cong_gong/hui_cong_gong/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取22/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+          <folding>
+            <element signature="e#734#1869#0" />
+            <element signature="e#9501#10514#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取22/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="86" column="35" lean-forward="true" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="35" />
+          <folding>
+            <element signature="e#3421#3806#0" />
+            <element signature="e#6015#6554#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="57" column="52" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#2065#2141#0" />
+            <element signature="e#2168#2222#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="909">
+          <caret line="83" column="31" lean-forward="true" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+            <element signature="e#521#646#0" />
+            <element signature="e#687#2049#0" />
+            <element signature="e#803#1768#0" />
+            <element signature="e#2092#2444#0" />
+            <element signature="e#2630#2759#0" />
+            <element signature="e#2990#4130#0" />
+            <element signature="e#4413#4674#0" />
+            <element signature="e#4841#4982#0" />
+            <element signature="e#5322#6108#0" />
+            <element signature="e#6288#6514#0" />
+            <element signature="e#6690#6878#0" />
+            <element signature="e#7064#7242#0" />
+            <element signature="e#7422#7595#0" />
+            <element signature="e#7773#7941#0" />
+            <element signature="e#8388#9335#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/中国制造网/普通供应/zhong_guo_zhi_zao/zhong_guo_zhi_zao/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="29" column="27" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="29" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/天助网/普通供应/tian_zhu_wang/tian_zhu_wang/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/中国制造网/普通供应/zhong_guo_zhi_zao/zhong_guo_zhi_zao/spiders/spider_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4430">
+          <caret line="58" column="12" lean-forward="true" selection-start-line="58" selection-start-column="12" selection-end-line="76" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#1045#1299#0" />
+            <element signature="e#2415#2953#0" />
+            <element signature="e#3040#4453#0" />
+            <element signature="e#4736#4971#0" />
+            <element signature="e#5138#5231#0" />
+            <element signature="e#9713#9994#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/天助网/普通供应/tian_zhu_wang/tian_zhu_wang/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/中国制造网/普通供应/zhong_guo_zhi_zao/zhong_guo_zhi_zao/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="6" selection-start-line="6" selection-end-line="96" />
+          <folding>
+            <element signature="e#5338#5867#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/天助网/普通供应/tian_zhu_wang/tian_zhu_wang/spiders/spider_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#588#1096#0" />
+            <element signature="e#443#619#0" />
+            <element signature="e#1244#7920#0" />
+            <element signature="e#953#1440#0" />
+            <element signature="e#2454#3112#0" />
+            <element signature="e#794#2258#0" />
+            <element signature="e#1102#1687#0" />
+            <element signature="e#905#1095#0" />
+            <element signature="e#1349#1438#0" />
+            <element signature="e#3852#4746#0" />
+            <element signature="e#2784#2986#0" />
+            <element signature="e#3094#3437#0" />
+            <element signature="e#3392#3525#0" />
+            <element signature="e#3778#3975#0" />
+            <element signature="e#4014#4166#0" />
+            <element signature="e#4293#4927#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/天助网/普通供应/tian_zhu_wang/tian_zhu_wang/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="81" column="68" selection-start-line="81" selection-start-column="68" selection-end-line="81" selection-end-column="68" />
+          <folding>
+            <element signature="e#996#5442#0" />
+            <element signature="e#1367#5189#0" />
+          </folding>
         </state>
       </provider>
     </entry>
