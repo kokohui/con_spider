@@ -210,6 +210,4 @@ class SpiderDataSpider(scrapy.Spider):
             # return item
 
 
-# 'http://so.sooshong.com/sale/search.jsp?offset=20&rows=10&keywords=%E7%94%B5%E8%84%91&searchby=0&sortby=0&beforafter=1&days=180&categoryid=0&b2b=0&searchandor=0'
-# 'http://so.sooshong.com/sale/search.jsp?offset=30&rows=10&keywords=%E7%94%B5%E8%84%91&searchby=0&sortby=0&beforafter=1&days=180&categoryid=0&b2b=0&searchandor=0'
 # 'http://so.sooshong.com/sale/search.jsp?offset=10&rows=10&keywords=%E9%9E%8B%E5%AD%90&searchby=0&sortby=0&beforafter=1&days=180&categoryid=0&b2b=0&searchandor=0'
