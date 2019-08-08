@@ -24,13 +24,13 @@ class TianZhuWangPipeline(object):
         if result_count == 0:
 
             dict_data = {
-                "con_info": {"create_date": item['create_date'], "com_name": item["com_name"], "linkman": item["linkman"], "mobile": item["mobile"], "address": item["address"], "summary": item["summary"], "scopes": item["scopes"]},
-                "pro_info": {"create_date": item['create_date'], "price": item['price'], "title": item['title'], "way": item['way'], "one_level_id ": item['one_level_id'], "two_level_id": item['two_level_id'], "three_level_id": item['three_level_id'], "keywords": item['keywords'],"list_img": item['list_img'], "imgs": item['imgs'], "detail": item['detail'], "units": item['units']}}
+                "con_info": {"create_date": item['create_date'], "com_name": item["com_name"], "linkman": item["linkman"], "mobile": item["mobile"], "address": item["address"], "summary": item["summary"], "scopes": item["scopes"], "logo": item['list_img']},
+                "pro_info": {"create_date": item['create_date'], "price": item['price'], "title": item['title'], "way": item['way'], "one_level_id ": item['one_level_id'], "two_level_id": item['two_level_id'], "three_level_id": item['three_level_id'], "keywords": item['keywords'], "list_img": item['list_img'], "imgs": item['imgs'], "detail": item['detail'], "units": item['units']}}
             json_data = json.dumps(dict_data)
 
             try:
-                sql = 'insert into `bus_spider_product_list`(`create_date`, `detail`) value (%s, %s)'
-                self.cur.execute(sql, (item['create_date'], json_data))
+                sql = 'insert into `bus_spider_product_list`(`create_date`, `detail`, `spider_id`) value (%s, %s, %s)'
+                self.cur.execute(sql, (item['create_date'], json_data, item['spdier_data_id']))
             except Exception as e:
                 self.conn.rollback()
                 print('事务处理失败')

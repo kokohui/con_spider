@@ -21,6 +21,7 @@ class TianZhuWangItem(scrapy.Item):
 
     summary = scrapy.Field()
     scopes = scrapy.Field()
+    spdier_data_id = scrapy.Field()
 
 
 

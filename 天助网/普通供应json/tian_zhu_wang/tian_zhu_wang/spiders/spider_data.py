@@ -19,23 +19,27 @@ class SpiderDataSpider(scrapy.Spider):
     name = 'spider_data'
 
     def start_requests(self):
-        sql_id = "SELECT url FROM bus_spider_data WHERE source = '天助网' and   TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
+        item = TianZhuWangItem()
+        sql_id = "SELECT url, id FROM bus_spider_data WHERE source = '天助网' and   TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
         cur.execute(sql_id)
         res_all_list = cur.fetchall()
         url = res_all_list[0][0]
+        spdier_data_id = res_all_list[0][-1]
+        item['spdier_data_id'] = spdier_data_id
         for num in range(1, 3):
             url_2 = 'http://www.tz1288.com/selloffer/search.html?keyword={}&pageIndex={}'.format(url, num)
             print(url_2)
-            yield Request(url=url_2, callback=self.parse)
+            yield Request(url=url_2, callback=self.parse, meta={"item": item})
 
     def parse(self, response):
+        item = response.meta["item"]
         detail_url_list = response.xpath('//*[@id="itemBox"]/li/a/@href').extract()
         for detail_url in detail_url_list:
-            yield Request(url=detail_url, callback=self.detail_parse)
+            yield Request(url=detail_url, callback=self.detail_parse, meta={"item": item})
 
     def detail_parse(self, response):
 
-        item = TianZhuWangItem()
+        item = response.meta["item"]
 
         mobile = ''
         result_count = 0
