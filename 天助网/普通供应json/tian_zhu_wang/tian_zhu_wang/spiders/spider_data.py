@@ -207,6 +207,7 @@ class SpiderDataSpider(scrapy.Spider):
                 print('address', address)
             item['address'] = address
 
+
             try:
                 com_url = response.xpath('/html/body/div[3]/div[1]/ul/li[2]/a/@href').extract()[0]
                 print(com_url)
