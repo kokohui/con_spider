@@ -31,7 +31,7 @@ class HundredZhaoShangPipeline(object):
                              "way": item['way'], "one_level_id ": item['one_level_id'],
                              "two_level_id": item['two_level_id'], "three_level_id": item['three_level_id'],
                              "keywords": item['keywords'], "list_img": item['list_img'], "imgs": item['imgs'],
-                             "detail": item['detail'], "units": item['units']}, "num": item["num"], "end_time": item["end_time"]}
+                             "detail": item['detail'], "units": item['units'],"num": item["num"], "end_time": item["end_time"]} }
             json_data = json.dumps(dict_data)
 
 

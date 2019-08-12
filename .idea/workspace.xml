@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b7fd72f-e1a9-47bf-8b69-20ce23bc59ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/items.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/middlewares.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/pipelines.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/spiders/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/spiders/spider_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/scrapy.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/baidu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/youDao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/you_dao2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/you_dao_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/360_fanyi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shipin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yoDao/fanyi1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yoDao/sql_demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yoDao/youDao_domo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/天助网/普通供应json/tian_zhu_wang/tian_zhu_wang/spiders/spider_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/天助网/普通供应json/tian_zhu_wang/tian_zhu_wang/spiders/spider_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aa.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baidu.py" beforeDir="false" afterPath="$PROJECT_DIR$/baidu.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,91 +21,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/you_dao_3.py">
+        <entry file="file://$PROJECT_DIR$/aa.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#309#818#0" />
-                <element signature="e#1137#1327#0" />
-                <element signature="e#1586#1677#0" />
-                <element signature="e#1458#2102#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/youDao.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+            <state relative-caret-position="467">
+              <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/baidu.py">
+        <entry file="file://$PROJECT_DIR$/yoDao/sql_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="535">
+              <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#24#35#0" expanded="true" />
+                <element signature="e#515#637#0" />
+                <element signature="e#661#784#0" />
+                <element signature="e#813#941#0" />
+                <element signature="e#965#1430#0" />
+                <element signature="e#1455#1709#0" />
+                <element signature="e#1743#3155#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aa.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="7" column="23" selection-start-line="7" selection-end-line="8" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#p#0;n#!!top" />
-                <element signature="n#style#0;n#p#1;n#!!top" expanded="true" />
-                <element signature="n#p#1;n#!!top" />
-                <element signature="n#style#0;n#p#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#5;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#6;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#7;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#8;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#9;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#10;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#11;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#12;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#13;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#14;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#15;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#16;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#17;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#18;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#19;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#20;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#21;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#22;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#23;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#24;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#25;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#26;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#27;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#28;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#29;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#30;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/阿土伯爬取/aTuBo/aTuBo/pipelines.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-113">
-              <caret line="88" selection-start-line="88" selection-end-line="88" />
             </state>
           </provider>
         </entry>
@@ -120,8 +52,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -146,11 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/pipelines.py" />
-        <option value="$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/settings.py" />
-        <option value="$PROJECT_DIR$/慧聪网系列/慧聪网单条企业爬取/hui_cong_gong/hui_cong_gong/items.py" />
-        <option value="$PROJECT_DIR$/网商会/wangShangHui/wangShangHui/pipelines.py" />
-        <option value="$PROJECT_DIR$/网商会/wangShangHui/wangShangHui/items.py" />
         <option value="$PROJECT_DIR$/网商会/wangShangHui/wangShangHui/spiders/spider_data.py" />
         <option value="$PROJECT_DIR$/慧聪网系列/慧聪网供应/hui_cong_gong/hui_cong_gong/middlewares.py" />
         <option value="$PROJECT_DIR$/代理ip抓取/xi_ci.py" />
@@ -189,20 +116,24 @@
         <option value="$PROJECT_DIR$/天助网/普通供应json/tian_zhu_wang/tian_zhu_wang/pipelines.py" />
         <option value="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/items.py" />
         <option value="$PROJECT_DIR$/天助网/普通供应json/tian_zhu_wang/tian_zhu_wang/spiders/spider_data.py" />
-        <option value="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/pipelines.py" />
         <option value="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/spiders/spider_data.py" />
-        <option value="$PROJECT_DIR$/aa.html" />
         <option value="$PROJECT_DIR$/you_dao2.py" />
         <option value="$USER_HOME$/Downloads/python/demo.py" />
         <option value="$PROJECT_DIR$/you_dao_3.py" />
         <option value="$PROJECT_DIR$/youDao.py" />
+        <option value="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/pipelines.py" />
         <option value="$PROJECT_DIR$/baidu.py" />
+        <option value="$PROJECT_DIR$/360_fanyi.py" />
+        <option value="$PROJECT_DIR$/yoDao/fanyi1.py" />
+        <option value="$PROJECT_DIR$/yoDao/youDao_domo.py" />
+        <option value="$PROJECT_DIR$/shipin.py" />
+        <option value="$PROJECT_DIR$/aa.html" />
+        <option value="$PROJECT_DIR$/yoDao/sql_demo.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="693" />
     <option name="width" value="714" />
     <option name="height" value="1017" />
   </component>
@@ -218,6 +149,11 @@
             <path>
               <item name="公司爬虫" type="b2602c69:ProjectViewProjectNode" />
               <item name="公司爬虫" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="公司爬虫" type="b2602c69:ProjectViewProjectNode" />
+              <item name="公司爬虫" type="462c0819:PsiDirectoryNode" />
+              <item name="yoDao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -264,7 +200,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.baidu">
+  <component name="RunManager" selected="Python.sql_demo">
+    <configuration name="360_fanyi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="公司爬虫" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/360_fanyi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="baidu" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="公司爬虫" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -287,7 +245,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="fanyi1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="公司爬虫" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -295,12 +253,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads/python" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yoDao" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/python/demo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yoDao/fanyi1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -309,7 +267,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="youDao" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="sql_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="公司爬虫" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -317,34 +275,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yoDao" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/youDao.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="you_dao2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="公司爬虫" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/you_dao2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yoDao/sql_demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -377,11 +313,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sql_demo" />
+        <item itemvalue="Python.fanyi1" />
+        <item itemvalue="Python.360_fanyi" />
         <item itemvalue="Python.baidu" />
-        <item itemvalue="Python.youDao" />
         <item itemvalue="Python.you_dao_3" />
-        <item itemvalue="Python.demo" />
-        <item itemvalue="Python.you_dao2" />
       </list>
     </recent_temporary>
   </component>
@@ -423,30 +359,32 @@
       <workItem from="1565140277314" duration="17674000" />
       <workItem from="1565225875255" duration="19715000" />
       <workItem from="1565312475385" duration="21958000" />
+      <workItem from="1565345742360" duration="25000" />
+      <workItem from="1565571211715" duration="25980000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="313104000" />
+    <option name="totallyTimeSpent" value="339109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1416" height="1026" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.116519175" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12979351" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28026906" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49926254" weight="0.93273544" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3295964" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49926254" weight="0.3295964" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.55941707" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5014749" side_tool="true" weight="0.55941707" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49852508" weight="0.2825112" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -461,68 +399,21 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/$jieba.coverage" NAME="jieba分词提取关键字 Coverage Results" MODIFIED="1564380942135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$spider_1.coverage" NAME="spider_1 Coverage Results" MODIFIED="1562830465471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/企查查爬取" />
+    <SUITE FILE_PATH="coverage/$spider_data.coverage" NAME="spider_data Coverage Results" MODIFIED="1565155788475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang/hundred_zhao_shang/spiders" />
+    <SUITE FILE_PATH="coverage/$baidu.coverage" NAME="baidu Coverage Results" MODIFIED="1565572579049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$360_fanyi.coverage" NAME="360_fanyi Coverage Results" MODIFIED="1565576855302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$youDao.coverage" NAME="youDao Coverage Results" MODIFIED="1565343176610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$master.coverage" NAME="master Coverage Results" MODIFIED="1564639316577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/分布式" />
+    <SUITE FILE_PATH="coverage/$sql_demo.coverage" NAME="sql_demo Coverage Results" MODIFIED="1565603008032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yoDao" />
     <SUITE FILE_PATH="coverage/$ceshi.coverage" NAME="ceshi Coverage Results" MODIFIED="1562914140759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1688自定义" />
     <SUITE FILE_PATH="coverage/$demo.coverage" NAME="demo Coverage Results" MODIFIED="1565341767251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/python" />
-    <SUITE FILE_PATH="coverage/$spider_data.coverage" NAME="spider_data Coverage Results" MODIFIED="1565155788475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/100招商网采购/hundred_zhao_shang/hundred_zhao_shang/spiders" />
-    <SUITE FILE_PATH="coverage/$baidu.coverage" NAME="baidu Coverage Results" MODIFIED="1565343389828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$fanyi1.coverage" NAME="fanyi1 Coverage Results" MODIFIED="1565578300796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yoDao" />
     <SUITE FILE_PATH="coverage/$you_dao2.coverage" NAME="you_dao2 Coverage Results" MODIFIED="1565339378406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/$you_dao_3.coverage" NAME="you_dao_3 Coverage Results" MODIFIED="1565342569984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/$youDao.coverage" NAME="youDao Coverage Results" MODIFIED="1565343176610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$you_dao_3.coverage" NAME="you_dao_3 Coverage Results" MODIFIED="1565345755849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$1688_spider.coverage" NAME="1688_spider Coverage Results" MODIFIED="1562893650326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/1688自定义" />
     <SUITE FILE_PATH="coverage/$xi_ci.coverage" NAME="xi_ci Coverage Results" MODIFIED="1563789459847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/代理ip抓取" />
-    <SUITE FILE_PATH="coverage/$master.coverage" NAME="master Coverage Results" MODIFIED="1564639316577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/分布式" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网诚信2_2/hui_cong_gong/hui_cong_gong/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-          <folding>
-            <element signature="e#1177#3454#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网供应抓取/hui_cong_gong/hui_cong_gong/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网供应抓取/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#577#1639#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/spiders/suppy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="259" selection-start-line="259" selection-end-line="259" />
-          <folding>
-            <element signature="e#577#1473#0" />
-            <element signature="e#1516#2002#0" />
-            <element signature="e#2044#8427#0" />
-            <element signature="e#2226#2722#0" />
-            <element signature="e#2975#4171#0" />
-            <element signature="e#4454#4715#0" />
-            <element signature="e#4882#5023#0" />
-            <element signature="e#8499#9447#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/慧聪网系列/慧聪网抓取/慧聪网供应/hui_cong_gong/hui_cong_gong/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -712,13 +603,6 @@
         <state relative-caret-position="-1881" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/首商网爬取/shou_shang_wang/shou_shang_wang/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="9" selection-start-line="9" selection-end-line="104" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Python36/Lib/site-packages/twisted/internet/defer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3919">
@@ -850,16 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/items.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -878,92 +752,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/spiders/spider_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3399">
-          <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1184660488/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="226" column="4" selection-start-line="226" selection-start-column="4" selection-end-line="226" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="7" column="23" selection-start-line="7" selection-end-line="8" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#p#0;n#!!top" />
-            <element signature="n#style#0;n#p#1;n#!!top" expanded="true" />
-            <element signature="n#p#1;n#!!top" />
-            <element signature="n#style#0;n#p#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#5;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#6;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#7;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#8;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#9;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#10;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#11;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#12;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#13;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#14;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#15;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#16;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#17;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#18;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#19;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#20;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#21;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#22;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#23;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#24;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#25;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#26;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#27;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#28;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#29;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#30;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/阿土伯爬取/aTuBo/aTuBo/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/you_dao2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="72" column="32" lean-forward="true" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#55#580#0" />
-            <element signature="e#1398#1493#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/you_dao_3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#309#818#0" />
-            <element signature="e#1137#1327#0" />
-            <element signature="e#1586#1677#0" />
-            <element signature="e#1458#2102#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -974,19 +766,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/youDao.py">
+    <entry file="file://$PROJECT_DIR$/阿土伯爬取/aTuBo/aTuBo/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        <state relative-caret-position="2904">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="29" column="112" lean-forward="true" selection-start-line="29" selection-start-column="112" selection-end-line="29" selection-end-column="112" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yoDao/youDao_domo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-129">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <element signature="e#682#1191#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yoDao/fanyi1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="50" column="15" lean-forward="true" selection-start-line="7" selection-end-line="50" selection-end-column="15" />
+          <folding>
+            <element signature="e#25#36#0" expanded="true" />
+            <element signature="e#682#1190#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shipin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1233">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#63#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/360_fanyi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="69" column="32" lean-forward="true" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#782#1353#0" />
+            <element signature="e#1386#1493#0" />
+            <element signature="e#1518#1681#0" />
+            <element signature="e#1704#1795#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/you_dao2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="77" column="39" lean-forward="true" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/you_dao_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="62" selection-start-line="62" selection-end-line="63" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#309#880#0" />
+            <element signature="e#913#1020#0" />
+            <element signature="e#1045#1208#0" />
+            <element signature="e#1231#1322#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/baidu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="-133">
+          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/首商网爬取/shou_shang_wang/shou_shang_wang/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2377">
+          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youDao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/100招商网采购/hundred_zhao_shang_json/hundred_zhao_shang/spiders/spider_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yoDao/sql_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+            <element signature="e#515#637#0" />
+            <element signature="e#661#784#0" />
+            <element signature="e#813#941#0" />
+            <element signature="e#965#1430#0" />
+            <element signature="e#1455#1709#0" />
+            <element signature="e#1743#3155#0" />
           </folding>
         </state>
       </provider>
