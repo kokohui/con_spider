@@ -15,8 +15,8 @@ conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888',
 cur = conn.cursor()  # 获取一个游标
 
 YOUDAO_URL = 'http://openapi.youdao.com/api'
-APP_KEY = '3b89ebfc8485d804'
-APP_SECRET = 'ODV8FZA7ULWi46RJKje4wLoE011JqMoh'
+APP_KEY = '1ed4a7c384866571'
+APP_SECRET = 'DJKSDSmPKpw49z9ychpnsw9Je9mobZay'
 
 
 def encrypt(signStr):
@@ -61,11 +61,12 @@ def connect(q):
 def sql_query():
 
     # sql = "select id, title  from bus_product whenever ttt='0'"
-    sql = 'select id,detail  from bus_product_quality_en where ttt="0" '
+    sql = 'select id, name from bus_user_en where ttt="0" and name !="" and name is not null '
 
     try:
         cur.execute(sql)
         data = cur.fetchall()
+        print("data", data)
         return data
     except:
         conn.rollback()
@@ -75,40 +76,19 @@ if __name__ == '__main__':
     word_list = sql_query()
     for word in word_list:
         sql_id = word[0]
-        detail_chinese = word[1]
+        standards_chinese = word[1]
+        print(standards_chinese)
 
-        soup = BeautifulSoup(str(detail_chinese), 'lxml')
-        tree = etree.HTML(detail_chinese)
-
-        img_p = ''
+        name_trans = ''
         try:
-            img_list = soup.find_all('img')
-            print(img_list)
-            for img in img_list:
-                img_p += str(img)
-        except:
-            print('没有图片')
-        img_p_2 = "<p>" + img_p + "</p>"
-        img_p_2 = str(img_p_2).replace('"', "'")
-        print(img_p_2)
-
-        name_trans_all = ''
-        try:
-            detail_text_list = tree.xpath('//p/text()')
-            for detail_text in detail_text_list:
-                name_trans = connect(detail_text)
-                # print('name_trans:', name_trans)
-                name_trans_all += str(name_trans)
-
+            name_trans = connect(standards_chinese)
+            print(name_trans)
         except:
             print('没有文字')
-        name_trans_all_2 = "<p>" + name_trans_all + "</p>"
-        print("name_trans_all_2:", name_trans_all_2)
 
-        test_all = name_trans_all_2 + img_p_2
-        test_all = test_all.replace('"', "'")
+        test_all = str(name_trans).replace('"', "'").replace("(", "").replace(")", "")
         try:
-            sql = 'update bus_product_quality_en set  detail_en  = "{}", ttt = "1" where id = "{}"' .format(test_all, sql_id)
+            sql = 'update bus_user_en set  name  = "{}", ttt = "1" where id = "{}"' .format(test_all, sql_id)
             # sql = 'instert into bus_product_quality_en()' .format(name_trans, sql_id)
             print(sql)
             data = cur.execute(sql)
