@@ -4,6 +4,7 @@ import hashlib
 import time
 import requests
 import pymysql
+import asyncio
 
 from lxml import etree
 from bs4 import BeautifulSoup
@@ -15,8 +16,8 @@ conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888',
 cur = conn.cursor()  # 获取一个游标
 
 YOUDAO_URL = 'http://openapi.youdao.com/api'
-APP_KEY = '78b58d928f459895'
-APP_SECRET = 'uioUosZDvV92d3WXT7MuhKacsicPfXhb'
+APP_KEY = '27f45a948f63b7c7'
+APP_SECRET = 'ltOs35zocBmNPK1CaSMEum5mgKXLgDB8'
 
 
 def encrypt(signStr):
@@ -67,8 +68,7 @@ def connect(q):
 
 def sql_query():
 
-    # sql = "select id, title  from bus_product whenever ttt='0'"
-    sql = 'select id, sub_summary from bus_user_en where ttt="1" and sub_summary !="" and sub_summary is not null '
+    sql = 'select id, sub_scopes from bus_user_en where ttt="2" and sub_scopes !="" and sub_scopes is not null '
 
     try:
         cur.execute(sql)
@@ -79,30 +79,38 @@ def sql_query():
         conn.rollback()
 
 
-if __name__ == '__main__':
-    word_list = sql_query()
-    for word in word_list:
-        sql_id = word[0]
-        standards_chinese = word[1]
-        print(standards_chinese)
+async def main():
+        word_list = sql_query()
+        for word in word_list:
+            sql_id = word[0]
+            standards_chinese = word[1]
+            print(standards_chinese)
 
-        name_trans = ''
-        try:
-            name_trans = connect(standards_chinese)
-            print(name_trans)
-        except:
-            print('没有文字')
-
-        if name_trans != '':
-            test_all = str(name_trans).replace('"', "'")
-
+            name_trans = ''
             try:
-                sql = 'update bus_user_en set  sub_summary  = "{}", ttt = "2" where id = "{}"' .format(test_all, sql_id)
-                print(sql)
-                data = cur.execute(sql)
-                conn.commit()
+                name_trans = connect(standards_chinese)
+                print(name_trans)
             except:
-                print('此处有个错')
+                print('没有文字')
+
+            if name_trans != '':
+                test_all = str(name_trans).replace('"', "'")
+
+                try:
+                    sql = 'update bus_user_en set  sub_scopes  = "{}", ttt = "3" where id = "{}"'.format(test_all,
+                                                                                                          sql_id)
+                    print(sql)
+                    data = cur.execute(sql)
+                    conn.commit()
+                except:
+                    print('此处有个错')
+
+
+if __name__ == '__main__':
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
+
+
 
 
 cur.close()
