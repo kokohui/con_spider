@@ -60,8 +60,7 @@ def connect(q):
 
 def sql_query():
 
-    # sql = "select id, title  from bus_product whenever ttt='0'"
-    sql = 'select id,detail  from bus_product_quality_en where ttt="0" '
+    sql = 'select id, detail  from bus_industry_news_en where  detail is not null '
 
     try:
         cur.execute(sql)
@@ -108,8 +107,7 @@ if __name__ == '__main__':
         test_all = name_trans_all_2 + img_p_2
         test_all = test_all.replace('"', "'")
         try:
-            sql = 'update bus_product_quality_en set  detail_en  = "{}", ttt = "1" where id = "{}"' .format(test_all, sql_id)
-            # sql = 'instert into bus_product_quality_en()' .format(name_trans, sql_id)
+            sql = 'update bus_industry_news_en set  detail  = "{}"where id = "{}"' .format(test_all, sql_id)
             print(sql)
             data = cur.execute(sql)
             conn.commit()
