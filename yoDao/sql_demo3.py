@@ -5,7 +5,7 @@ import time
 import requests
 import pymysql
 import asyncio
-
+import json
 from lxml import etree
 from bs4 import BeautifulSoup
 
@@ -16,8 +16,8 @@ conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888',
 cur = conn.cursor()  # 获取一个游标
 
 YOUDAO_URL = 'http://openapi.youdao.com/api'
-APP_KEY = '4acec3be94933473'
-APP_SECRET = 'rUnL8EC2piDimVArrV85zZGaTPX9vdxh'
+APP_KEY = '05d75b8083faae9a'
+APP_SECRET = 'JW7cD7E6hC4v5hfNwrjT5oC3Y1cydnXl'
 
 
 def encrypt(signStr):
@@ -69,7 +69,7 @@ def connect(q):
 
 def sql_query():
 
-    sql = 'select id, address from bus_user_en where   address is not null and address != "" and id > 98119'
+    sql = 'select id, keywords from bus_product_en where  keywords is not null and keywords != ""'
 
     try:
         cur.execute(sql)
@@ -84,25 +84,37 @@ async def main():
         word_list = sql_query()
         for word in word_list:
             sql_id = word[0]
-            standards_chinese = word[1]
-            print(standards_chinese)
-
-            name_trans = ''
+            standards_chinese_list = word[1]
             try:
-                name_trans = connect(standards_chinese)
-                print(name_trans)
+                standards_chinese_list = json.loads(word[1])
+                standards_trans_list = []
+                for standards_chinese_dict in standards_chinese_list:
+                    standards_chinese = standards_chinese_dict['keyword']
+                    print(standards_chinese)
+                    name_trans = ''
+
+                    try:
+                        name_trans = connect(standards_chinese)
+                        standards_chinese_dict['keyword'] = name_trans
+                        standards_trans_list.append(standards_chinese_dict)
+                        print(name_trans)
+                    except:
+                        print('没有文字')
             except:
-                print('没有文字')
+                print('不是json')
 
             if name_trans != '':
-                test_all = str(name_trans).replace('"', "'")
+                test_all = str(standards_trans_list).replace('"', "'")
+                test_all = json.dumps(test_all).replace('"', "'")
+                print("test_all", test_all)
 
                 try:
-                    sql = 'update bus_user_en set  address  = "{}" where id = "{}"'.format(test_all, sql_id)
+                    sql = 'update bus_product_en set  keywords  = "{}" where id = "{}"'.format(test_all, sql_id)
                     print(sql)
                     data = cur.execute(sql)
                     conn.commit()
-                except:
+                except Exception as e:
+                    raise e
                     print('此处有个错')
 
 
@@ -110,8 +122,7 @@ if __name__ == '__main__':
     loop = asyncio.get_event_loop()
     loop.run_until_complete(main())
 
-
-
+    # sql_query()
 
 cur.close()
 conn.close()

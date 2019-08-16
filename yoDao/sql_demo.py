@@ -15,8 +15,8 @@ conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888',
 cur = conn.cursor()  # 获取一个游标
 
 YOUDAO_URL = 'http://openapi.youdao.com/api'
-APP_KEY = '3b89ebfc8485d804'
-APP_SECRET = 'ODV8FZA7ULWi46RJKje4wLoE011JqMoh'
+APP_KEY = '05d75b8083faae9a'
+APP_SECRET = 'JW7cD7E6hC4v5hfNwrjT5oC3Y1cydnXl'
 
 
 def encrypt(signStr):
@@ -60,7 +60,7 @@ def connect(q):
 
 def sql_query():
 
-    sql = 'select id, detail  from bus_industry_news_en where  detail is not null '
+    sql = 'select id, detail  from bus_industry_news_en where  detail is not null and detail != ""'
 
     try:
         cur.execute(sql)
@@ -94,12 +94,12 @@ if __name__ == '__main__':
         name_trans_all = ''
         try:
             detail_text_list = tree.xpath('//p/text()')
+            print("detail_text_list", detail_text_list)
             for detail_text in detail_text_list:
                 name_trans = connect(detail_text)
-                # print('name_trans:', name_trans)
                 name_trans_all += str(name_trans)
-
         except:
+
             print('没有文字')
         name_trans_all_2 = "<p>" + name_trans_all + "</p>"
         print("name_trans_all_2:", name_trans_all_2)
@@ -107,7 +107,7 @@ if __name__ == '__main__':
         test_all = name_trans_all_2 + img_p_2
         test_all = test_all.replace('"', "'")
         try:
-            sql = 'update bus_industry_news_en set  detail  = "{}"where id = "{}"' .format(test_all, sql_id)
+            sql = 'update bus_industry_news_en set  detail_en  = "{}"where id = "{}"' .format(test_all, sql_id)
             print(sql)
             data = cur.execute(sql)
             conn.commit()
