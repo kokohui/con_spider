@@ -30,7 +30,6 @@ class SpiderDataSpider(scrapy.Spider):
         url = 'http://so.sooshong.com/sale/search.jsp?offset={}0&rows=10&keywords=%E7%94%B5%E8%84%91&searchby=0&sortby=0&beforafter=1&days=180&categoryid=0&b2b=0&searchandor=0'
         for num in range(1, 2):
             start_url = url.format(str(num))
-            # start_url = 'http://www.sooshong.com/s-5-189p2'
 
             yield Request(url=start_url, callback=self.parse)
 

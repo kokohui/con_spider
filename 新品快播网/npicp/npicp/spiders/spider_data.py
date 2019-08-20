@@ -4,14 +4,12 @@ from scrapy import Request
 from ..items import NpicpItem
 import pymysql
 import time
-import os
 import random
 import re
 import requests
 from bs4 import BeautifulSoup
 import datetime
 from lxml import etree
-import chardet
 
 conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888', db='ktcx_buschance', port=3306,
                        charset='utf8')
@@ -21,17 +19,33 @@ cur = conn.cursor()  # 获取一个游标
 
 class SpiderDataSpider(scrapy.Spider):
     name = 'spider_data'
-    start_urls = ['https://www.npicp.com/buy/16-572-0-0-0-1.html']
+
+    def start_requests(self):
+        item = NpicpItem()
+        """初始url"""
+        sql_id = "SELECT url, id FROM bus_spider_data WHERE TYPE = 'caigou' and source = '新品快播网' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
+        cur.execute(sql_id)
+        res_all_list = cur.fetchall()
+        print(res_all_list)
+        url = res_all_list[0][0]
+        spdier_data_id = res_all_list[0][-1]
+        item['spdier_data_id'] = spdier_data_id
+        print(':::', url)
+        for num in range(1, 2):
+            start_url = url.format(str(num))
+
+            yield Request(url=start_url, callback=self.parse, meta={"item": item})
 
     def parse(self, response):
+        item = response.meta["item"]
+
         res_url_list = response.xpath('/html/body/div[6]/div/div[1]/div[3]/ul/li/div/div[1]/div/div[1]/a/@href').extract()
         for res_url in res_url_list:
             print(res_url)
-            yield Request(url=res_url, callback=self.detail_parse)
-
+            yield Request(url=res_url, callback=self.detail_parse, meta={"item": item})
 
     def detail_parse(self, response):
-        item = NpicpItem()
+        item = response.meta["item"]
 
         mobile = ''
         com_name = ''
@@ -39,39 +53,39 @@ class SpiderDataSpider(scrapy.Spider):
         try:
             mobile = response.xpath('/html/body/div[5]/div/div[1]/div[2]/div[2]/div[6]/span/text()')[0].extract().strip()
             com_name = str(response.xpath('/html/body/div[5]/div/div[1]/div[2]/div[2]/div[1]/a/text()').extract()[0]).strip()
-            # sql_count = "select count(0) from bus_user where company_name='{}'".format(com_name)
-            # cur.execute(sql_count)
-            # result = cur.fetchall()
-            # result_count = int(result[0][0])
+            sql_count = "select count(0) from bus_user where company_name='{}'".format(com_name)
+            cur.execute(sql_count)
+            result = cur.fetchall()
+            result_count = int(result[0][0])
         except:
             print('没有手机号或公司重复')
         item['com_name'] = com_name
         item['mobile'] = mobile
 
-        if mobile != '':
+        if mobile != '' and result_count == 0:
             print('................................................')
 
-        #     # 数据库获取id
-        #     sql_id = "SELECT one_level,two_level,three_level,keyword  FROM bus_spider_data WHERE source = '找商网' and  TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
-        #     cur.execute(sql_id)
-        #     print('sql_id?????????????', sql_id)
-        #     res_all_list = cur.fetchall()
-        #     for res_all in res_all_list:
-        #         one_level = res_all[0]
-        #         item['one_level_id'] = str(one_level)
-        #         print('id.........', item['one_level_id'])
-        #
-        #         two_level = res_all[1]
-        #         item['two_level_id'] = str(two_level)
-        #         print('id.........', item['two_level_id'])
-        #
-        #         three_level = res_all[2]
-        #         item['three_level_id'] = str(three_level)
-        #         print('id.........', item['three_level_id'])
-        #
-        #         keywords = res_all[-1]
-        #         item['keywords'] = str(keywords)
-        #
+            # 数据库获取id
+            sql_id = "SELECT one_level,two_level,three_level,keyword  FROM bus_spider_data WHERE  source = '新品快播网' and  TYPE = 'caigou' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
+            cur.execute(sql_id)
+            print('sql_id?????????????', sql_id)
+            res_all_list = cur.fetchall()
+            for res_all in res_all_list:
+                one_level = res_all[0]
+                item['one_level_id'] = str(one_level)
+                print('id.........', item['one_level_id'])
+
+                two_level = res_all[1]
+                item['two_level_id'] = str(two_level)
+                print('id.........', item['two_level_id'])
+
+                three_level = res_all[2]
+                item['three_level_id'] = str(three_level)
+                print('id.........', item['three_level_id'])
+
+                keywords = res_all[-1]
+                item['keywords'] = str(keywords)
+
 
             # 创建时间
             create_date = time.strftime('%Y.%m.%d %H:%M:%S ', time.localtime(time.time()))
@@ -165,7 +179,7 @@ class SpiderDataSpider(scrapy.Spider):
             self.detail_con(con_url, item)
 
         #
-        #     yield item
+            yield item
 
     @classmethod
     def detail_con(self, con_url, item):
@@ -173,21 +187,24 @@ class SpiderDataSpider(scrapy.Spider):
         headers = {
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
         }
-        con_text = requests.get(url='https://www.npicp.com/company/li7568948', headers=headers, verify=False).text
+        con_text = requests.get(url='https://www.npicp.com/company/li7568948', headers=headers, verify=False)
+        con_text = con_text.content
+
         tree = etree.HTML(con_text)
 
         scopes = '-'
         try:
             scopes = tree.xpath('/html/body/div[5]/div[1]/div[1]/div[3]/ul/li[4]/text()')[0]
-            print('scopes', scopes.encodeing("utf-8"))
+            scopes = scopes.split('：')[-1]
+            print('scopes', scopes)
         except:
             print('scopes', scopes)
         item['scopes'] = scopes
 
         summary = ''
         try:
-            summary = tree.xpath('/html/body/div[5]/div[2]/div[1]/div[2]/text()')[0]
-            # print('summary>>>>>>>>>>>>>>>', summary.encode("utf-8"))
+            summary = tree.xpath('/html/body/div[5]/div[2]/div[1]/div[2]/text()')[1].strip()
+            print('summary', summary)
         except:
             print('summary', summary)
         item['summary'] = summary

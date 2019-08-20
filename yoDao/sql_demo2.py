@@ -68,7 +68,7 @@ def connect(q):
 def sql_query():
 
     # sql = "select id, title  from bus_product whenever ttt='0'"
-    sql = 'select id, units from bus_product_en where units !="" and units is not null '
+    sql = 'select id, category_name from bus_help_core where  category_name is not null and category_name != ""'
 
     try:
         cur.execute(sql)
@@ -97,7 +97,7 @@ if __name__ == '__main__':
             test_all = str(name_trans).replace('"', "'")
 
             try:
-                sql = 'update bus_product_en set  units  = "{}", ttt = "2" where id = "{}"' .format(test_all, sql_id)
+                sql = 'update bus_help_core set  category_name  = "{}" where id = "{}"'.format(test_all, sql_id)
                 print(sql)
                 data = cur.execute(sql)
                 conn.commit()

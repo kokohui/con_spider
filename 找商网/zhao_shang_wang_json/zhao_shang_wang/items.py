@@ -8,7 +8,7 @@
 import scrapy
 
 
-class NpicpItem(scrapy.Item):
+class ZhaoShangWangItem(scrapy.Item):
     create_date = scrapy.Field()  # 创建时间
     list_img = scrapy.Field()  # 图片1
     price = scrapy.Field()  # 价格
@@ -28,7 +28,4 @@ class NpicpItem(scrapy.Item):
 
     summary = scrapy.Field()
     scopes = scrapy.Field()
-    num = scrapy.Field()
-    end_time = scrapy.Field()
     spdier_data_id = scrapy.Field()
-

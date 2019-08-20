@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
+
+# Define your item pipelines here
+#
+# Don't forget to add your pipeline to the ITEM_PIPELINES setting
+# See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import pymysql
 import json
 
 
-class NpicpPipeline(object):
+class ZhaoShangWangPipeline(object):
     cursor = None  # mysql游标对象声明
     cur = None  # 获取一个游标
 
@@ -32,16 +37,12 @@ class NpicpPipeline(object):
                              "way": item['way'], "one_level_id ": item['one_level_id'],
                              "two_level_id": item['two_level_id'], "three_level_id": item['three_level_id'],
                              "keywords": item['keywords'], "list_img": item['list_img'], "imgs": item['imgs'],
-                             "detail": item['detail'], "units": item['units'], "num": item["num"],
-                             "end_time": item["end_time"]}}
+                             "detail": item['detail'], "units": item['units']}}
             json_data = json.dumps(dict_data)
 
             try:
-                sql = 'insert into `bus_spider_product_list`(`create_date`, `detail`, `type`, `spider_id`) value (%s, %s, %s, %s)'
-                self.cur.execute(sql, (item['create_date'], json_data, 1, item['spdier_data_id']))
-
-                # sql = 'insert into `bus_spider_product_list`(`detail`) value (%s)'
-                # self.cur.execute(sql, (json_data))
+                sql = 'insert into `bus_spider_product_list`(`create_date`, `detail`, `spider_id`) value (%s, %s, %s)'
+                self.cur.execute(sql, (item['create_date'], json_data, item['spdier_data_id']))
             except Exception as e:
                 self.conn.rollback()
                 print('事务处理失败')
@@ -53,10 +54,9 @@ class NpicpPipeline(object):
             return item
 
     def close_spider(self, spider):
-        sql_id = "SELECT id FROM bus_spider_data WHERE source = '新品快播网' and TYPE = 'caigou' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
+        sql_id = "SELECT id FROM bus_spider_data WHERE source = '找商网' and  TYPE = 'gongying' AND is_del = '0' AND isuse = '0' ORDER BY create_date LIMIT 1 "
         self.cur.execute(sql_id)
         res_all_list = self.cur.fetchall()
-        print(res_all_list, '.....')
         id = res_all_list[0][0]
         sql_insert = "UPDATE ktcx_buschance.bus_spider_data SET isuse='1' WHERE id={}".format(id)
         print(sql_insert)

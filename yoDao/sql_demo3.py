@@ -69,7 +69,7 @@ def connect(q):
 
 def sql_query():
 
-    sql = 'select id, keywords from bus_product_en where  keywords is not null and keywords != ""'
+    sql = 'select id, title from bus_help_core where  title is not null and title != ""'
 
     try:
         cur.execute(sql)
@@ -109,7 +109,7 @@ async def main():
                 print("test_all", test_all)
 
                 try:
-                    sql = 'update bus_product_en set  keywords  = "{}" where id = "{}"'.format(test_all, sql_id)
+                    sql = 'update bus_help_core set  title  = "{}" where id = "{}"'.format(test_all, sql_id)
                     print(sql)
                     data = cur.execute(sql)
                     conn.commit()

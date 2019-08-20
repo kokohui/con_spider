@@ -60,7 +60,7 @@ def connect(q):
 
 def sql_query():
 
-    sql = 'select id, detail  from bus_industry_news_en where  detail is not null and detail != ""'
+    sql = 'select id, content  from bus_help_core where  content is not null and content != ""'
 
     try:
         cur.execute(sql)
@@ -93,7 +93,7 @@ if __name__ == '__main__':
 
         name_trans_all = ''
         try:
-            detail_text_list = tree.xpath('//p/text()')
+            detail_text_list = tree.xpath('//p//text()')
             print("detail_text_list", detail_text_list)
             for detail_text in detail_text_list:
                 name_trans = connect(detail_text)
@@ -107,7 +107,7 @@ if __name__ == '__main__':
         test_all = name_trans_all_2 + img_p_2
         test_all = test_all.replace('"', "'")
         try:
-            sql = 'update bus_industry_news_en set  detail_en  = "{}"where id = "{}"' .format(test_all, sql_id)
+            sql = 'update bus_help_core set  content_en  = "{}"where id = "{}"' .format(test_all, sql_id)
             print(sql)
             data = cur.execute(sql)
             conn.commit()
