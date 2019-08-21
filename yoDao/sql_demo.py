@@ -41,7 +41,7 @@ def connect(q):
 
     data = {}
     data['from'] = 'zh-CHS'
-    data['to'] = 'EN'
+    data['to'] = 'id'
     data['signType'] = 'v3'
     curtime = str(int(time.time()))
     data['curtime'] = curtime

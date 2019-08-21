@@ -42,7 +42,7 @@ def connect(q):
 
     data = {}
     data['from'] = 'zh-CHS'
-    data['to'] = 'EN'
+    data['to'] = 'id'
     data['signType'] = 'v3'
     curtime = str(int(time.time()))
     data['curtime'] = curtime
@@ -69,7 +69,7 @@ def connect(q):
 
 def sql_query():
 
-    sql = 'select id, title from bus_help_core where  title is not null and title != ""'
+    sql = 'select id, title from bus_product_yn where  title is not null and title != "" and ttt = "0"'
 
     try:
         cur.execute(sql)
@@ -109,7 +109,7 @@ async def main():
                 print("test_all", test_all)
 
                 try:
-                    sql = 'update bus_help_core set  title  = "{}" where id = "{}"'.format(test_all, sql_id)
+                    sql = 'update bus_product_yn set  title  = "{}", ttt = "1" where id = "{}"'.format(test_all, sql_id)
                     print(sql)
                     data = cur.execute(sql)
                     conn.commit()

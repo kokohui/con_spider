@@ -15,8 +15,8 @@ conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888',
 cur = conn.cursor()  # 获取一个游标
 
 YOUDAO_URL = 'http://openapi.youdao.com/api'
-APP_KEY = '05d75b8083faae9a'
-APP_SECRET = 'JW7cD7E6hC4v5hfNwrjT5oC3Y1cydnXl'
+APP_KEY = '5b922fbab328150f'
+APP_SECRET = '9Qi87TNzkhMduyGSiKJfJZUBUPOj2HO6'
 
 
 def encrypt(signStr):
@@ -41,7 +41,7 @@ def connect(q):
 
     data = {}
     data['from'] = 'zh-CHS'
-    data['to'] = 'EN'
+    data['to'] = 'id'
     data['signType'] = 'v3'
     curtime = str(int(time.time()))
     data['curtime'] = curtime
@@ -67,8 +67,7 @@ def connect(q):
 
 def sql_query():
 
-    # sql = "select id, title  from bus_product whenever ttt='0'"
-    sql = 'select id, category_name from bus_help_core where  category_name is not null and category_name != ""'
+    sql = 'select id, title from bus_product_yn where  title is not null and title != "" and ttt = "0"'
 
     try:
         cur.execute(sql)
@@ -95,9 +94,8 @@ if __name__ == '__main__':
 
         if name_trans != '':
             test_all = str(name_trans).replace('"', "'")
-
             try:
-                sql = 'update bus_help_core set  category_name  = "{}" where id = "{}"'.format(test_all, sql_id)
+                sql = 'update bus_product_yn set  title  = "{}", ttt = "1" where id = "{}"'.format(test_all, sql_id)
                 print(sql)
                 data = cur.execute(sql)
                 conn.commit()

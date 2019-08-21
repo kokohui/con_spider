@@ -128,7 +128,7 @@ class SpiderDataSpider(scrapy.Spider):
             # 标题
             title = ''
             try:
-                title = str(response.xpath('/html/body/main/div[4]/div[1]/div[2]/div[1]/h4/text()').extract()[0])
+                title = str(response.xpath('//h1/text()').extract()[0])
                 print('title', title)
             except:
                 print('title', title)
@@ -232,4 +232,4 @@ class SpiderDataSpider(scrapy.Spider):
                 print('summary', summary)
             item['summary'] = summary
 
-            yield item
+            # yield item
