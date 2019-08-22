@@ -15,8 +15,8 @@ conn = pymysql.connect(host='192.168.1.210', user='root', passwd='zhangxing888',
 cur = conn.cursor()  # 获取一个游标
 
 YOUDAO_URL = 'http://openapi.youdao.com/api'
-APP_KEY = '5b922fbab328150f'
-APP_SECRET = '9Qi87TNzkhMduyGSiKJfJZUBUPOj2HO6'
+APP_KEY = '05d75b8083faae9a'
+APP_SECRET = 'JW7cD7E6hC4v5hfNwrjT5oC3Y1cydnXl'
 
 
 def encrypt(signStr):
